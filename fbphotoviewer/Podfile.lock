@@ -17,11 +17,15 @@ PODS:
     - Bolts (~> 1.9)
   - FBSDKLoginKit (4.40.0):
     - FBSDKCoreKit
+  - R.swift (5.0.2):
+    - R.swift.Library (~> 5.0.0)
+  - R.swift.Library (5.0.0)
 
 DEPENDENCIES:
   - FacebookCore
   - FacebookLogin
   - FBSDKLoginKit
+  - R.swift
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -30,6 +34,8 @@ SPEC REPOS:
     - FacebookLogin
     - FBSDKCoreKit
     - FBSDKLoginKit
+    - R.swift
+    - R.swift.Library
 
 SPEC CHECKSUMS:
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
@@ -37,7 +43,9 @@ SPEC CHECKSUMS:
   FacebookLogin: ebcf34714a1cb9f0759d9f071cfb01ed500996cf
   FBSDKCoreKit: ae214474b25033399c131dc81d258e412582a2ba
   FBSDKLoginKit: 7a1e411d46acc8834588eca437daf34de42e1d52
+  R.swift: 81455d81467763cbd3f4d79d938d05f4ac4c0228
+  R.swift.Library: 0bf390e729bc10bb2c9e4fb78bd043164a7be4ff
 
-PODFILE CHECKSUM: ebf29764c1312a8c466ce6d980efa25c232098f5
+PODFILE CHECKSUM: 6a0ecfde9e1e90c3f48d7e8b20c5025106da4f8f
 
 COCOAPODS: 1.5.3

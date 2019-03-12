@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  fbphotoviewer
+
+  Created by Serg Liamthev on 3/12/19.
+  Copyright © 2019 serglam. All rights reserved.
+*/
+
+// Facebook errors
+"error.fb-empty-result" = "Facebook Autorization - unable to get result";
+"error.fb-canceled-by-user" = "Facebook Autorization canceled by user";
+"error.fb-access-token-nil" = "Failed to get access token";

@@ -9,6 +9,7 @@ target 'fbphotoviewer' do
   pod 'FBSDKLoginKit'
   pod 'FacebookCore'
   pod 'FacebookLogin'
+  pod 'R.swift'
 
   target 'fbphotoviewerTests' do
     inherit! :search_paths

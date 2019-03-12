@@ -7,7 +7,12 @@
 //
 
 import UIKit
+import FBSDKLoginKit
+import FBSDKCoreKit
+import FacebookLogin
 import FacebookCore
+
+typealias Localizable = R.string.localizable
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -23,8 +28,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.backgroundColor = .white
         window?.makeKeyAndVisible()
-        let rootVC = ViewController()
+        let rootVC = SignInVC()
         window?.rootViewController = rootVC
+        
+        // TODO: Add routing here
+        if FBSDKAccessToken.current() != nil {
+            // logged in using facebook
+        }
+        else {
+            // logged in using manual email/password method
+        }
+        
         return true
     }
     
