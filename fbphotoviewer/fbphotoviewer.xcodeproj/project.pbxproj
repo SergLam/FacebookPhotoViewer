@@ -21,6 +21,8 @@
 		7CE8135D2239A3CF004A223E /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE8135C2239A3CF004A223E /* SignInView.swift */; };
 		7CE813602239A59F004A223E /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE8135F2239A59F004A223E /* UIColor+Ext.swift */; };
 		7CE813632239A9BE004A223E /* FBApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE813622239A9BE004A223E /* FBApiManager.swift */; };
+		7CE813662239BB02004A223E /* FBUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE813652239BB02004A223E /* FBUser.swift */; };
+		7CE813682239BB2E004A223E /* FBAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE813672239BB2E004A223E /* FBAlbum.swift */; };
 		EF6074F13A3A65D104BC199E /* Pods_fbphotoviewerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C57ED63459E44CC2C4C3AA6C /* Pods_fbphotoviewerUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +65,8 @@
 		7CE8135C2239A3CF004A223E /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		7CE8135F2239A59F004A223E /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
 		7CE813622239A9BE004A223E /* FBApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBApiManager.swift; sourceTree = "<group>"; };
+		7CE813652239BB02004A223E /* FBUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBUser.swift; sourceTree = "<group>"; };
+		7CE813672239BB2E004A223E /* FBAlbum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBAlbum.swift; sourceTree = "<group>"; };
 		AC1AF05769774B1EF7836EA6 /* Pods-fbphotoviewerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fbphotoviewerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fbphotoviewerUITests/Pods-fbphotoviewerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C57ED63459E44CC2C4C3AA6C /* Pods_fbphotoviewerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fbphotoviewerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C840CA5369BAC26DB9205926 /* Pods-fbphotoviewerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fbphotoviewerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-fbphotoviewerTests/Pods-fbphotoviewerTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -162,6 +166,7 @@
 		7C97558E2236FFEC005F30B4 /* fbphotoviewer */ = {
 			isa = PBXGroup;
 			children = (
+				7CE813642239BAC7004A223E /* DataModels */,
 				7CE813612239A9A8004A223E /* Services */,
 				7C816F4922385F84009C8EB8 /* UserStory */,
 				7CE8135E2239A58E004A223E /* Extensions */,
@@ -213,6 +218,15 @@
 				7CE813622239A9BE004A223E /* FBApiManager.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		7CE813642239BAC7004A223E /* DataModels */ = {
+			isa = PBXGroup;
+			children = (
+				7CE813652239BB02004A223E /* FBUser.swift */,
+				7CE813672239BB2E004A223E /* FBAlbum.swift */,
+			);
+			path = DataModels;
 			sourceTree = "<group>";
 		};
 		D5374537158A3518669DBC77 /* Pods */ = {
@@ -494,8 +508,10 @@
 				7C816F4B22386071009C8EB8 /* SignInVM.swift in Sources */,
 				7CE813632239A9BE004A223E /* FBApiManager.swift in Sources */,
 				7CE813602239A59F004A223E /* UIColor+Ext.swift in Sources */,
+				7CE813662239BB02004A223E /* FBUser.swift in Sources */,
 				7C816F512238660B009C8EB8 /* R.generated.swift in Sources */,
 				7CE8135D2239A3CF004A223E /* SignInView.swift in Sources */,
+				7CE813682239BB2E004A223E /* FBAlbum.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
