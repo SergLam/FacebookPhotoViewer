@@ -18,6 +18,9 @@
 		7C97559A2236FFED005F30B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C9755982236FFED005F30B4 /* LaunchScreen.storyboard */; };
 		7C9755A52236FFEE005F30B4 /* fbphotoviewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9755A42236FFEE005F30B4 /* fbphotoviewerTests.swift */; };
 		7C9755B02236FFEE005F30B4 /* fbphotoviewerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9755AF2236FFEE005F30B4 /* fbphotoviewerUITests.swift */; };
+		7CE8135D2239A3CF004A223E /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE8135C2239A3CF004A223E /* SignInView.swift */; };
+		7CE813602239A59F004A223E /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE8135F2239A59F004A223E /* UIColor+Ext.swift */; };
+		7CE813632239A9BE004A223E /* FBApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE813622239A9BE004A223E /* FBApiManager.swift */; };
 		EF6074F13A3A65D104BC199E /* Pods_fbphotoviewerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C57ED63459E44CC2C4C3AA6C /* Pods_fbphotoviewerUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +60,9 @@
 		7C9755AB2236FFEE005F30B4 /* fbphotoviewerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fbphotoviewerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C9755AF2236FFEE005F30B4 /* fbphotoviewerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fbphotoviewerUITests.swift; sourceTree = "<group>"; };
 		7C9755B12236FFEE005F30B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7CE8135C2239A3CF004A223E /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		7CE8135F2239A59F004A223E /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
+		7CE813622239A9BE004A223E /* FBApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBApiManager.swift; sourceTree = "<group>"; };
 		AC1AF05769774B1EF7836EA6 /* Pods-fbphotoviewerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fbphotoviewerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fbphotoviewerUITests/Pods-fbphotoviewerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C57ED63459E44CC2C4C3AA6C /* Pods_fbphotoviewerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fbphotoviewerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C840CA5369BAC26DB9205926 /* Pods-fbphotoviewerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fbphotoviewerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-fbphotoviewerTests/Pods-fbphotoviewerTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -117,8 +123,7 @@
 		7C816F4922385F84009C8EB8 /* UserStory */ = {
 			isa = PBXGroup;
 			children = (
-				7C9755912236FFEC005F30B4 /* SignInVC.swift */,
-				7C816F4A22386071009C8EB8 /* SignInVM.swift */,
+				7CE8135B2239A3BD004A223E /* SignIn */,
 			);
 			path = UserStory;
 			sourceTree = "<group>";
@@ -157,7 +162,9 @@
 		7C97558E2236FFEC005F30B4 /* fbphotoviewer */ = {
 			isa = PBXGroup;
 			children = (
+				7CE813612239A9A8004A223E /* Services */,
 				7C816F4922385F84009C8EB8 /* UserStory */,
+				7CE8135E2239A58E004A223E /* Extensions */,
 				7C816F4E223861DF009C8EB8 /* Resources */,
 				7C2C671E2237971000D0AF8A /* Application */,
 			);
@@ -180,6 +187,32 @@
 				7C9755B12236FFEE005F30B4 /* Info.plist */,
 			);
 			path = fbphotoviewerUITests;
+			sourceTree = "<group>";
+		};
+		7CE8135B2239A3BD004A223E /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				7C9755912236FFEC005F30B4 /* SignInVC.swift */,
+				7C816F4A22386071009C8EB8 /* SignInVM.swift */,
+				7CE8135C2239A3CF004A223E /* SignInView.swift */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		7CE8135E2239A58E004A223E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7CE8135F2239A59F004A223E /* UIColor+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7CE813612239A9A8004A223E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				7CE813622239A9BE004A223E /* FBApiManager.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		D5374537158A3518669DBC77 /* Pods */ = {
@@ -401,22 +434,26 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-fbphotoviewer/Pods-fbphotoviewer-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/Closures/Closures.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
 				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Closures.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -455,7 +492,10 @@
 				7C9755922236FFEC005F30B4 /* SignInVC.swift in Sources */,
 				7C9755902236FFEC005F30B4 /* AppDelegate.swift in Sources */,
 				7C816F4B22386071009C8EB8 /* SignInVM.swift in Sources */,
+				7CE813632239A9BE004A223E /* FBApiManager.swift in Sources */,
+				7CE813602239A59F004A223E /* UIColor+Ext.swift in Sources */,
 				7C816F512238660B009C8EB8 /* R.generated.swift in Sources */,
+				7CE8135D2239A3CF004A223E /* SignInView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

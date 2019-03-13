@@ -10,3 +10,6 @@
 "error.fb-empty-result" = "Facebook Autorization - unable to get result";
 "error.fb-canceled-by-user" = "Facebook Autorization canceled by user";
 "error.fb-access-token-nil" = "Failed to get access token";
+
+// Sign In
+"sign-in.fb-login.button.title" = "Continue with Facebook";

@@ -44,14 +44,21 @@ struct R: Rswift.Validatable {
   
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 3 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 4 localization keys.
     struct localizable {
+      /// Value: Continue with Facebook
+      static let signInFbLoginButtonTitle = Rswift.StringResource(key: "sign-in.fb-login.button.title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Facebook Autorization - unable to get result
       static let errorFbEmptyResult = Rswift.StringResource(key: "error.fb-empty-result", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Facebook Autorization canceled by user
       static let errorFbCanceledByUser = Rswift.StringResource(key: "error.fb-canceled-by-user", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Failed to get access token
       static let errorFbAccessTokenNil = Rswift.StringResource(key: "error.fb-access-token-nil", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      
+      /// Value: Continue with Facebook
+      static func signInFbLoginButtonTitle(_: Void = ()) -> String {
+        return NSLocalizedString("sign-in.fb-login.button.title", bundle: R.hostingBundle, comment: "")
+      }
       
       /// Value: Facebook Autorization - unable to get result
       static func errorFbEmptyResult(_: Void = ()) -> String {
