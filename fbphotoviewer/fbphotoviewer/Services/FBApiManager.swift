@@ -17,8 +17,8 @@ class FBApiManager {
     static let shared = FBApiManager()
     
     struct MyProfileRequest {
-        let path = "/me"
-        let parameters: [String : Any] = ["fields": "id, name, first_name, last_name"]
+        let path = "me"
+        let parameters: [String : Any] = ["fields": "id, first_name, last_name, name"]
         let token = AccessToken.current?.authenticationToken
         let method: GraphRequestHTTPMethod = .GET
         let apiVersion = GraphAPIVersion.defaultVersion.stringValue
@@ -26,16 +26,14 @@ class FBApiManager {
     
     func getUserProfile(completion: @escaping (User?, Error?) -> ()) {
         let request = MyProfileRequest()
-        FBSDKGraphRequest(graphPath: request.path, parameters: request.parameters,
-                          tokenString: request.token, version: request.apiVersion,
-                          httpMethod: request.method.rawValue)?.start(completionHandler: { (connection, result, error) in
-                            if let result = result {
-                                let user = User(json: JSON(result))
-                                completion(user, error)
-                            } else {
-                                completion(nil, error)
-                            }
-                          })
+        FBSDKGraphRequest(graphPath: request.path, parameters: request.parameters)?.start(completionHandler: { (connection, result, error) in
+            if let result = result {
+                let user = User(json: JSON(result))
+                completion(user, error)
+            } else {
+                completion(nil, error)
+            }
+        })
     }
     
 }

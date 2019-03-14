@@ -20,6 +20,7 @@ class SignInVM {
     weak var delegate: SignInVMDelegate?
     
     func signUpViaFB(_ vc: UIViewController){
+        FBSDKLoginManager().logOut()
         let loginManager = FBSDKLoginManager()
         loginManager.logIn(withReadPermissions: ["public_profile", "email"], from: vc){ [weak self](result, error) in
             if let err = error {

@@ -67,6 +67,7 @@
 		7CE813622239A9BE004A223E /* FBApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBApiManager.swift; sourceTree = "<group>"; };
 		7CE813652239BB02004A223E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7CE813672239BB2E004A223E /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		7CE81369223A2ED7004A223E /* fbphotoviewer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = fbphotoviewer.entitlements; sourceTree = "<group>"; };
 		AC1AF05769774B1EF7836EA6 /* Pods-fbphotoviewerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fbphotoviewerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fbphotoviewerUITests/Pods-fbphotoviewerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C57ED63459E44CC2C4C3AA6C /* Pods_fbphotoviewerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fbphotoviewerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C840CA5369BAC26DB9205926 /* Pods-fbphotoviewerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fbphotoviewerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-fbphotoviewerTests/Pods-fbphotoviewerTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -166,6 +167,7 @@
 		7C97558E2236FFEC005F30B4 /* fbphotoviewer */ = {
 			isa = PBXGroup;
 			children = (
+				7CE81369223A2ED7004A223E /* fbphotoviewer.entitlements */,
 				7CE813642239BAC7004A223E /* DataModels */,
 				7CE813612239A9A8004A223E /* Services */,
 				7C816F4922385F84009C8EB8 /* UserStory */,
@@ -315,6 +317,11 @@
 				TargetAttributes = {
 					7C97558B2236FFEC005F30B4 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					7C97559F2236FFEE005F30B4 = {
 						CreatedOnToolsVersion = 10.1;
@@ -682,6 +689,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = fbphotoviewer/fbphotoviewer.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MDWBDEPC5G;
 				INFOPLIST_FILE = "$(SRCROOT)/fbphotoviewer/Application/Info.plist";
@@ -696,6 +705,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = serglam.fbphotoviewer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -707,6 +717,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = fbphotoviewer/fbphotoviewer.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MDWBDEPC5G;
 				INFOPLIST_FILE = "$(SRCROOT)/fbphotoviewer/Application/Info.plist";
@@ -721,6 +733,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = serglam.fbphotoviewer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

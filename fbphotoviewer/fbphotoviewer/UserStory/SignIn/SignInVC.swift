@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FBSDKCoreKit
 
 class SignInVC: UIViewController {
 
@@ -36,13 +37,18 @@ extension SignInVC: SignInViewDelegate {
 extension SignInVC: SignInVMDelegate {
     
     func onSignInError(_ error: String) {
-        debugPrint(error)
+        debugPrint("ERROR: "+error)
     }
     
     func onSignInSuccess() {
         FBApiManager.shared.getUserProfile(completion: { (user, error) in
-            debugPrint("ERROR: \(error?.localizedDescription)")
             debugPrint("USER: \(user?.toJSON())")
+            guard let fbError = error as? FBSDKError else {
+                debugPrint("ERROR: \(error?.localizedDescription)")
+                return
+            }
+            debugPrint("FB_ERROR: \(fbError.localizedDescription)")
+            
         })
     }
     

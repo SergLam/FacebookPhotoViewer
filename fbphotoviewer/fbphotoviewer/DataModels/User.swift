@@ -10,12 +10,16 @@ import Foundation
 import SwiftyJSON
 
 struct User {
+    // TEST USER:
+    // qqcjdtzyuy_1552376613@tfbnw.net
+    // password123456
     
     static func fromJSON(_ data: [String: Any]) -> User {
         let json = JSON(data)
         return User(json: json)
     }
     
+    var id: String = ""
     var firstName: String = ""
     var lastName: String = ""
     var name: String = ""
@@ -26,6 +30,7 @@ struct User {
     }
     
     init(json: JSON) {
+        id = json["id"].stringValue
         firstName = json["first_name"].stringValue
         lastName = json["last_name"].stringValue
         name = json["name"].stringValue
@@ -41,6 +46,7 @@ struct User {
         result["first_name"] = firstName
         result["last_name"] = lastName
         result["name"] = name
+        result["id"] = id
         
         return result
     }
