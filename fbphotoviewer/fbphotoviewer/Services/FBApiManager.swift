@@ -9,38 +9,33 @@
 import Foundation
 import FacebookCore
 import FBSDKCoreKit
+import SwiftyJSON
+
 
 class FBApiManager {
     
     static let shared = FBApiManager()
     
-    struct MyProfileRequest: GraphRequestProtocol {
-        struct Response: GraphResponseProtocol {
-            init(rawResponse: Any?) {
-                // Decode JSON from rawResponse into other properties here.
-            }
-        }
-        
-        var graphPath = "/me"
-        var parameters: [String : Any]? = ["fields": "id, name"]
-        var accessToken = AccessToken.current
-        var httpMethod: GraphRequestHTTPMethod = .GET
-        var apiVersion: GraphAPIVersion = .defaultVersion
+    struct MyProfileRequest {
+        let path = "/me"
+        let parameters: [String : Any] = ["fields": "id, name, first_name, last_name"]
+        let token = AccessToken.current?.authenticationToken
+        let method: GraphRequestHTTPMethod = .GET
+        let apiVersion = GraphAPIVersion.defaultVersion.stringValue
     }
     
-    func getUserProfile() {
-        let connection = GraphRequestConnection()
-        connection.add(MyProfileRequest()) { response, result in
-            switch result {
-            case .success(let response):
-                print("Custom Graph Request Succeeded: \(response)")
-//                print("My facebook id is \(response.dictionaryValue?["id"])")
-//                print("My name is \(response.dictionaryValue?["name"])")
-            case .failed(let error):
-                print("Custom Graph Request Failed: \(error)")
-            }
-        }
-        connection.start()
+    func getUserProfile(completion: @escaping (User?, Error?) -> ()) {
+        let request = MyProfileRequest()
+        FBSDKGraphRequest(graphPath: request.path, parameters: request.parameters,
+                          tokenString: request.token, version: request.apiVersion,
+                          httpMethod: request.method.rawValue)?.start(completionHandler: { (connection, result, error) in
+                            if let result = result {
+                                let user = User(json: JSON(result))
+                                completion(user, error)
+                            } else {
+                                completion(nil, error)
+                            }
+                          })
     }
     
 }

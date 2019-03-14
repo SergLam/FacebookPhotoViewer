@@ -20,6 +20,7 @@ class SignInVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         contentView.delegate = self
+        viewModel.delegate = self
     }
     
 }
@@ -28,6 +29,21 @@ extension SignInVC: SignInViewDelegate {
     
     func didTapFBLoginButton() {
         viewModel.signUpViaFB(self)
+    }
+    
+}
+
+extension SignInVC: SignInVMDelegate {
+    
+    func onSignInError(_ error: String) {
+        debugPrint(error)
+    }
+    
+    func onSignInSuccess() {
+        FBApiManager.shared.getUserProfile(completion: { (user, error) in
+            debugPrint("ERROR: \(error?.localizedDescription)")
+            debugPrint("USER: \(user?.toJSON())")
+        })
     }
     
 }

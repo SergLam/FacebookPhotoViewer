@@ -22,6 +22,7 @@ PODS:
     - R.swift.Library (~> 5.0.0)
   - R.swift.Library (5.0.0)
   - SnapKit (4.0.1)
+  - SwiftyJSON (4.2.0)
 
 DEPENDENCIES:
   - Closures
@@ -30,6 +31,7 @@ DEPENDENCIES:
   - FBSDKLoginKit
   - R.swift
   - SnapKit (~> 4.0.0)
+  - SwiftyJSON
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -42,6 +44,7 @@ SPEC REPOS:
     - R.swift
     - R.swift.Library
     - SnapKit
+    - SwiftyJSON
 
 SPEC CHECKSUMS:
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
@@ -53,7 +56,8 @@ SPEC CHECKSUMS:
   R.swift: 81455d81467763cbd3f4d79d938d05f4ac4c0228
   R.swift.Library: 0bf390e729bc10bb2c9e4fb78bd043164a7be4ff
   SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
+  SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
 
-PODFILE CHECKSUM: 9a8a39dff847e0985b162cc8fb00a9102d429f2a
+PODFILE CHECKSUM: 73dc6c8913035da70a2aa2ba87f95ba309a3de28
 
 COCOAPODS: 1.5.3

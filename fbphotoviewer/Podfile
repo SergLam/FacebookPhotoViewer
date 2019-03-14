@@ -10,6 +10,9 @@ target 'fbphotoviewer' do
   pod 'FacebookCore'
   pod 'FacebookLogin'
   
+  # Networking
+  pod 'SwiftyJSON'
+  
   # UI
   pod 'SnapKit', '~> 4.0.0'
   pod 'Closures'

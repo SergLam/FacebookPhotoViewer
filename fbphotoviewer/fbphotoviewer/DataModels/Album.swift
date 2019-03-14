@@ -8,6 +8,6 @@
 
 import Foundation
 
-class FBAlbum {
+class Album {
     
 }
