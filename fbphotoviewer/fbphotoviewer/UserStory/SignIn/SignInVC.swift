@@ -37,17 +37,16 @@ extension SignInVC: SignInViewDelegate {
 extension SignInVC: SignInVMDelegate {
     
     func onSignInError(_ error: String) {
-        debugPrint("ERROR: "+error)
+        AlertPresenter.showErrorAlert(on: self, error: error)
     }
     
     func onSignInSuccess() {
         FBApiManager.shared.getUserProfile(completion: { (user, error) in
-            debugPrint("USER: \(user?.toJSON())")
-            guard let fbError = error as? FBSDKError else {
-                debugPrint("ERROR: \(error?.localizedDescription)")
-                return
+            guard let error = error else {
+                debugPrint("USER: \(user?.toJSON())")
             }
-            debugPrint("FB_ERROR: \(fbError.localizedDescription)")
+            AlertPresenter.showErrorAlert(on: self, error: error.localizedDescription)
+            
             
         })
     }

@@ -39,10 +39,8 @@ class SignInVM {
                 self?.delegate?.onSignInError(Localizable.errorFbAccessTokenNil())
                 return
             }
-            // TODO: save token + expiration date to user defaults
-            debugPrint(accessToken.tokenString)
-            debugPrint("EXPIRATION_DATE_ACCESS: \(String(describing: accessToken.dataAccessExpirationDate))")
-            debugPrint("EXPIRATION_DATE_ACCESS: \(String(describing: accessToken.expirationDate))")
+            // TODO: save tokens for re-authentication
+            debugPrint(accessToken)
             self?.delegate?.onSignInSuccess()
         }
     }
