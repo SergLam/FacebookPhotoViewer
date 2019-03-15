@@ -41,11 +41,22 @@ extension SignInVC: SignInVMDelegate {
     }
     
     func onSignInSuccess() {
-        FBApiManager.shared.getUserProfile(completion: { (user, error) in
+        FBApiManager.shared.getUserProfile(completion: { [weak self] (user, error) in
             guard let error = error else {
                 debugPrint("USER: \(user?.toJSON())")
+                FBApiManager.shared.getUserAlbums(completion: {  [weak self] (result, error) in
+                    debugPrint("ALBUM: \(result)")
+                    if let vc = self, let error = error {
+                        AlertPresenter.showErrorAlert(on: vc, error: error.localizedDescription)
+                    }
+                    
+                })
+                return
             }
-            AlertPresenter.showErrorAlert(on: self, error: error.localizedDescription)
+            if let vc = self {
+                AlertPresenter.showErrorAlert(on: vc, error: error.localizedDescription)
+            }
+           
             
             
         })

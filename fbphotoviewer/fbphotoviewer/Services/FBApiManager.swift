@@ -19,9 +19,11 @@ class FBApiManager {
     struct MyProfileRequest {
         let path = "me"
         let parameters: [String : Any] = ["fields": "id, first_name, last_name, name"]
-        let token = AccessToken.current?.authenticationToken
-        let method: GraphRequestHTTPMethod = .GET
-        let apiVersion = GraphAPIVersion.defaultVersion.stringValue
+    }
+    
+    struct UserAlbumsRequest {
+        let path = "me/albums"
+        let parameters: [String : Any] = ["fields": "id, photo_count, name, photos{picture,id}, cover_photo"]
     }
     
     func getUserProfile(completion: @escaping (User?, Error?) -> ()) {
@@ -30,6 +32,17 @@ class FBApiManager {
             if let result = result {
                 let user = User(json: JSON(result))
                 completion(user, error)
+            } else {
+                completion(nil, error)
+            }
+        })
+    }
+    
+    func getUserAlbums(completion: @escaping (String?, Error?) -> ()) {
+        let request = UserAlbumsRequest()
+        FBSDKGraphRequest(graphPath: request.path, parameters: request.parameters)?.start(completionHandler: { (connection, result, error) in
+            if let result = result {
+                completion(String(describing: result), error)
             } else {
                 completion(nil, error)
             }

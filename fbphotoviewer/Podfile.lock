@@ -1,4 +1,5 @@
 PODS:
+  - AlisterSwift (0.1.0)
   - Bolts (1.9.0):
     - Bolts/AppLinks (= 1.9.0)
     - Bolts/Tasks (= 1.9.0)
@@ -25,6 +26,7 @@ PODS:
   - SwiftyJSON (4.2.0)
 
 DEPENDENCIES:
+  - AlisterSwift (from `https://github.com/anodamobi/AlisterSwift.git`, commit `ff395f6`, branch `develop`)
   - Closures
   - FacebookCore
   - FacebookLogin
@@ -46,7 +48,19 @@ SPEC REPOS:
     - SnapKit
     - SwiftyJSON
 
+EXTERNAL SOURCES:
+  AlisterSwift:
+    :branch: develop
+    :commit: ff395f6
+    :git: https://github.com/anodamobi/AlisterSwift.git
+
+CHECKOUT OPTIONS:
+  AlisterSwift:
+    :commit: ff395f64feccfd30e06e9616899a9557e7dd6a30
+    :git: https://github.com/anodamobi/AlisterSwift.git
+
 SPEC CHECKSUMS:
+  AlisterSwift: 1d599f2c05943f9b576b9c741c9aae311cd41fe7
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   Closures: ad5ebce1242de44d64505bfd3b7c25b12cad3d2e
   FacebookCore: 74288d0add931d361b1596beae787ab72c438249
@@ -58,6 +72,6 @@ SPEC CHECKSUMS:
   SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
 
-PODFILE CHECKSUM: 73dc6c8913035da70a2aa2ba87f95ba309a3de28
+PODFILE CHECKSUM: 4aab623ed04b22e21789f58a57b1f204e5ba2c4f
 
 COCOAPODS: 1.5.3
