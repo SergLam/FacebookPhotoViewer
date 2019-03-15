@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		1474621BB214745B7BFE900A /* Pods_fbphotoviewerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C50FB325B32EC0C2EF04097 /* Pods_fbphotoviewerTests.framework */; };
 		744DE5CA18E974B7DECBD76F /* Pods_fbphotoviewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFB849693F3D9EBC34B2C212 /* Pods_fbphotoviewer.framework */; };
+		7C24DE80223B6F7100A88EED /* AlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C24DE7F223B6F7100A88EED /* AlertPresenter.swift */; };
+		7C24DE83223B722300A88EED /* AlbumsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C24DE82223B722300A88EED /* AlbumsVC.swift */; };
+		7C24DE85223B726E00A88EED /* AlbumsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C24DE84223B726E00A88EED /* AlbumsView.swift */; };
+		7C24DE87223B727B00A88EED /* AlbumsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C24DE86223B727B00A88EED /* AlbumsViewModel.swift */; };
+		7C24DE8A223B72E800A88EED /* AlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C24DE89223B72E800A88EED /* AlbumCell.swift */; };
 		7C816F4B22386071009C8EB8 /* SignInVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C816F4A22386071009C8EB8 /* SignInVM.swift */; };
 		7C816F4D223861A7009C8EB8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7C816F4C223861A7009C8EB8 /* Localizable.strings */; };
 		7C816F512238660B009C8EB8 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C816F502238660B009C8EB8 /* R.generated.swift */; };
@@ -18,6 +23,11 @@
 		7C97559A2236FFED005F30B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C9755982236FFED005F30B4 /* LaunchScreen.storyboard */; };
 		7C9755A52236FFEE005F30B4 /* fbphotoviewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9755A42236FFEE005F30B4 /* fbphotoviewerTests.swift */; };
 		7C9755B02236FFEE005F30B4 /* fbphotoviewerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9755AF2236FFEE005F30B4 /* fbphotoviewerUITests.swift */; };
+		7CE8135D2239A3CF004A223E /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE8135C2239A3CF004A223E /* SignInView.swift */; };
+		7CE813602239A59F004A223E /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE8135F2239A59F004A223E /* UIColor+Ext.swift */; };
+		7CE813632239A9BE004A223E /* FBApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE813622239A9BE004A223E /* FBApiManager.swift */; };
+		7CE813662239BB02004A223E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE813652239BB02004A223E /* User.swift */; };
+		7CE813682239BB2E004A223E /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE813672239BB2E004A223E /* Album.swift */; };
 		EF6074F13A3A65D104BC199E /* Pods_fbphotoviewerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C57ED63459E44CC2C4C3AA6C /* Pods_fbphotoviewerUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +52,11 @@
 		0D265B1626C5D88F6BE76FE4 /* Pods-fbphotoviewerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fbphotoviewerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-fbphotoviewerUITests/Pods-fbphotoviewerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		5C50FB325B32EC0C2EF04097 /* Pods_fbphotoviewerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fbphotoviewerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		697AC52BC4F84205E27E3E3B /* Pods-fbphotoviewer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fbphotoviewer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fbphotoviewer/Pods-fbphotoviewer.debug.xcconfig"; sourceTree = "<group>"; };
+		7C24DE7F223B6F7100A88EED /* AlertPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresenter.swift; sourceTree = "<group>"; };
+		7C24DE82223B722300A88EED /* AlbumsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsVC.swift; sourceTree = "<group>"; };
+		7C24DE84223B726E00A88EED /* AlbumsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsView.swift; sourceTree = "<group>"; };
+		7C24DE86223B727B00A88EED /* AlbumsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsViewModel.swift; sourceTree = "<group>"; };
+		7C24DE89223B72E800A88EED /* AlbumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCell.swift; sourceTree = "<group>"; };
 		7C816F4A22386071009C8EB8 /* SignInVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVM.swift; sourceTree = "<group>"; };
 		7C816F4C223861A7009C8EB8 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		7C816F502238660B009C8EB8 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
@@ -57,6 +72,12 @@
 		7C9755AB2236FFEE005F30B4 /* fbphotoviewerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fbphotoviewerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C9755AF2236FFEE005F30B4 /* fbphotoviewerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fbphotoviewerUITests.swift; sourceTree = "<group>"; };
 		7C9755B12236FFEE005F30B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7CE8135C2239A3CF004A223E /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		7CE8135F2239A59F004A223E /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
+		7CE813622239A9BE004A223E /* FBApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBApiManager.swift; sourceTree = "<group>"; };
+		7CE813652239BB02004A223E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		7CE813672239BB2E004A223E /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		7CE81369223A2ED7004A223E /* fbphotoviewer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = fbphotoviewer.entitlements; sourceTree = "<group>"; };
 		AC1AF05769774B1EF7836EA6 /* Pods-fbphotoviewerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fbphotoviewerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fbphotoviewerUITests/Pods-fbphotoviewerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C57ED63459E44CC2C4C3AA6C /* Pods_fbphotoviewerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fbphotoviewerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C840CA5369BAC26DB9205926 /* Pods-fbphotoviewerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fbphotoviewerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-fbphotoviewerTests/Pods-fbphotoviewerTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -103,6 +124,25 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7C24DE81223B721000A88EED /* AlbumsList */ = {
+			isa = PBXGroup;
+			children = (
+				7C24DE88223B72D000A88EED /* Cells */,
+				7C24DE82223B722300A88EED /* AlbumsVC.swift */,
+				7C24DE84223B726E00A88EED /* AlbumsView.swift */,
+				7C24DE86223B727B00A88EED /* AlbumsViewModel.swift */,
+			);
+			path = AlbumsList;
+			sourceTree = "<group>";
+		};
+		7C24DE88223B72D000A88EED /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				7C24DE89223B72E800A88EED /* AlbumCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		7C2C671E2237971000D0AF8A /* Application */ = {
 			isa = PBXGroup;
 			children = (
@@ -117,8 +157,8 @@
 		7C816F4922385F84009C8EB8 /* UserStory */ = {
 			isa = PBXGroup;
 			children = (
-				7C9755912236FFEC005F30B4 /* SignInVC.swift */,
-				7C816F4A22386071009C8EB8 /* SignInVM.swift */,
+				7C24DE81223B721000A88EED /* AlbumsList */,
+				7CE8135B2239A3BD004A223E /* SignIn */,
 			);
 			path = UserStory;
 			sourceTree = "<group>";
@@ -157,7 +197,11 @@
 		7C97558E2236FFEC005F30B4 /* fbphotoviewer */ = {
 			isa = PBXGroup;
 			children = (
+				7CE81369223A2ED7004A223E /* fbphotoviewer.entitlements */,
+				7CE813642239BAC7004A223E /* DataModels */,
+				7CE813612239A9A8004A223E /* Services */,
 				7C816F4922385F84009C8EB8 /* UserStory */,
+				7CE8135E2239A58E004A223E /* Extensions */,
 				7C816F4E223861DF009C8EB8 /* Resources */,
 				7C2C671E2237971000D0AF8A /* Application */,
 			);
@@ -180,6 +224,42 @@
 				7C9755B12236FFEE005F30B4 /* Info.plist */,
 			);
 			path = fbphotoviewerUITests;
+			sourceTree = "<group>";
+		};
+		7CE8135B2239A3BD004A223E /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				7C9755912236FFEC005F30B4 /* SignInVC.swift */,
+				7C816F4A22386071009C8EB8 /* SignInVM.swift */,
+				7CE8135C2239A3CF004A223E /* SignInView.swift */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		7CE8135E2239A58E004A223E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7CE8135F2239A59F004A223E /* UIColor+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7CE813612239A9A8004A223E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				7CE813622239A9BE004A223E /* FBApiManager.swift */,
+				7C24DE7F223B6F7100A88EED /* AlertPresenter.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		7CE813642239BAC7004A223E /* DataModels */ = {
+			isa = PBXGroup;
+			children = (
+				7CE813652239BB02004A223E /* User.swift */,
+				7CE813672239BB2E004A223E /* Album.swift */,
+			);
+			path = DataModels;
 			sourceTree = "<group>";
 		};
 		D5374537158A3518669DBC77 /* Pods */ = {
@@ -268,6 +348,11 @@
 				TargetAttributes = {
 					7C97558B2236FFEC005F30B4 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					7C97559F2236FFEE005F30B4 = {
 						CreatedOnToolsVersion = 10.1;
@@ -401,22 +486,28 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-fbphotoviewer/Pods-fbphotoviewer-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/Closures/Closures.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
 				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Closures.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -454,8 +545,18 @@
 			files = (
 				7C9755922236FFEC005F30B4 /* SignInVC.swift in Sources */,
 				7C9755902236FFEC005F30B4 /* AppDelegate.swift in Sources */,
+				7C24DE85223B726E00A88EED /* AlbumsView.swift in Sources */,
+				7C24DE8A223B72E800A88EED /* AlbumCell.swift in Sources */,
 				7C816F4B22386071009C8EB8 /* SignInVM.swift in Sources */,
+				7CE813632239A9BE004A223E /* FBApiManager.swift in Sources */,
+				7C24DE87223B727B00A88EED /* AlbumsViewModel.swift in Sources */,
+				7CE813602239A59F004A223E /* UIColor+Ext.swift in Sources */,
+				7C24DE83223B722300A88EED /* AlbumsVC.swift in Sources */,
+				7C24DE80223B6F7100A88EED /* AlertPresenter.swift in Sources */,
+				7CE813662239BB02004A223E /* User.swift in Sources */,
 				7C816F512238660B009C8EB8 /* R.generated.swift in Sources */,
+				7CE8135D2239A3CF004A223E /* SignInView.swift in Sources */,
+				7CE813682239BB2E004A223E /* Album.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -624,6 +725,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = fbphotoviewer/fbphotoviewer.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MDWBDEPC5G;
 				INFOPLIST_FILE = "$(SRCROOT)/fbphotoviewer/Application/Info.plist";
@@ -638,6 +741,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = serglam.fbphotoviewer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -649,6 +753,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = fbphotoviewer/fbphotoviewer.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MDWBDEPC5G;
 				INFOPLIST_FILE = "$(SRCROOT)/fbphotoviewer/Application/Info.plist";
@@ -663,6 +769,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = serglam.fbphotoviewer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
