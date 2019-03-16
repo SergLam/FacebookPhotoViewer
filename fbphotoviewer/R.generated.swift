@@ -16,14 +16,21 @@ struct R: Rswift.Validatable {
     try intern.validate()
   }
   
-  /// This `R.image` struct is generated, and contains static references to 1 images.
+  /// This `R.image` struct is generated, and contains static references to 2 images.
   struct image {
     /// Image `LaunchImage`.
     static let launchImage = Rswift.ImageResource(bundle: R.hostingBundle, name: "LaunchImage")
+    /// Image `placeholder`.
+    static let placeholder = Rswift.ImageResource(bundle: R.hostingBundle, name: "placeholder")
     
     /// `UIImage(named: "LaunchImage", bundle: ..., traitCollection: ...)`
     static func launchImage(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.launchImage, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "placeholder", bundle: ..., traitCollection: ...)`
+    static func placeholder(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.placeholder, compatibleWith: traitCollection)
     }
     
     fileprivate init() {}
@@ -44,8 +51,10 @@ struct R: Rswift.Validatable {
   
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 10 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 12 localization keys.
     struct localizable {
+      /// Value: Back
+      static let back = Rswift.StringResource(key: "back", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Cancel
       static let cancel = Rswift.StringResource(key: "cancel", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Continue with Facebook
@@ -66,6 +75,13 @@ struct R: Rswift.Validatable {
       static let success = Rswift.StringResource(key: "success", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: User does not have albums yet
       static let albumsListEmptyStateTitle = Rswift.StringResource(key: "albums-list.empty-state-title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: View photo
+      static let viewPhotoTitle = Rswift.StringResource(key: "view-photo.title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      
+      /// Value: Back
+      static func back(_: Void = ()) -> String {
+        return NSLocalizedString("back", bundle: R.hostingBundle, comment: "")
+      }
       
       /// Value: Cancel
       static func cancel(_: Void = ()) -> String {
@@ -115,6 +131,11 @@ struct R: Rswift.Validatable {
       /// Value: User does not have albums yet
       static func albumsListEmptyStateTitle(_: Void = ()) -> String {
         return NSLocalizedString("albums-list.empty-state-title", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// Value: View photo
+      static func viewPhotoTitle(_: Void = ()) -> String {
+        return NSLocalizedString("view-photo.title", bundle: R.hostingBundle, comment: "")
       }
       
       fileprivate init() {}

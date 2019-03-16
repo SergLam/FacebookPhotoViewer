@@ -8,6 +8,12 @@
 
 import Foundation
 
-class AlbumViewModel {
-    // TODO: add methods for paging photo loading
+class AlbumPhotosViewModel {
+    
+    var album: Album
+    
+    init(album: Album) {
+        self.album = album
+    }
+    
 }

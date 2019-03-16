@@ -34,6 +34,7 @@ class AlbumsListCell: UITableViewCell, ReusableViewInterface {
     
     private func setupLayout() {
         contentView.addSubview(albumImage)
+        albumImage.image = R.image.placeholder()
         albumImage.snp.makeConstraints { (make) in
             make.top.bottom.leading.equalToSuperview()
                 .inset(UIEdgeInsets(top: 15, left: 15, bottom: 15, right: 0))
@@ -51,7 +52,7 @@ class AlbumsListCell: UITableViewCell, ReusableViewInterface {
     func update(_ model: ViewModelInterface) {
         guard let model = model as? AlbumsListCellViewModel else { return }
         if let url = URL(string: model.album.coverPhotoUrl) {
-            albumImage.kf.setImage(with: url)
+            albumImage.kf.setImage(with: url, placeholder: R.image.placeholder())
         }
         albumTitle.text = model.album.name
     }

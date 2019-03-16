@@ -21,9 +21,10 @@ class FBApiManager {
     }
     
     struct UserAlbumsRequest {
+        // TODO: Add pagination
         let path = "me/albums"
-        // photos{picture,id}, cover_photo, picture
-        let parameters: [String : Any] = ["fields": "id, photo_count, name, photos{picture,id}, cover_photo, picture"]
+        let parameters: [String : Any] = ["fields":
+            "id, photo_count, name, photos{picture, id, images}, cover_photo, picture"]
     }
     
     func getUserProfile(completion: @escaping (User?, Error?) -> ()) {

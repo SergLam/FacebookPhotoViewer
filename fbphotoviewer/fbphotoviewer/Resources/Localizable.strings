@@ -11,6 +11,7 @@
 "cancel" = "Cancel";
 "error" = "Error";
 "success" = "Success";
+"back" = "Back";
 
 // Facebook errors
 "error.fb-empty-result" = "Facebook Autorization - unable to get result";
@@ -23,3 +24,6 @@
 // Albums List
 "albums-list.screenTitle" = "My Albums List";
 "albums-list.empty-state-title" = "User does not have albums yet";
+
+// View photo
+"view-photo.title" = "View photo";

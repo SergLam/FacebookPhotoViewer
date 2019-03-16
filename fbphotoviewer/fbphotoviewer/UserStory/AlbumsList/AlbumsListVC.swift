@@ -32,6 +32,7 @@ class AlbumsListVC: UIViewController {
     
     override func viewDidLoad() {
         navigationItem.title = Localizable.albumsListScreenTitle()
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: Localizable.back(), style: .plain, target: nil, action: nil)
         super.viewDidLoad()
         configureAlister()
         contentView.tableView.emptyDataSetSource = self
@@ -44,6 +45,11 @@ class AlbumsListVC: UIViewController {
     private func configureAlister() {
         controller.configureCells {
             $0.register(cell: AlbumsListCell.self, for: AlbumsListCellViewModel.self)
+        }
+        controller.selection = { [unowned self] (model, _) in
+            guard let model = model as? AlbumsListCellViewModel else { return }
+            let vc = AlbumPhotosVC(album: model.album)
+            self.navigationController?.pushViewController(vc, animated: true)
         }
     }
     

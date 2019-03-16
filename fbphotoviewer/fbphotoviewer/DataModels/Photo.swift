@@ -17,11 +17,13 @@ struct Photo {
     }
     
     var id: String = ""
-    var picture: String = ""
+    var thumbnailUrl: String = ""
+    var photoUrl: String = ""
     
     init(json: JSON) {
         id = json["id"].stringValue
-        picture = json["picture"].stringValue
+        thumbnailUrl = json["picture"].stringValue
+        photoUrl = json["images"].arrayValue[0]["source"].stringValue
     }
     
     init(data: [String : Any]) {
@@ -32,7 +34,8 @@ struct Photo {
     func toJSON() -> [String: Any] {
         var result: [String: Any] = [:]
         result["id"] = id
-        result["picture"] = picture
+        result["picture"] = thumbnailUrl
+        result["images"] = ["source": photoUrl]
         return result
     }
     

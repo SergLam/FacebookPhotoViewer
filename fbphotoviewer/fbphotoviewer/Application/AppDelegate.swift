@@ -33,7 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         
         let rootVC = SignInVC()
-        let navVC = UINavigationController.init(rootViewController: rootVC)
+        let navVC = UINavigationController(rootViewController: rootVC)
         window?.rootViewController = navVC
         
         return true
