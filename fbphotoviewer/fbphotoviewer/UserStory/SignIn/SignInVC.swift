@@ -29,7 +29,7 @@ class SignInVC: UIViewController {
 extension SignInVC: SignInViewDelegate {
     
     func didTapFBLoginButton() {
-        viewModel.signUpViaFB(self)
+        viewModel.signInViaFB(self)
     }
     
 }
@@ -41,14 +41,8 @@ extension SignInVC: SignInVMDelegate {
     }
     
     func onSignInSuccess() {
-        FBApiManager.shared.getUserProfile(completion: { (user, error) in
-            guard let error = error else {
-                debugPrint("USER: \(user?.toJSON())")
-            }
-            AlertPresenter.showErrorAlert(on: self, error: error.localizedDescription)
-            
-            
-        })
+        let vc = AlbumsListVC()
+        navigationController?.pushViewController(vc, animated: true)
     }
     
 }

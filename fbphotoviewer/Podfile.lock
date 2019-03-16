@@ -1,4 +1,5 @@
 PODS:
+  - AlisterSwift (0.1.0)
   - Bolts (1.9.0):
     - Bolts/AppLinks (= 1.9.0)
     - Bolts/Tasks (= 1.9.0)
@@ -6,6 +7,7 @@ PODS:
     - Bolts/Tasks
   - Bolts/Tasks (1.9.0)
   - Closures (0.5)
+  - DZNEmptyDataSet (1.8.1)
   - FacebookCore (0.5.0):
     - Bolts (~> 1.9)
     - FBSDKCoreKit (~> 4.37)
@@ -18,6 +20,8 @@ PODS:
     - Bolts (~> 1.9)
   - FBSDKLoginKit (4.40.0):
     - FBSDKCoreKit
+  - Kingfisher (5.1.0)
+  - PKHUD (5.2.1)
   - R.swift (5.0.2):
     - R.swift.Library (~> 5.0.0)
   - R.swift.Library (5.0.0)
@@ -25,10 +29,14 @@ PODS:
   - SwiftyJSON (4.2.0)
 
 DEPENDENCIES:
+  - AlisterSwift (from `https://github.com/anodamobi/AlisterSwift.git`, commit `ff395f6`, branch `develop`)
   - Closures
+  - DZNEmptyDataSet
   - FacebookCore
   - FacebookLogin
   - FBSDKLoginKit
+  - Kingfisher
+  - PKHUD (~> 5.0)
   - R.swift
   - SnapKit (~> 4.0.0)
   - SwiftyJSON
@@ -37,27 +45,45 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Bolts
     - Closures
+    - DZNEmptyDataSet
     - FacebookCore
     - FacebookLogin
     - FBSDKCoreKit
     - FBSDKLoginKit
+    - Kingfisher
+    - PKHUD
     - R.swift
     - R.swift.Library
     - SnapKit
     - SwiftyJSON
 
+EXTERNAL SOURCES:
+  AlisterSwift:
+    :branch: develop
+    :commit: ff395f6
+    :git: https://github.com/anodamobi/AlisterSwift.git
+
+CHECKOUT OPTIONS:
+  AlisterSwift:
+    :commit: ff395f64feccfd30e06e9616899a9557e7dd6a30
+    :git: https://github.com/anodamobi/AlisterSwift.git
+
 SPEC CHECKSUMS:
+  AlisterSwift: 1d599f2c05943f9b576b9c741c9aae311cd41fe7
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   Closures: ad5ebce1242de44d64505bfd3b7c25b12cad3d2e
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   FacebookCore: 74288d0add931d361b1596beae787ab72c438249
   FacebookLogin: ebcf34714a1cb9f0759d9f071cfb01ed500996cf
   FBSDKCoreKit: ae214474b25033399c131dc81d258e412582a2ba
   FBSDKLoginKit: 7a1e411d46acc8834588eca437daf34de42e1d52
+  Kingfisher: fcec238063d17404fca89bf0a850583211c4cbf6
+  PKHUD: 4e6162c4c39ac367c6934e9855c6b4762ee16256
   R.swift: 81455d81467763cbd3f4d79d938d05f4ac4c0228
   R.swift.Library: 0bf390e729bc10bb2c9e4fb78bd043164a7be4ff
   SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
 
-PODFILE CHECKSUM: 73dc6c8913035da70a2aa2ba87f95ba309a3de28
+PODFILE CHECKSUM: fa164608d076b14d0f2dba707bf7c5ac1d09491f
 
 COCOAPODS: 1.5.3

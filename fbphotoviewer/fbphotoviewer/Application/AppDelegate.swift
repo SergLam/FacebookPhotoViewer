@@ -31,16 +31,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.backgroundColor = .white
         window?.makeKeyAndVisible()
-        let rootVC = SignInVC()
-        window?.rootViewController = rootVC
         
-        // TODO: Add routing here
-        if FBSDKAccessToken.current() != nil {
-            // logged in using facebook
-        }
-        else {
-            // logged in using manual email/password method
-        }
+        let rootVC = SignInVC()
+        let navVC = UINavigationController(rootViewController: rootVC)
+        window?.rootViewController = navVC
         
         return true
     }

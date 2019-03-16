@@ -11,7 +11,6 @@ import FacebookCore
 import FBSDKCoreKit
 import SwiftyJSON
 
-
 class FBApiManager {
     
     static let shared = FBApiManager()
@@ -19,9 +18,13 @@ class FBApiManager {
     struct MyProfileRequest {
         let path = "me"
         let parameters: [String : Any] = ["fields": "id, first_name, last_name, name"]
-        let token = AccessToken.current?.authenticationToken
-        let method: GraphRequestHTTPMethod = .GET
-        let apiVersion = GraphAPIVersion.defaultVersion.stringValue
+    }
+    
+    struct UserAlbumsRequest {
+        // TODO: Add pagination
+        let path = "me/albums"
+        let parameters: [String : Any] = ["fields":
+            "id, photo_count, name, photos{picture, id, images}, cover_photo, picture"]
     }
     
     func getUserProfile(completion: @escaping (User?, Error?) -> ()) {
@@ -30,6 +33,23 @@ class FBApiManager {
             if let result = result {
                 let user = User(json: JSON(result))
                 completion(user, error)
+            } else {
+                completion(nil, error)
+            }
+        })
+    }
+    
+    func getUserAlbums(completion: @escaping ([Album]?, Error?) -> ()) {
+        let request = UserAlbumsRequest()
+        FBSDKGraphRequest(graphPath: request.path, parameters: request.parameters)?.start(completionHandler: { (connection, result, error) in
+            if let result = result {
+                let json = JSON(result)
+                let albums_data = json["data"].arrayValue
+                var albums: [Album] = []
+                for data in albums_data {
+                    albums.append(Album(json: data))
+                }
+                completion(albums, error)
             } else {
                 completion(nil, error)
             }

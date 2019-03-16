@@ -47,7 +47,6 @@ struct User {
         result["last_name"] = lastName
         result["name"] = name
         result["id"] = id
-        
         return result
     }
     
