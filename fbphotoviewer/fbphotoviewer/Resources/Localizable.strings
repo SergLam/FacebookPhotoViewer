@@ -19,3 +19,7 @@
 
 // Sign In
 "sign-in.fb-login.button.title" = "Continue with Facebook";
+
+// Albums List
+"albums-list.screenTitle" = "My Albums List";
+"albums-list.empty-state-title" = "User does not have albums yet";

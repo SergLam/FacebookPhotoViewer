@@ -20,14 +20,14 @@ struct Album {
     var photoCount: Int = 0
     var name: String = ""
     var photos: [Photo] = []
-    var coverPhoto: String = ""
+    var coverPhotoUrl: String = ""
     
     init(json: JSON) {
         id = json["id"].stringValue
         photoCount = json["photo_count"].intValue
         name = json["name"].stringValue
         photos = json["photos"]["data"].arrayValue.map { return Photo(json: $0) }
-        coverPhoto = json["picture"]["data"]["url"].stringValue
+        coverPhotoUrl = json["picture"]["data"]["url"].stringValue
     }
     
     init(data: [String : Any]) {

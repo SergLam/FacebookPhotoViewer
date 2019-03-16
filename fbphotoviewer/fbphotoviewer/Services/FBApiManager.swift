@@ -38,12 +38,17 @@ class FBApiManager {
         })
     }
     
-    func getUserAlbums(completion: @escaping (JSON?, Error?) -> ()) {
+    func getUserAlbums(completion: @escaping ([Album]?, Error?) -> ()) {
         let request = UserAlbumsRequest()
         FBSDKGraphRequest(graphPath: request.path, parameters: request.parameters)?.start(completionHandler: { (connection, result, error) in
-            debugPrint("TEST: "+result.debugDescription)
             if let result = result {
-                completion(JSON(result), error)
+                let json = JSON(result)
+                let albums_data = json["data"].arrayValue
+                var albums: [Album] = []
+                for data in albums_data {
+                    albums.append(Album(json: data))
+                }
+                completion(albums, error)
             } else {
                 completion(nil, error)
             }
