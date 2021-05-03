@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol AlbumsListViewModelDelegate: class {
+protocol AlbumsListViewModelDelegate: AnyObject {
     func didFailToLoadData(_ error: String)
     func onLoadAlbumsSuccess()
 }

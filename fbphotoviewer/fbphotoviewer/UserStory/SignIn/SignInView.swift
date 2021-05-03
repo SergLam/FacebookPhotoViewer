@@ -8,9 +8,8 @@
 
 import UIKit
 import SnapKit
-import Closures
 
-protocol SignInViewDelegate: class {
+protocol SignInViewDelegate: AnyObject {
     func didTapFBLoginButton()
 }
 
@@ -47,7 +46,7 @@ class SignInView: UIView {
             make.height.equalTo(buttonHeight)
         }
         
-        fbLoginButton.onTap { [unowned self] in
+        fbLoginButton.addAction = { [unowned self] in
             self.delegate?.didTapFBLoginButton()
         }
     }

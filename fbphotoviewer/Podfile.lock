@@ -1,55 +1,50 @@
 PODS:
   - AlisterSwift (0.1.0)
-  - Bolts (1.9.0):
-    - Bolts/AppLinks (= 1.9.0)
-    - Bolts/Tasks (= 1.9.0)
-  - Bolts/AppLinks (1.9.0):
-    - Bolts/Tasks
-  - Bolts/Tasks (1.9.0)
-  - Closures (0.5)
+  - Closures (0.7)
   - DZNEmptyDataSet (1.8.1)
-  - FacebookCore (0.5.0):
-    - Bolts (~> 1.9)
-    - FBSDKCoreKit (~> 4.37)
-  - FacebookLogin (0.5.0):
-    - Bolts (~> 1.9)
-    - FacebookCore (~> 0.5)
-    - FBSDKCoreKit (~> 4.37)
-    - FBSDKLoginKit (~> 4.37)
-  - FBSDKCoreKit (4.40.0):
-    - Bolts (~> 1.9)
-  - FBSDKLoginKit (4.40.0):
-    - FBSDKCoreKit
-  - Kingfisher (5.1.0)
-  - PKHUD (5.2.1)
-  - R.swift (5.0.2):
-    - R.swift.Library (~> 5.0.0)
-  - R.swift.Library (5.0.0)
-  - SnapKit (4.0.1)
-  - SwiftyJSON (4.2.0)
+  - FBSDKCoreKit (9.2.0):
+    - FBSDKCoreKit/Basics (= 9.2.0)
+    - FBSDKCoreKit/Core (= 9.2.0)
+  - FBSDKCoreKit/Basics (9.2.0)
+  - FBSDKCoreKit/Core (9.2.0):
+    - FBSDKCoreKit/Basics
+  - FBSDKLoginKit (9.2.0):
+    - FBSDKLoginKit/Login (= 9.2.0)
+  - FBSDKLoginKit/Login (9.2.0):
+    - FBSDKCoreKit (~> 9.2.0)
+  - FBSDKShareKit (9.2.0):
+    - FBSDKShareKit/Share (= 9.2.0)
+  - FBSDKShareKit/Share (9.2.0):
+    - FBSDKCoreKit (~> 9.2.0)
+  - Kingfisher (6.3.0)
+  - PKHUD (5.3.0)
+  - R.swift (5.4.0):
+    - R.swift.Library (~> 5.3.0)
+  - R.swift.Library (5.3.0)
+  - SnapKit (5.0.1)
+  - SwiftyJSON (5.0.1)
 
 DEPENDENCIES:
   - AlisterSwift (from `https://github.com/anodamobi/AlisterSwift.git`, commit `ff395f6`, branch `develop`)
-  - Closures
-  - DZNEmptyDataSet
-  - FacebookCore
-  - FacebookLogin
-  - FBSDKLoginKit
-  - Kingfisher
-  - PKHUD (~> 5.0)
-  - R.swift
-  - SnapKit (~> 4.0.0)
-  - SwiftyJSON
+  - Closures (~> 0.7)
+  - DZNEmptyDataSet (~> 1.8.1)
+  - FBSDKCoreKit (~> 9.2.0)
+  - FBSDKLoginKit (~> 9.2.0)
+  - FBSDKShareKit (~> 9.2.0)
+  - Kingfisher (~> 6.3.0)
+  - PKHUD (~> 5.3.0)
+  - R.swift (~> 5.4.0)
+  - SnapKit (~> 5.0.0)
+  - SwiftyJSON (~> 5.0.1)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
-    - Bolts
-    - Closures
+  https://github.com/CocoaPods/Specs.git:
     - DZNEmptyDataSet
-    - FacebookCore
-    - FacebookLogin
+  trunk:
+    - Closures
     - FBSDKCoreKit
     - FBSDKLoginKit
+    - FBSDKShareKit
     - Kingfisher
     - PKHUD
     - R.swift
@@ -65,25 +60,23 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   AlisterSwift:
-    :commit: ff395f64feccfd30e06e9616899a9557e7dd6a30
+    :commit: 2256340f3359f592425a949c1bda641415603942
     :git: https://github.com/anodamobi/AlisterSwift.git
 
 SPEC CHECKSUMS:
-  AlisterSwift: 1d599f2c05943f9b576b9c741c9aae311cd41fe7
-  Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
-  Closures: ad5ebce1242de44d64505bfd3b7c25b12cad3d2e
+  AlisterSwift: ee167d0ae829139977a6b5107e713cbf17ccc661
+  Closures: a83b9892a5b1c4125a9dfcd53e2754db5d7f6d22
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
-  FacebookCore: 74288d0add931d361b1596beae787ab72c438249
-  FacebookLogin: ebcf34714a1cb9f0759d9f071cfb01ed500996cf
-  FBSDKCoreKit: ae214474b25033399c131dc81d258e412582a2ba
-  FBSDKLoginKit: 7a1e411d46acc8834588eca437daf34de42e1d52
-  Kingfisher: fcec238063d17404fca89bf0a850583211c4cbf6
-  PKHUD: 4e6162c4c39ac367c6934e9855c6b4762ee16256
-  R.swift: 81455d81467763cbd3f4d79d938d05f4ac4c0228
-  R.swift.Library: 0bf390e729bc10bb2c9e4fb78bd043164a7be4ff
-  SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
-  SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
+  FBSDKCoreKit: dace5abafc2fd9272733e6d027bcf18102712117
+  FBSDKLoginKit: 43f377b451d391f5bc9dd774f51a391db1072029
+  FBSDKShareKit: 1210ece9e8f516ef0bb40ac329929a2874aef274
+  Kingfisher: 6c3df386db71d82c0817a429d2c9421a77396529
+  PKHUD: 98f3e4bc904b9c916f1c5bb6d765365b5357291b
+  R.swift: c533450b0f7dc494e0993f5f1a1db925d84c3006
+  R.swift.Library: 0fc583cb55a99e28901299cc451614cad1161962
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
 
-PODFILE CHECKSUM: fa164608d076b14d0f2dba707bf7c5ac1d09491f
+PODFILE CHECKSUM: d253f0d430454782cfe15ab223eeedb924843862
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.10.1

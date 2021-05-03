@@ -5,10 +5,10 @@
 //  Created by Serg Liamthev on 3/15/19.
 //  Copyright © 2019 serglam. All rights reserved.
 //
-import UIKit
-import Closures
 
-class AlertPresenter {
+import UIKit
+
+final class AlertPresenter {
     
     static func showErrorAlert(on viewController: UIViewController, error: String) {
         DispatchQueue.main.async {
@@ -21,12 +21,12 @@ class AlertPresenter {
         }
     }
     
-    static func showSucessAlert(on viewController: UIViewController, message: String,
-                                _ completion: @escaping ()->()?) {
+    static func showSuccessAlert(on viewController: UIViewController, message: String,
+                                 _ completion: VoidClosure?) {
         DispatchQueue.main.async {
             let alert = UIAlertController(title: Localizable.success(), message: message, preferredStyle: .alert)
             let action = UIAlertAction(title: Localizable.ok(), style: .default, handler: { _ in
-                completion()
+                completion?()
             })
             alert.addAction(action)
             viewController.present(alert, animated: true, completion: nil)

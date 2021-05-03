@@ -6,24 +6,29 @@
   Copyright © 2019 serglam. All rights reserved.
 */
 
-// General
+// MARK: - General
 "ok" = "Ok";
 "cancel" = "Cancel";
 "error" = "Error";
 "success" = "Success";
 "back" = "Back";
 
-// Facebook errors
+// MARK: - Facebook errors
 "error.fb-empty-result" = "Facebook Autorization - unable to get result";
 "error.fb-canceled-by-user" = "Facebook Autorization canceled by user";
 "error.fb-access-token-nil" = "Failed to get access token";
 
-// Sign In
+// MARK: - Sign In
 "sign-in.fb-login.button.title" = "Continue with Facebook";
 
-// Albums List
+// MARK: - Albums List
 "albums-list.screenTitle" = "My Albums List";
 "albums-list.empty-state-title" = "User does not have albums yet";
 
-// View photo
+// MARK: - View photo
 "view-photo.title" = "View photo";
+
+// MARK: - Email sending errors
+"email.send.fail" = "Mail failed: the email message was not sent. Please check your e-mail settings.";
+"email.send.success" = "Mail send: email message sent successfully.";
+"email.send.not-configured" = "Your device has not been configured to send emails. Please sign in to your email at the default iOS Mail app.";

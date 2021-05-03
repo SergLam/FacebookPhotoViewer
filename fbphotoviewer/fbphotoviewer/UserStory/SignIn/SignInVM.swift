@@ -10,7 +10,7 @@ import Foundation
 import FBSDKLoginKit
 import FBSDKCoreKit
 
-protocol SignInVMDelegate: class {
+protocol SignInVMDelegate: AnyObject {
     func onSignInError(_ error: String)
     func onSignInSuccess()
 }
@@ -20,9 +20,10 @@ class SignInVM {
     weak var delegate: SignInVMDelegate?
     
     func signInViaFB(_ vc: UIViewController){
-        FBSDKLoginManager().logOut()
-        let loginManager = FBSDKLoginManager()
-        loginManager.logIn(withReadPermissions: ["public_profile", "email", "user_photos"], from: vc){ [weak self](result, error) in
+        
+        LoginManager().logOut()
+        let loginManager = LoginManager()
+        loginManager.logIn(permissions: ["public_profile", "email", "user_photos"], from: vc) { [weak self] result, error in
             if let err = error {
                 self?.delegate?.onSignInError(err.localizedDescription)
                 return
@@ -35,7 +36,7 @@ class SignInVM {
                 self?.delegate?.onSignInError(Localizable.errorFbCanceledByUser())
                 return
             }
-            guard let accessToken = FBSDKAccessToken.current() else {
+            guard let accessToken = AccessToken.current else {
                 self?.delegate?.onSignInError(Localizable.errorFbAccessTokenNil())
                 return
             }
@@ -43,6 +44,7 @@ class SignInVM {
             debugPrint(accessToken)
             self?.delegate?.onSignInSuccess()
         }
+        
     }
     
 }
