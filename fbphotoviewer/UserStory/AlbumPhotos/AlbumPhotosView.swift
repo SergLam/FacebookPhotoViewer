@@ -11,9 +11,10 @@ import UIKit
 
 final class AlbumPhotosView: UIView {
     
-    let collectionView: UICollectionView
-    let layout = UICollectionViewFlowLayout()
+    private(set) var collectionView: UICollectionView
+    private let layout = UICollectionViewFlowLayout()
     
+    // MARK: - Life cycle
     init() {
         collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
         super.init(frame: CGRect.zero)
@@ -25,6 +26,9 @@ final class AlbumPhotosView: UIView {
     }
     
     private func setupLayout() {
+        
+        backgroundColor = UIColor.white
+        
         layout.scrollDirection = .vertical
         
         addSubview(collectionView)

@@ -12,6 +12,7 @@ final class ViewPhotoViewModel {
     
     let photoURL: String
     
+    // MARK: - Life cycle
     init(url: String) {
         self.photoURL = url
     }

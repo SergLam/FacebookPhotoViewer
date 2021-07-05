@@ -11,12 +11,13 @@ import DZNEmptyDataSet
 import PKHUD
 import UIKit
 
-final class AlbumsListVC: UIViewController {
+final class AlbumsListVC: BaseViewController {
     
-    let contentView = AlbumsView()
-    let viewModel = AlbumsListViewModel()
-    let controller: TableController
+    private let contentView = AlbumsView()
+    private let viewModel = AlbumsListViewModel()
+    private let controller: TableController
     
+    // MARK: - Life cycle
     init() {
         controller = TableController(tableView: contentView.tableView)
         super.init(nibName: nil, bundle: nil)
@@ -38,7 +39,7 @@ final class AlbumsListVC: UIViewController {
         contentView.tableView.emptyDataSetSource = self
         viewModel.delegate = self
         
-        HUD.show(.progress)
+        showProgress()
         viewModel.loadUserAlbums()
     }
     
@@ -69,13 +70,17 @@ final class AlbumsListVC: UIViewController {
 extension AlbumsListVC: AlbumsListViewModelDelegate {
     
     func didFailToLoadData(_ error: String) {
-        HUD.hide { [unowned self] _ in
+        executeOnMain { [weak self] in
+            guard let `self` = self else { return }
+            self.hideProgress()
             AlertPresenter.showErrorAlert(on: self, error: error)
         }
     }
     
     func onLoadAlbumsSuccess() {
-        HUD.hide { [unowned self] _ in
+        executeOnMain { [weak self] in
+            guard let `self` = self else { return }
+            self.hideProgress()
             self.displayAlbums()
         }
     }

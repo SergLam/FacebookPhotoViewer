@@ -20,9 +20,10 @@ final class AlbumsListCellViewModel: ViewModelInterface {
 
 final class AlbumsListCell: UITableViewCell, ReusableViewInterface {
     
-    let albumImage = UIImageView()
-    let albumTitle = UILabel()
+    private let albumImage = UIImageView()
+    private let albumTitle = UILabel()
     
+    // MARK: - Life cycle
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupLayout()
@@ -33,6 +34,9 @@ final class AlbumsListCell: UITableViewCell, ReusableViewInterface {
     }
     
     private func setupLayout() {
+        
+        contentView.backgroundColor = UIColor.white
+        
         contentView.addSubview(albumImage)
         albumImage.image = R.image.placeholder()
         albumImage.snp.makeConstraints { make in

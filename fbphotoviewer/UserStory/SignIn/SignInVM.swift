@@ -11,7 +11,9 @@ import FBSDKLoginKit
 import Foundation
 
 protocol SignInVMDelegate: AnyObject {
+    
     func onSignInError(_ error: String)
+    func didUserCancelSignIn()
     func onSignInSuccess()
 }
 
@@ -33,7 +35,7 @@ final class SignInVM {
                 return
             }
             guard !result.isCancelled else {
-                self?.delegate?.onSignInError(Localizable.errorFbCanceledByUser())
+                self?.delegate?.didUserCancelSignIn()
                 return
             }
             guard let accessToken = AccessToken.current else {

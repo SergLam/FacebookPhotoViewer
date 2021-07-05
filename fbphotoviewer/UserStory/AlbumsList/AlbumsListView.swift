@@ -11,8 +11,9 @@ import UIKit
 
 final class AlbumsView: UIView {
     
-    let tableView = UITableView()
+    private(set) var tableView = UITableView()
     
+    // MARK: - Life cycle
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupLayout()
@@ -23,9 +24,10 @@ final class AlbumsView: UIView {
     }
     
     private func setupLayout() {
-        backgroundColor = .white
+        backgroundColor = UIColor.white
         
         addSubview(tableView)
+        tableView.backgroundColor = UIColor.white
         tableView.snp.makeConstraints { make in
             make.edges.equalTo(safeAreaLayoutGuide)
         }

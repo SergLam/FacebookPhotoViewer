@@ -12,6 +12,7 @@ final class AlbumPhotosViewModel {
     
     var album: Album
     
+    // MARK: - Life cycle
     init(album: Album) {
         self.album = album
     }

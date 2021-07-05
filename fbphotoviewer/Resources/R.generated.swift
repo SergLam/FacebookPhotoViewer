@@ -122,7 +122,7 @@ struct R: Rswift.Validatable {
 
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 15 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 16 localization keys.
     struct localizable {
       /// Value: Back
       static let back = Rswift.StringResource(key: "back", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
@@ -146,6 +146,8 @@ struct R: Rswift.Validatable {
       static let albumsListScreenTitle = Rswift.StringResource(key: "albums-list.screenTitle", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Ok
       static let ok = Rswift.StringResource(key: "ok", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Sign In
+      static let signInFbLoginScreenTitle = Rswift.StringResource(key: "sign-in.fb-login.screen-title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Success
       static let success = Rswift.StringResource(key: "success", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: User does not have albums yet
@@ -296,6 +298,19 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("ok", bundle: bundle, comment: "")
+      }
+
+      /// Value: Sign In
+      static func signInFbLoginScreenTitle(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("sign-in.fb-login.screen-title", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "sign-in.fb-login.screen-title"
+        }
+
+        return NSLocalizedString("sign-in.fb-login.screen-title", bundle: bundle, comment: "")
       }
 
       /// Value: Success

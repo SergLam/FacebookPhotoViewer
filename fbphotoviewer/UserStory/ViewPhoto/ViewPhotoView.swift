@@ -12,8 +12,10 @@ import UIKit
 
 final class ViewPhotoView: UIView {
     
-    let photoImageView = UIImageView()
-    let placeholder = R.image.placeholder()
+    private let photoImageView = UIImageView()
+    private let placeholder = R.image.placeholder()
+    
+    // MARK: - Life cycle
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupLayout()
@@ -24,7 +26,7 @@ final class ViewPhotoView: UIView {
     }
     
     private func setupLayout() {
-        backgroundColor = .white
+        backgroundColor = UIColor.white
         
         addSubview(photoImageView)
         photoImageView.contentMode = .scaleAspectFit

@@ -9,12 +9,13 @@
 import UIKit
 import AlisterSwift
 
-final class AlbumPhotosVC: UIViewController {
+final class AlbumPhotosVC: BaseViewController {
     
-    let contentView = AlbumPhotosView()
-    let controller: AlbumPhotosCollectionController
-    let viewModel: AlbumPhotosViewModel
+    private let contentView = AlbumPhotosView()
+    private let controller: AlbumPhotosCollectionController
+    private let viewModel: AlbumPhotosViewModel
     
+    // MARK: - Life cycle
     init(album: Album) {
         viewModel = AlbumPhotosViewModel(album: album)
         controller = AlbumPhotosCollectionController(collectionView: contentView.collectionView)

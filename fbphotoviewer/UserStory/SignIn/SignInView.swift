@@ -6,7 +6,6 @@
 //  Copyright © 2019 serglam. All rights reserved.
 //
 
-import AlisterSwift
 import UIKit
 
 protocol SignInViewDelegate: AnyObject {
@@ -17,8 +16,9 @@ final class SignInView: UIView {
     
     weak var delegate: SignInViewDelegate?
     
-    let fbLoginButton = UIButton()
+    private let fbLoginButton = UIButton()
     
+    // MARK: - Life cycle
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupLayout()
@@ -29,6 +29,9 @@ final class SignInView: UIView {
     }
     
     private func setupLayout() {
+        
+        backgroundColor = UIColor.white
+        
         addSubview(fbLoginButton)
         let buttonHeight: CGFloat = 46
         fbLoginButton.backgroundColor = .facebookLogo

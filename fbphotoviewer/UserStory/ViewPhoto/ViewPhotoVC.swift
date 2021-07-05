@@ -8,11 +8,12 @@
 
 import UIKit
 
-final class ViewPhotoVC: UIViewController {
+final class ViewPhotoVC: BaseViewController {
     
-    let contentView = ViewPhotoView()
-    let viewModel: ViewPhotoViewModel
+    private let contentView = ViewPhotoView()
+    private let viewModel: ViewPhotoViewModel
     
+    // MARK: - Life cycle
     init(url: String) {
         viewModel = ViewPhotoViewModel(url: url)
         super.init(nibName: nil, bundle: nil)

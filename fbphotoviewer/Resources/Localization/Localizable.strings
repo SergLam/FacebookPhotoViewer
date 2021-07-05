@@ -19,6 +19,7 @@
 "error.fb-access-token-nil" = "Failed to get access token";
 
 // MARK: - Sign In
+"sign-in.fb-login.screen-title" = "Sign In";
 "sign-in.fb-login.button.title" = "Continue with Facebook";
 
 // MARK: - Albums List
