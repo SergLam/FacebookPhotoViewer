@@ -10,9 +10,9 @@ target 'FBPhotoViewer' do
   inhibit_all_warnings!
   
   # Facebook
-  pod 'FBSDKLoginKit', '~> 9.2.0'
-  pod 'FBSDKCoreKit', '~> 9.2.0'
-  pod 'FBSDKShareKit', '~> 9.2.0'
+  pod 'FBSDKLoginKit', '~> 12.3.0'
+  pod 'FBSDKCoreKit', '~> 12.3.0'
+  pod 'FBSDKShareKit', '~> 12.3.0'
   
   # Networking
   pod 'SwiftyJSON', '~> 5.0.1'

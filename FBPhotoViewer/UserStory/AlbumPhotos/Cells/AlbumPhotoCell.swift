@@ -6,9 +6,9 @@
 //  Copyright © 2019 Serg Liamtsev. All rights reserved.
 //
 
-import UIKit
 import AlisterSwift
 import Kingfisher
+import UIKit
 
 final class AlbumPhotoCellViewModel: ViewModelInterface {
     

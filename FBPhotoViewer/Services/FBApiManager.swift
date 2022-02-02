@@ -6,8 +6,8 @@
 //  Copyright © 2019 Serg Liamtsev. All rights reserved.
 //
 
-import Foundation
 import FBSDKCoreKit
+import Foundation
 import SwiftyJSON
 
 final class FBApiManager {
@@ -28,7 +28,8 @@ final class FBApiManager {
     
     func getUserProfile(completion: @escaping (User?, Error?) -> Void) {
         let request = MyProfileRequest()
-        GraphRequest(graphPath: request.path, parameters: request.parameters).start(completionHandler: { _, result, error in
+        let graphRequest = GraphRequest(graphPath: request.path, parameters: request.parameters)
+        graphRequest.start(completion: { _, result, error in
             if let result = result {
                 let user = User(json: JSON(result))
                 completion(user, error)
@@ -40,7 +41,8 @@ final class FBApiManager {
     
     func getUserAlbums(completion: @escaping ([Album]?, Error?) -> Void) {
         let request = UserAlbumsRequest()
-        GraphRequest(graphPath: request.path, parameters: request.parameters).start(completionHandler: { _, result, error in
+        let graphRequest = GraphRequest(graphPath: request.path, parameters: request.parameters)
+        graphRequest.start(completion: { _, result, error in
             if let result = result {
                 let json = JSON(result)
                 let albums_data = json["data"].arrayValue
