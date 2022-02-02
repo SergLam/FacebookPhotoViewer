@@ -33,8 +33,9 @@
 		049CFAEE264041800021C7CA /* UserDefaults+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CFAED264041800021C7CA /* UserDefaults+Ext.swift */; };
 		049CFAF0264041C40021C7CA /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CFAEF264041C40021C7CA /* AppConstants.swift */; };
 		049CFAF2264042200021C7CA /* DateFormatter+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CFAF1264042200021C7CA /* DateFormatter+Ext.swift */; };
-		1474621BB214745B7BFE900A /* Pods_fbphotoviewerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C50FB325B32EC0C2EF04097 /* Pods_fbphotoviewerTests.framework */; };
-		744DE5CA18E974B7DECBD76F /* Pods_fbphotoviewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFB849693F3D9EBC34B2C212 /* Pods_fbphotoviewer.framework */; };
+		04C2942227AAD40400598B5E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04C2942127AAD40400598B5E /* Images.xcassets */; };
+		6E61BE060356137015F3DA31 /* Pods_FBPhotoViewerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67E4BDB5E7C969BCE24EB763 /* Pods_FBPhotoViewerUITests.framework */; };
+		79DDEAACDF549FFEAFD38ED5 /* Pods_FBPhotoViewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2573A4790061800A0F45FE13 /* Pods_FBPhotoViewer.framework */; };
 		7C24DE80223B6F7100A88EED /* AlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C24DE7F223B6F7100A88EED /* AlertPresenter.swift */; };
 		7C24DE83223B722300A88EED /* AlbumsListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C24DE82223B722300A88EED /* AlbumsListVC.swift */; };
 		7C24DE85223B726E00A88EED /* AlbumsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C24DE84223B726E00A88EED /* AlbumsListView.swift */; };
@@ -63,7 +64,7 @@
 		7CE813632239A9BE004A223E /* FBApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE813622239A9BE004A223E /* FBApiManager.swift */; };
 		7CE813662239BB02004A223E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE813652239BB02004A223E /* User.swift */; };
 		7CE813682239BB2E004A223E /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE813672239BB2E004A223E /* Album.swift */; };
-		EF6074F13A3A65D104BC199E /* Pods_fbphotoviewerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C57ED63459E44CC2C4C3AA6C /* Pods_fbphotoviewerUITests.framework */; };
+		8F3D3A865328EF3D24961D03 /* Pods_FBPhotoViewerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01DD186D945442B3E19F551F /* Pods_FBPhotoViewerTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01DD186D945442B3E19F551F /* Pods_FBPhotoViewerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FBPhotoViewerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		049CFA6B264037A90021C7CA /* UIView+AddAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AddAction.swift"; sourceTree = "<group>"; };
 		049CFA6D264037D70021C7CA /* SharedTypeAliases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTypeAliases.swift; sourceTree = "<group>"; };
 		049CFA7626403D2E0021C7CA /* LocaleRefreshable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocaleRefreshable.swift; sourceTree = "<group>"; };
@@ -122,8 +124,15 @@
 		049CFAED264041800021C7CA /* UserDefaults+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Ext.swift"; sourceTree = "<group>"; };
 		049CFAEF264041C40021C7CA /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		049CFAF1264042200021C7CA /* DateFormatter+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Ext.swift"; sourceTree = "<group>"; };
+		04C2942127AAD40400598B5E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0D265B1626C5D88F6BE76FE4 /* Pods-fbphotoviewerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fbphotoviewerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-fbphotoviewerUITests/Pods-fbphotoviewerUITests.release.xcconfig"; sourceTree = "<group>"; };
-		5C50FB325B32EC0C2EF04097 /* Pods_fbphotoviewerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fbphotoviewerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0DC6EE307EDBAB28770F83FB /* Pods-FBPhotoViewerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FBPhotoViewerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FBPhotoViewerUITests/Pods-FBPhotoViewerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		2573A4790061800A0F45FE13 /* Pods_FBPhotoViewer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FBPhotoViewer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		276067B77402346E44C7DB4F /* Pods-FBPhotoViewerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FBPhotoViewerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FBPhotoViewerTests/Pods-FBPhotoViewerTests.release.xcconfig"; sourceTree = "<group>"; };
+		293145D6A5676253C67AA510 /* Pods-FBPhotoViewerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FBPhotoViewerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FBPhotoViewerTests/Pods-FBPhotoViewerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		46E27CD9F7045C10AAA12001 /* Pods-FBPhotoViewer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FBPhotoViewer.release.xcconfig"; path = "Pods/Target Support Files/Pods-FBPhotoViewer/Pods-FBPhotoViewer.release.xcconfig"; sourceTree = "<group>"; };
+		56BD5D5B58A77180295D0FD5 /* Pods-FBPhotoViewerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FBPhotoViewerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FBPhotoViewerUITests/Pods-FBPhotoViewerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		67E4BDB5E7C969BCE24EB763 /* Pods_FBPhotoViewerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FBPhotoViewerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		697AC52BC4F84205E27E3E3B /* Pods-fbphotoviewer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fbphotoviewer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fbphotoviewer/Pods-fbphotoviewer.debug.xcconfig"; sourceTree = "<group>"; };
 		7C24DE7F223B6F7100A88EED /* AlertPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresenter.swift; sourceTree = "<group>"; };
 		7C24DE82223B722300A88EED /* AlbumsListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsListVC.swift; sourceTree = "<group>"; };
@@ -161,9 +170,8 @@
 		7CE813672239BB2E004A223E /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		7CE81369223A2ED7004A223E /* fbphotoviewer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = fbphotoviewer.entitlements; sourceTree = "<group>"; };
 		AC1AF05769774B1EF7836EA6 /* Pods-fbphotoviewerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fbphotoviewerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fbphotoviewerUITests/Pods-fbphotoviewerUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		C57ED63459E44CC2C4C3AA6C /* Pods_fbphotoviewerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fbphotoviewerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA5F64E992155A5303138CC3 /* Pods-FBPhotoViewer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FBPhotoViewer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FBPhotoViewer/Pods-FBPhotoViewer.debug.xcconfig"; sourceTree = "<group>"; };
 		C840CA5369BAC26DB9205926 /* Pods-fbphotoviewerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fbphotoviewerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-fbphotoviewerTests/Pods-fbphotoviewerTests.release.xcconfig"; sourceTree = "<group>"; };
-		CFB849693F3D9EBC34B2C212 /* Pods_fbphotoviewer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fbphotoviewer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9990D1A44A0190F6773A2D4 /* Pods-fbphotoviewer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fbphotoviewer.release.xcconfig"; path = "Pods/Target Support Files/Pods-fbphotoviewer/Pods-fbphotoviewer.release.xcconfig"; sourceTree = "<group>"; };
 		F49B0918A8B5887D9DC6A270 /* Pods-fbphotoviewerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fbphotoviewerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fbphotoviewerTests/Pods-fbphotoviewerTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -173,7 +181,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				744DE5CA18E974B7DECBD76F /* Pods_fbphotoviewer.framework in Frameworks */,
+				79DDEAACDF549FFEAFD38ED5 /* Pods_FBPhotoViewer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,7 +189,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1474621BB214745B7BFE900A /* Pods_fbphotoviewerTests.framework in Frameworks */,
+				8F3D3A865328EF3D24961D03 /* Pods_FBPhotoViewerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,7 +197,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF6074F13A3A65D104BC199E /* Pods_fbphotoviewerUITests.framework in Frameworks */,
+				6E61BE060356137015F3DA31 /* Pods_FBPhotoViewerUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,6 +232,7 @@
 			isa = PBXGroup;
 			children = (
 				7C9755962236FFED005F30B4 /* Assets.xcassets */,
+				04C2942127AAD40400598B5E /* Images.xcassets */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -403,9 +412,9 @@
 		6366EF0AB769ACCE7F714DB9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CFB849693F3D9EBC34B2C212 /* Pods_fbphotoviewer.framework */,
-				5C50FB325B32EC0C2EF04097 /* Pods_fbphotoviewerTests.framework */,
-				C57ED63459E44CC2C4C3AA6C /* Pods_fbphotoviewerUITests.framework */,
+				2573A4790061800A0F45FE13 /* Pods_FBPhotoViewer.framework */,
+				01DD186D945442B3E19F551F /* Pods_FBPhotoViewerTests.framework */,
+				67E4BDB5E7C969BCE24EB763 /* Pods_FBPhotoViewerUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -496,9 +505,9 @@
 		7C9755832236FFEC005F30B4 = {
 			isa = PBXGroup;
 			children = (
-				7C97558E2236FFEC005F30B4 /* fbphotoviewer */,
-				7C9755A32236FFEE005F30B4 /* fbphotoviewerTests */,
-				7C9755AE2236FFEE005F30B4 /* fbphotoviewerUITests */,
+				7C97558E2236FFEC005F30B4 /* FBPhotoViewer */,
+				7C9755A32236FFEE005F30B4 /* FBPhotoViewerTests */,
+				7C9755AE2236FFEE005F30B4 /* FBPhotoViewerUITests */,
 				7C97558D2236FFEC005F30B4 /* Products */,
 				D5374537158A3518669DBC77 /* Pods */,
 				6366EF0AB769ACCE7F714DB9 /* Frameworks */,
@@ -515,7 +524,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		7C97558E2236FFEC005F30B4 /* fbphotoviewer */ = {
+		7C97558E2236FFEC005F30B4 /* FBPhotoViewer */ = {
 			isa = PBXGroup;
 			children = (
 				049CFA7426403D2E0021C7CA /* Protocols */,
@@ -528,25 +537,25 @@
 				7C816F4E223861DF009C8EB8 /* Resources */,
 				7C2C671E2237971000D0AF8A /* Application */,
 			);
-			path = fbphotoviewer;
+			path = FBPhotoViewer;
 			sourceTree = "<group>";
 		};
-		7C9755A32236FFEE005F30B4 /* fbphotoviewerTests */ = {
+		7C9755A32236FFEE005F30B4 /* FBPhotoViewerTests */ = {
 			isa = PBXGroup;
 			children = (
 				7C9755A42236FFEE005F30B4 /* fbphotoviewerTests.swift */,
 				7C9755A62236FFEE005F30B4 /* Info.plist */,
 			);
-			path = fbphotoviewerTests;
+			path = FBPhotoViewerTests;
 			sourceTree = "<group>";
 		};
-		7C9755AE2236FFEE005F30B4 /* fbphotoviewerUITests */ = {
+		7C9755AE2236FFEE005F30B4 /* FBPhotoViewerUITests */ = {
 			isa = PBXGroup;
 			children = (
 				7C9755AF2236FFEE005F30B4 /* FBPhotoViewerUITests.swift */,
 				7C9755B12236FFEE005F30B4 /* Info.plist */,
 			);
-			path = fbphotoviewerUITests;
+			path = FBPhotoViewerUITests;
 			sourceTree = "<group>";
 		};
 		7CE8135B2239A3BD004A223E /* SignIn */ = {
@@ -600,6 +609,12 @@
 				C840CA5369BAC26DB9205926 /* Pods-fbphotoviewerTests.release.xcconfig */,
 				AC1AF05769774B1EF7836EA6 /* Pods-fbphotoviewerUITests.debug.xcconfig */,
 				0D265B1626C5D88F6BE76FE4 /* Pods-fbphotoviewerUITests.release.xcconfig */,
+				BA5F64E992155A5303138CC3 /* Pods-FBPhotoViewer.debug.xcconfig */,
+				46E27CD9F7045C10AAA12001 /* Pods-FBPhotoViewer.release.xcconfig */,
+				293145D6A5676253C67AA510 /* Pods-FBPhotoViewerTests.debug.xcconfig */,
+				276067B77402346E44C7DB4F /* Pods-FBPhotoViewerTests.release.xcconfig */,
+				56BD5D5B58A77180295D0FD5 /* Pods-FBPhotoViewerUITests.debug.xcconfig */,
+				0DC6EE307EDBAB28770F83FB /* Pods-FBPhotoViewerUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -674,7 +689,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1010;
-				ORGANIZATIONNAME = serglam;
+				ORGANIZATIONNAME = "Serg Liamtsev";
 				TargetAttributes = {
 					7C97558B2236FFEC005F30B4 = {
 						CreatedOnToolsVersion = 10.1;
@@ -720,6 +735,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C97559A2236FFED005F30B4 /* LaunchScreen.storyboard in Resources */,
+				04C2942227AAD40400598B5E /* Images.xcassets in Resources */,
 				7C816F4D223861A7009C8EB8 /* Localizable.strings in Resources */,
 				7C9755972236FFED005F30B4 /* Assets.xcassets in Resources */,
 			);
@@ -775,7 +791,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-fbphotoviewer-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-FBPhotoViewer-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -797,7 +813,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-fbphotoviewerTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-FBPhotoViewerTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -836,7 +852,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-fbphotoviewer/Pods-fbphotoviewer-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FBPhotoViewer/Pods-FBPhotoViewer-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A095E0B64B842EE7C0CBCEFC /* [CP] Check Pods Manifest.lock */ = {
@@ -854,7 +870,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-fbphotoviewerUITests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-FBPhotoViewerUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1083,7 +1099,7 @@
 		};
 		7C9755B52236FFEE005F30B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 697AC52BC4F84205E27E3E3B /* Pods-fbphotoviewer.debug.xcconfig */;
+			baseConfigurationReference = BA5F64E992155A5303138CC3 /* Pods-FBPhotoViewer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
@@ -1102,7 +1118,7 @@
 					"$(inherited)",
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = serglamm.fbphotoviewer;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.serglam.fb-photo-viewer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -1112,7 +1128,7 @@
 		};
 		7C9755B62236FFEE005F30B4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D9990D1A44A0190F6773A2D4 /* Pods-fbphotoviewer.release.xcconfig */;
+			baseConfigurationReference = 46E27CD9F7045C10AAA12001 /* Pods-FBPhotoViewer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
@@ -1131,7 +1147,7 @@
 					"$(inherited)",
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = serglamm.fbphotoviewer;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.serglam.fb-photo-viewer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -1141,7 +1157,7 @@
 		};
 		7C9755B82236FFEE005F30B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F49B0918A8B5887D9DC6A270 /* Pods-fbphotoviewerTests.debug.xcconfig */;
+			baseConfigurationReference = 293145D6A5676253C67AA510 /* Pods-FBPhotoViewerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1163,7 +1179,7 @@
 		};
 		7C9755B92236FFEE005F30B4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C840CA5369BAC26DB9205926 /* Pods-fbphotoviewerTests.release.xcconfig */;
+			baseConfigurationReference = 276067B77402346E44C7DB4F /* Pods-FBPhotoViewerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1185,7 +1201,7 @@
 		};
 		7C9755BB2236FFEE005F30B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AC1AF05769774B1EF7836EA6 /* Pods-fbphotoviewerUITests.debug.xcconfig */;
+			baseConfigurationReference = 56BD5D5B58A77180295D0FD5 /* Pods-FBPhotoViewerUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1206,7 +1222,7 @@
 		};
 		7C9755BC2236FFEE005F30B4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0D265B1626C5D88F6BE76FE4 /* Pods-fbphotoviewerUITests.release.xcconfig */;
+			baseConfigurationReference = 0DC6EE307EDBAB28770F83FB /* Pods-FBPhotoViewerUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

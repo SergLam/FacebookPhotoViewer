@@ -4,7 +4,7 @@ deployment_target = '11.0'
 
 install! 'cocoapods', :disable_input_output_paths => true, :warn_for_unused_master_specs_repo => false
 
-target 'fbphotoviewer' do
+target 'FBPhotoViewer' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
   inhibit_all_warnings!
@@ -31,12 +31,12 @@ target 'fbphotoviewer' do
   # Code-style
   pod 'SwiftLint', '~> 0.43.1'
   
-  target 'fbphotoviewerTests' do
+  target 'FBPhotoViewerTests' do
     inherit! :search_paths
     # Pods for testing
   end
 
-  target 'fbphotoviewerUITests' do
+  target 'FBPhotoViewerUITests' do
     inherit! :search_paths
     # Pods for testing
   end
