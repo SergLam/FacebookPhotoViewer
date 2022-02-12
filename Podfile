@@ -4,8 +4,17 @@ deployment_target = '11.0'
 
 install! 'cocoapods', :disable_input_output_paths => true, :warn_for_unused_master_specs_repo => false
 
-target 'FBPhotoViewer' do
-  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+source 'https://github.com/CocoaPods/Specs.git'
+
+use_frameworks!
+inhibit_all_warnings!
+
+workspace 'FBPhotoViewer'
+
+project 'FBPhotoViewer'
+
+def development_pods
+  
   use_frameworks!
   inhibit_all_warnings!
   
@@ -29,34 +38,57 @@ target 'FBPhotoViewer' do
   pod 'R.swift', '~> 5.4.0'
 
   # Code-style
-  pod 'SwiftLint', '~> 0.43.1'
+  pod 'SwiftLint', '~> 0.45.1'
+end
+
+def testing_pods
+  
+  # Code-style
+  pod 'SwiftLint', '~> 0.45.1'
+end
+
+abstract_target 'App' do
+  
+  target 'FBPhotoViewer' do
+    
+    project 'FBPhotoViewer'
+    development_pods
+    
+  end
   
   target 'FBPhotoViewerTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target 'FBPhotoViewerUITests' do
-    inherit! :search_paths
-    # Pods for testing
+    
+    project 'FBPhotoViewer'
+    testing_pods
+    
   end
   
-  post_install do |installer|
+  target 'FBPhotoViewerUITests' do
     
-    installer.pods_project.targets.each do |target|
-      target.build_configurations.each do |config|
-        config.build_settings['ENABLE_BITCODE'] = 'NO' # set 'NO' to disable DSYM uploading - usefull for third-party error logging SDK (like Firebase)
-        config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = deployment_target
-        config.build_settings['SWIFT_OPTIMIZATION_LEVEL'] = '-Onone'
-      end
-    end
-    
-    installer.generated_projects.each do |project|
-      project.build_configurations.each do |bc|
-        bc.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = deployment_target
-      end
-    end
+    project 'FBPhotoViewer'
+    testing_pods
     
   end
+  
+end
 
+post_install do |installer|
+  
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['ENABLE_BITCODE'] = 'NO' # set 'NO' to disable DSYM uploading - usefull for third-party error logging SDK (like Firebase)
+      config.build_settings.delete 'IPHONEOS_DEPLOYMENT_TARGET'
+      if config.name == 'Debug' || config.name == 'Debug-MockAPI'
+        config.build_settings['OTHER_SWIFT_FLAGS'] = ['$(inherited)', '-Onone']
+        config.build_settings['SWIFT_OPTIMIZATION_LEVEL'] = '-Owholemodule'
+      end
+    end
+  end
+  
+  installer.generated_projects.each do |project|
+    project.build_configurations.each do |bc|
+      bc.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = deployment_target
+    end
+  end
+  
 end
