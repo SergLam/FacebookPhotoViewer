@@ -30,7 +30,7 @@
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>FacebookAppID</key>
-	<string>376916516226757</string>
+	<string>$(FB_APP_ID)</string>
 	<key>FacebookDisplayName</key>
 	<string>My FBPhotos Viewer</string>
 	<key>LSApplicationQueriesSchemes</key>

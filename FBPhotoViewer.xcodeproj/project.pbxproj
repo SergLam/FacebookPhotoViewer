@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04123F9F27B7C78400AD5721 /* Prod.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 04123F9E27B7C78400AD5721 /* Prod.xcconfig */; };
 		049CFA6C264037A90021C7CA /* UIView+AddAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CFA6B264037A90021C7CA /* UIView+AddAction.swift */; };
 		049CFA6E264037D70021C7CA /* SharedTypeAliases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CFA6D264037D70021C7CA /* SharedTypeAliases.swift */; };
 		049CFAAC26403D2E0021C7CA /* LocaleRefreshable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CFA7626403D2E0021C7CA /* LocaleRefreshable.swift */; };
@@ -85,6 +86,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04123F9E27B7C78400AD5721 /* Prod.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Prod.xcconfig; sourceTree = "<group>"; };
+		04123FA027B7C79900AD5721 /* Dev.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Dev.xcconfig; sourceTree = "<group>"; };
 		049CFA6B264037A90021C7CA /* UIView+AddAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AddAction.swift"; sourceTree = "<group>"; };
 		049CFA6D264037D70021C7CA /* SharedTypeAliases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTypeAliases.swift; sourceTree = "<group>"; };
 		049CFA7626403D2E0021C7CA /* LocaleRefreshable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocaleRefreshable.swift; sourceTree = "<group>"; };
@@ -210,6 +213,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04123F9C27B7C76000AD5721 /* Development */ = {
+			isa = PBXGroup;
+			children = (
+				04123FA027B7C79900AD5721 /* Dev.xcconfig */,
+			);
+			path = Development;
+			sourceTree = "<group>";
+		};
+		04123F9D27B7C76900AD5721 /* Production */ = {
+			isa = PBXGroup;
+			children = (
+				04123F9E27B7C78400AD5721 /* Prod.xcconfig */,
+			);
+			path = Production;
+			sourceTree = "<group>";
+		};
+		04123FA127B7C89C00AD5721 /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				7C9755982236FFED005F30B4 /* LaunchScreen.storyboard */,
+			);
+			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
 		049CFA6F26403C3B0021C7CA /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
@@ -391,6 +418,8 @@
 		049CFAE226403FB40021C7CA /* Environment */ = {
 			isa = PBXGroup;
 			children = (
+				04123F9D27B7C76900AD5721 /* Production */,
+				04123F9C27B7C76000AD5721 /* Development */,
 				049CFAE326403FDB0021C7CA /* Environment.swift */,
 			);
 			path = Environment;
@@ -500,10 +529,10 @@
 		7C816F4E223861DF009C8EB8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				04123FA127B7C89C00AD5721 /* LaunchScreen */,
 				049CFA7226403CB10021C7CA /* Images */,
 				049CFA7126403CA60021C7CA /* Localization */,
 				7C816F502238660B009C8EB8 /* R.generated.swift */,
-				7C9755982236FFED005F30B4 /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -748,6 +777,7 @@
 			files = (
 				7C97559A2236FFED005F30B4 /* LaunchScreen.storyboard in Resources */,
 				04C2942227AAD40400598B5E /* Images.xcassets in Resources */,
+				04123F9F27B7C78400AD5721 /* Prod.xcconfig in Resources */,
 				7C816F4D223861A7009C8EB8 /* Localizable.strings in Resources */,
 				7C9755972236FFED005F30B4 /* Assets.xcassets in Resources */,
 			);
@@ -846,7 +876,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$SRCROOT/fbphotoviewer/Resources/R.generated.swift",
+				$SRCROOT/fbphotoviewer/Resources/R.generated.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -993,6 +1023,7 @@
 /* Begin XCBuildConfiguration section */
 		7C9755B22236FFEE005F30B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04123FA027B7C79900AD5721 /* Dev.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1055,6 +1086,7 @@
 		};
 		7C9755B32236FFEE005F30B4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04123F9E27B7C78400AD5721 /* Prod.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;

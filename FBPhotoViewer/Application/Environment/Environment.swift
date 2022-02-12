@@ -12,6 +12,7 @@ private enum UserDefinedKeys: String, CaseIterable {
     
     // MARK: - Base URL keys
     case unknown = "unknown"
+    case facebookAppId = "FacebookAppID"
 }
 
  enum Environment {
@@ -43,6 +44,14 @@ private enum UserDefinedKeys: String, CaseIterable {
         }
         return buildNumber
     }()
+     
+    // MARK: - Facebook Constants
+     static let fbAppId: String = {
+         guard let appVersion = Bundle.main.infoDictionary?[UserDefinedKeys.facebookAppId.rawValue] as? String else {
+             preconditionFailure("Unable to get app FB App ID")
+         }
+         return appVersion
+     }()
     
     // MARK: - Mock API flag
     static var isMockApi: Bool {
