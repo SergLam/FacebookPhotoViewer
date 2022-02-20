@@ -28,23 +28,22 @@ def development_pods
   
   # UI
   pod 'SnapKit', '~> 5.0.0'
-  pod 'Closures', '~> 0.7'
   pod 'Kingfisher', '~> 6.3.0'
   pod 'AlisterSwift', :git => 'https://github.com/anodamobi/AlisterSwift.git', :branch => 'develop', :commit => 'ff395f6'
   pod 'DZNEmptyDataSet', '~> 1.8.1'
   pod 'PKHUD', '~> 5.3.0'
   
   # Resources
-  pod 'R.swift', '~> 5.4.0'
+  pod 'R.swift', '~> 6.1.0'
 
   # Code-style
-  pod 'SwiftLint', '~> 0.45.1'
+  pod 'SwiftLint', '~> 0.46.2'
 end
 
 def testing_pods
   
   # Code-style
-  pod 'SwiftLint', '~> 0.45.1'
+  pod 'SwiftLint', '~> 0.46.2'
 end
 
 abstract_target 'App' do

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -864,23 +864,23 @@
 		};
 		7C816F4F22386586009C8EB8 /* R.swift */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"$TEMP_DIR/rswift-lastrun",
 			);
 			name = R.swift;
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				$SRCROOT/fbphotoviewer/Resources/R.generated.swift,
+				$SRCROOT/FBPhotoViewer/Resources/R.generated.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/fbphotoviewer/Resources/R.generated.swift\"\n";
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/FBPhotoViewer/Resources/R.generated.swift\"\n";
 		};
 		9C7AF7B9DD601D0071FD2608 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
