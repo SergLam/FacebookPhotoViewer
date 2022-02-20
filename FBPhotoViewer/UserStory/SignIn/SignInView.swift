@@ -42,15 +42,20 @@ final class SignInView: UIView {
         fbLoginButton.setTitleColor(.white, for: .normal)
         fbLoginButton.layer.cornerRadius = buttonHeight / 2
         
-        fbLoginButton.snp.makeConstraints { make in
-            make.bottom.equalToSuperview().offset(-40)
-            make.centerX.equalToSuperview()
-            make.width.equalToSuperview().multipliedBy(0.5)
-            make.height.equalTo(buttonHeight)
-        }
+        fbLoginButton.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            fbLoginButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -20),
+            fbLoginButton.centerXAnchor.constraint(equalTo: centerXAnchor),
+            fbLoginButton.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.5),
+            fbLoginButton.heightAnchor.constraint(equalToConstant: buttonHeight)
+        ])
         
-        fbLoginButton.addAction = { [unowned self] in
-            self.delegate?.didTapFBLoginButton()
-        }
+        fbLoginButton.addTarget(self, action: #selector(didTapFBLoginButton), for: .touchUpInside)
+    }
+    
+    // MARK: - Actions
+    @objc
+    private func didTapFBLoginButton() {
+        delegate?.didTapFBLoginButton()
     }
 }

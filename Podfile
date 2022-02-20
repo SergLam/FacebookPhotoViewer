@@ -27,7 +27,6 @@ def development_pods
   pod 'SwiftyJSON', '~> 5.0.1'
   
   # UI
-  pod 'SnapKit', '~> 5.0.0'
   pod 'Kingfisher', '~> 6.3.0'
   pod 'AlisterSwift', :git => 'https://github.com/anodamobi/AlisterSwift.git', :branch => 'develop', :commit => 'ff395f6'
   pod 'DZNEmptyDataSet', '~> 1.8.1'

@@ -39,18 +39,24 @@ final class AlbumsListCell: UITableViewCell, ReusableViewInterface {
         
         contentView.addSubview(albumImage)
         albumImage.image = R.image.placeholder()
-        albumImage.snp.makeConstraints { make in
-            make.top.bottom.leading.equalToSuperview()
-                .inset(UIEdgeInsets(top: 15, left: 15, bottom: 15, right: 0))
-            make.size.equalTo(150)
-        }
+        
+        albumImage.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            albumImage.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 15),
+            albumImage.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 15),
+            albumImage.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -15),
+            albumImage.widthAnchor.constraint(equalToConstant: 150),
+            albumImage.heightAnchor.constraint(equalToConstant: 150)
+        ])
         
         contentView.addSubview(albumTitle)
-        albumTitle.snp.makeConstraints { make in
-            make.centerY.equalTo(albumImage)
-            make.leading.equalTo(albumImage.snp.trailing).offset(15)
-            make.trailing.equalToSuperview().offset(-15)
-        }
+        
+        albumTitle.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            albumTitle.centerYAnchor.constraint(equalTo: albumImage.centerYAnchor),
+            albumTitle.leadingAnchor.constraint(equalTo: albumImage.trailingAnchor, constant: 15),
+            albumTitle.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -15)
+        ])
     }
     
     func update(_ model: ViewModelInterface) {

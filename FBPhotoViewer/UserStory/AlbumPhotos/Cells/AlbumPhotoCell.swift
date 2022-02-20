@@ -36,9 +36,14 @@ final class AlbumPhotoCell: UICollectionViewCell, ReusableViewInterface {
     private func setupLayout() {
         contentView.addSubview(photoImageView)
         photoImageView.image = placeholder
-        photoImageView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
-        }
+        
+        photoImageView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            photoImageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+            photoImageView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
+            photoImageView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
+            photoImageView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor)
+        ])
     }
     
     func update(_ model: ViewModelInterface) {

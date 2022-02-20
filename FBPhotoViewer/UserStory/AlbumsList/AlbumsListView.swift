@@ -6,7 +6,6 @@
 //  Copyright © 2019 Serg Liamtsev. All rights reserved.
 //
 
-import SnapKit
 import UIKit
 
 final class AlbumsView: UIView {
@@ -28,8 +27,13 @@ final class AlbumsView: UIView {
         
         addSubview(tableView)
         tableView.backgroundColor = UIColor.white
-        tableView.snp.makeConstraints { make in
-            make.edges.equalTo(safeAreaLayoutGuide)
-        }
+        
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            tableView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+            tableView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
+            tableView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor)
+        ])
     }
 }

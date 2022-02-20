@@ -7,7 +7,6 @@
 //
 
 import Kingfisher
-import SnapKit
 import UIKit
 
 final class ViewPhotoView: UIView {
@@ -30,9 +29,14 @@ final class ViewPhotoView: UIView {
         
         addSubview(photoImageView)
         photoImageView.contentMode = .scaleAspectFit
-        photoImageView.snp.makeConstraints { make in
-            make.edges.equalTo(safeAreaLayoutGuide)
-        }
+        
+        photoImageView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            photoImageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+            photoImageView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
+            photoImageView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
+            photoImageView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor)
+        ])
     }
     
     func loadPhoto(withURL: String) {

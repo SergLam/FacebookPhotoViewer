@@ -6,7 +6,6 @@
 //  Copyright © 2019 Serg Liamtsev. All rights reserved.
 //
 
-import SnapKit
 import UIKit
 
 final class AlbumPhotosView: UIView {
@@ -30,12 +29,16 @@ final class AlbumPhotosView: UIView {
         backgroundColor = UIColor.white
         
         layout.scrollDirection = .vertical
-        
         addSubview(collectionView)
         collectionView.backgroundColor = .white
-        collectionView.snp.makeConstraints { make in
-            make.edges.equalTo(safeAreaLayoutGuide)
-        }
+        
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            collectionView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+            collectionView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
+            collectionView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
+            collectionView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor)
+        ])
     }
     
 }
