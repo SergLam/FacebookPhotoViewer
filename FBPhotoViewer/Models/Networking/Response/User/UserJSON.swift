@@ -29,10 +29,10 @@ struct UserJSON: Codable {
     
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        id = try container.decode(String.self, forKey: .id)
-        firstName = try container.decode(String.self, forKey: .firstName)
-        lastName = try container.decode(String.self, forKey: .lastName)
-        name = try container.decode(String.self, forKey: .name)
+        id = try container.decodeForce(String.self, forKey: .id)
+        firstName = try container.decodeIfPresentForce(String.self, forKey: .firstName) ?? ""
+        lastName = try container.decodeIfPresentForce(String.self, forKey: .lastName) ?? ""
+        name = try container.decodeIfPresentForce(String.self, forKey: .name) ?? ""
     }
 }
 
