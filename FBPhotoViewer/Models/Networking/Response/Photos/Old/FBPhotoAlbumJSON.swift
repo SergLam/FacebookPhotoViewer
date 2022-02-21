@@ -1,5 +1,5 @@
 //
-//  FBAlbum.swift
+//  FBPhotoAlbumJSON.swift
 //  FBPhotoViewer
 //
 //  Created by Serg Liamtsev on 3/14/19.
@@ -9,24 +9,24 @@
 import Foundation
 import SwiftyJSON
 
-struct Album {
+struct FBPhotoAlbumJSON {
     
-    static func fromJSON(_ data: [String: Any]) -> Album {
+    static func fromJSON(_ data: [String: Any]) -> FBPhotoAlbumJSON {
         let json = JSON(data)
-        return Album(json: json)
+        return FBPhotoAlbumJSON(json: json)
     }
     
     var id: String = ""
     var photoCount: Int = 0
     var name: String = ""
-    var photos: [Photo] = []
+    var photos: [FBPhotoJSON] = []
     var coverPhotoUrl: String = ""
     
     init(json: JSON) {
         id = json["id"].stringValue
         photoCount = json["photo_count"].intValue
         name = json["name"].stringValue
-        photos = json["photos"]["data"].arrayValue.map { return Photo(json: $0) }
+        photos = json["photos"]["data"].arrayValue.map { return FBPhotoJSON(json: $0) }
         coverPhotoUrl = json["picture"]["data"]["url"].stringValue
     }
     
@@ -40,7 +40,7 @@ struct Album {
         result["id"] = id
         result["photo_count"] = photoCount
         result["name"] = name
-        result["photos"] = Photo.photosToJSON(photos)
+        result["photos"] = FBPhotoJSON.photosToJSON(photos)
         
         return result
     }

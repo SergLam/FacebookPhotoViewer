@@ -13,6 +13,7 @@ private enum UserDefinedKeys: String, CaseIterable {
     // MARK: - Base URL keys
     case unknown = "unknown"
     case facebookAppId = "FacebookAppID"
+    case fbClientToken = "FB_CLIENT_TOKEN"
 }
 
  enum Environment {
@@ -46,6 +47,13 @@ private enum UserDefinedKeys: String, CaseIterable {
     }()
      
     // MARK: - Facebook Constants
+     static let fbClientToken: String = {
+         guard let fbClientToken = Bundle.main.infoDictionary?[UserDefinedKeys.fbClientToken.rawValue] as? String else {
+             preconditionFailure("Unable to get app FB App ID")
+         }
+         return fbClientToken
+     }()
+     
      static let fbAppId: String = {
          guard let appVersion = Bundle.main.infoDictionary?[UserDefinedKeys.facebookAppId.rawValue] as? String else {
              preconditionFailure("Unable to get app FB App ID")

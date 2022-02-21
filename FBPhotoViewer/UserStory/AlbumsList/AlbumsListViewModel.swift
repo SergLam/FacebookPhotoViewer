@@ -17,10 +17,12 @@ final class AlbumsListViewModel {
     
     weak var delegate: AlbumsListViewModelDelegate?
     
-    var albums: [Album] = []
+    var albums: [FBPhotoAlbumJSON] = []
+    
+    private let fbApiManager = FBGraphAPIManager()
     
     func loadUserAlbums() {
-        FBApiManager.shared.getUserAlbums(completion: {  [weak self] albums, error in
+        fbApiManager.getUserAlbums(completion: {  [weak self] albums, error in
             if let error = error {
                 self?.delegate?.didFailToLoadData(error.localizedDescription)
             }

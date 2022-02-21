@@ -7,6 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04078EB127C2A42700DBC6DE /* FBAPIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04078EB027C2A42700DBC6DE /* FBAPIError.swift */; };
+		04078EB527C2A6E500DBC6DE /* GetMyProfileRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04078EB427C2A6E500DBC6DE /* GetMyProfileRequest.swift */; };
+		04078EB727C2A71800DBC6DE /* GetMyPhotoAlbumsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04078EB627C2A71800DBC6DE /* GetMyPhotoAlbumsRequest.swift */; };
+		04078EBB27C2A90100DBC6DE /* FBGraphAPIManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04078EBA27C2A90100DBC6DE /* FBGraphAPIManagerProtocol.swift */; };
+		04078EBF27C2AA9900DBC6DE /* GetMyPhotoAlbumsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04078EBE27C2AA9900DBC6DE /* GetMyPhotoAlbumsResponse.swift */; };
+		04078EC227C2ADFF00DBC6DE /* Data+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04078EC127C2ADFF00DBC6DE /* Data+JSON.swift */; };
+		04078EC627C39C5000DBC6DE /* GetMyPhotoAlbumsResponsePaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04078EC527C39C5000DBC6DE /* GetMyPhotoAlbumsResponsePaging.swift */; };
+		04078EC827C39CD200DBC6DE /* FBPaginationCursor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04078EC727C39CD200DBC6DE /* FBPaginationCursor.swift */; };
+		04078ECB27C39D2A00DBC6DE /* GetMyPhotoAlbumsResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04078ECA27C39D2A00DBC6DE /* GetMyPhotoAlbumsResponseData.swift */; };
+		04078ECD27C39D5200DBC6DE /* FBAlbumCoverPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04078ECC27C39D5200DBC6DE /* FBAlbumCoverPhoto.swift */; };
+		04078ECF27C39DA200DBC6DE /* FBAlbumPhotos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04078ECE27C39DA200DBC6DE /* FBAlbumPhotos.swift */; };
+		04078ED127C39DD400DBC6DE /* FBAlbumPhotoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04078ED027C39DD400DBC6DE /* FBAlbumPhotoData.swift */; };
+		04078ED327C39DF100DBC6DE /* FBAlbumImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04078ED227C39DF100DBC6DE /* FBAlbumImage.swift */; };
+		04078ED527C39E3E00DBC6DE /* FBAlbumPhotosPaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04078ED427C39E3E00DBC6DE /* FBAlbumPhotosPaging.swift */; };
+		04078ED727C39ECA00DBC6DE /* FBAlbumPicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04078ED627C39ECA00DBC6DE /* FBAlbumPicture.swift */; };
+		04078ED927C39F0300DBC6DE /* FBAlbumPictureData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04078ED827C39F0300DBC6DE /* FBAlbumPictureData.swift */; };
 		04123F9F27B7C78400AD5721 /* Prod.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 04123F9E27B7C78400AD5721 /* Prod.xcconfig */; };
 		049CFA6C264037A90021C7CA /* UIView+AddAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CFA6B264037A90021C7CA /* UIView+AddAction.swift */; };
 		049CFA6E264037D70021C7CA /* SharedTypeAliases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CFA6D264037D70021C7CA /* SharedTypeAliases.swift */; };
@@ -41,7 +57,7 @@
 		7C24DE85223B726E00A88EED /* AlbumsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C24DE84223B726E00A88EED /* AlbumsListView.swift */; };
 		7C24DE87223B727B00A88EED /* AlbumsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C24DE86223B727B00A88EED /* AlbumsListViewModel.swift */; };
 		7C24DE8A223B72E800A88EED /* AlbumsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C24DE89223B72E800A88EED /* AlbumsListCell.swift */; };
-		7C24DE8C223B866200A88EED /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C24DE8B223B866200A88EED /* Photo.swift */; };
+		7C24DE8C223B866200A88EED /* FBPhotoJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C24DE8B223B866200A88EED /* FBPhotoJSON.swift */; };
 		7C44911A223D004900169843 /* AlbumPhotosVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C449119223D004900169843 /* AlbumPhotosVC.swift */; };
 		7C44911C223D00BC00169843 /* AlbumPhotosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C44911B223D00BC00169843 /* AlbumPhotosView.swift */; };
 		7C44911E223D00C800169843 /* AlbumPhotosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C44911D223D00C800169843 /* AlbumPhotosViewModel.swift */; };
@@ -61,9 +77,9 @@
 		7C9755B02236FFEE005F30B4 /* FBPhotoViewerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9755AF2236FFEE005F30B4 /* FBPhotoViewerUITests.swift */; };
 		7CE8135D2239A3CF004A223E /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE8135C2239A3CF004A223E /* SignInView.swift */; };
 		7CE813602239A59F004A223E /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE8135F2239A59F004A223E /* UIColor+Ext.swift */; };
-		7CE813632239A9BE004A223E /* FBApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE813622239A9BE004A223E /* FBApiManager.swift */; };
-		7CE813662239BB02004A223E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE813652239BB02004A223E /* User.swift */; };
-		7CE813682239BB2E004A223E /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE813672239BB2E004A223E /* Album.swift */; };
+		7CE813632239A9BE004A223E /* FBGraphAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE813622239A9BE004A223E /* FBGraphAPIManager.swift */; };
+		7CE813662239BB02004A223E /* UserJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE813652239BB02004A223E /* UserJSON.swift */; };
+		7CE813682239BB2E004A223E /* FBPhotoAlbumJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE813672239BB2E004A223E /* FBPhotoAlbumJSON.swift */; };
 		C2C66874C2B8FF7A814D7158 /* Pods_App_FBPhotoViewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6FA2F2C1720465ADE3D2EC8 /* Pods_App_FBPhotoViewer.framework */; };
 		E9AF38F6DB6816ED4E954DC4 /* Pods_App_FBPhotoViewerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97CCA611703303385A7D2357 /* Pods_App_FBPhotoViewerUITests.framework */; };
 /* End PBXBuildFile section */
@@ -86,6 +102,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04078EB027C2A42700DBC6DE /* FBAPIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBAPIError.swift; sourceTree = "<group>"; };
+		04078EB427C2A6E500DBC6DE /* GetMyProfileRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMyProfileRequest.swift; sourceTree = "<group>"; };
+		04078EB627C2A71800DBC6DE /* GetMyPhotoAlbumsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMyPhotoAlbumsRequest.swift; sourceTree = "<group>"; };
+		04078EBA27C2A90100DBC6DE /* FBGraphAPIManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBGraphAPIManagerProtocol.swift; sourceTree = "<group>"; };
+		04078EBE27C2AA9900DBC6DE /* GetMyPhotoAlbumsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMyPhotoAlbumsResponse.swift; sourceTree = "<group>"; };
+		04078EC127C2ADFF00DBC6DE /* Data+JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+JSON.swift"; sourceTree = "<group>"; };
+		04078EC527C39C5000DBC6DE /* GetMyPhotoAlbumsResponsePaging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMyPhotoAlbumsResponsePaging.swift; sourceTree = "<group>"; };
+		04078EC727C39CD200DBC6DE /* FBPaginationCursor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBPaginationCursor.swift; sourceTree = "<group>"; };
+		04078ECA27C39D2A00DBC6DE /* GetMyPhotoAlbumsResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMyPhotoAlbumsResponseData.swift; sourceTree = "<group>"; };
+		04078ECC27C39D5200DBC6DE /* FBAlbumCoverPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBAlbumCoverPhoto.swift; sourceTree = "<group>"; };
+		04078ECE27C39DA200DBC6DE /* FBAlbumPhotos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBAlbumPhotos.swift; sourceTree = "<group>"; };
+		04078ED027C39DD400DBC6DE /* FBAlbumPhotoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBAlbumPhotoData.swift; sourceTree = "<group>"; };
+		04078ED227C39DF100DBC6DE /* FBAlbumImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBAlbumImage.swift; sourceTree = "<group>"; };
+		04078ED427C39E3E00DBC6DE /* FBAlbumPhotosPaging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBAlbumPhotosPaging.swift; sourceTree = "<group>"; };
+		04078ED627C39ECA00DBC6DE /* FBAlbumPicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBAlbumPicture.swift; sourceTree = "<group>"; };
+		04078ED827C39F0300DBC6DE /* FBAlbumPictureData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBAlbumPictureData.swift; sourceTree = "<group>"; };
 		04123F9E27B7C78400AD5721 /* Prod.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Prod.xcconfig; sourceTree = "<group>"; };
 		04123FA027B7C79900AD5721 /* Dev.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Dev.xcconfig; sourceTree = "<group>"; };
 		049CFA6B264037A90021C7CA /* UIView+AddAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AddAction.swift"; sourceTree = "<group>"; };
@@ -144,7 +176,7 @@
 		7C24DE84223B726E00A88EED /* AlbumsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsListView.swift; sourceTree = "<group>"; };
 		7C24DE86223B727B00A88EED /* AlbumsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsListViewModel.swift; sourceTree = "<group>"; };
 		7C24DE89223B72E800A88EED /* AlbumsListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsListCell.swift; sourceTree = "<group>"; };
-		7C24DE8B223B866200A88EED /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		7C24DE8B223B866200A88EED /* FBPhotoJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBPhotoJSON.swift; sourceTree = "<group>"; };
 		7C449119223D004900169843 /* AlbumPhotosVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumPhotosVC.swift; sourceTree = "<group>"; };
 		7C44911B223D00BC00169843 /* AlbumPhotosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumPhotosView.swift; sourceTree = "<group>"; };
 		7C44911D223D00C800169843 /* AlbumPhotosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumPhotosViewModel.swift; sourceTree = "<group>"; };
@@ -170,9 +202,9 @@
 		7C9755B12236FFEE005F30B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7CE8135C2239A3CF004A223E /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		7CE8135F2239A59F004A223E /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
-		7CE813622239A9BE004A223E /* FBApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBApiManager.swift; sourceTree = "<group>"; };
-		7CE813652239BB02004A223E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		7CE813672239BB2E004A223E /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		7CE813622239A9BE004A223E /* FBGraphAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBGraphAPIManager.swift; sourceTree = "<group>"; };
+		7CE813652239BB02004A223E /* UserJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserJSON.swift; sourceTree = "<group>"; };
+		7CE813672239BB2E004A223E /* FBPhotoAlbumJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBPhotoAlbumJSON.swift; sourceTree = "<group>"; };
 		7CE81369223A2ED7004A223E /* fbphotoviewer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = fbphotoviewer.entitlements; sourceTree = "<group>"; };
 		89178ED9C831E157D2F5BDB8 /* Pods-App-FBPhotoViewer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-FBPhotoViewer.release.xcconfig"; path = "Pods/Target Support Files/Pods-App-FBPhotoViewer/Pods-App-FBPhotoViewer.release.xcconfig"; sourceTree = "<group>"; };
 		97CCA611703303385A7D2357 /* Pods_App_FBPhotoViewerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_App_FBPhotoViewerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -213,6 +245,127 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04078EAD27C2A3AD00DBC6DE /* Facebook */ = {
+			isa = PBXGroup;
+			children = (
+				04078EB827C2A88000DBC6DE /* Models */,
+				7CE813622239A9BE004A223E /* FBGraphAPIManager.swift */,
+				04078EBA27C2A90100DBC6DE /* FBGraphAPIManagerProtocol.swift */,
+			);
+			path = Facebook;
+			sourceTree = "<group>";
+		};
+		04078EAE27C2A3C400DBC6DE /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				04078EB327C2A63D00DBC6DE /* Response */,
+				04078EB227C2A63600DBC6DE /* Request */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		04078EB227C2A63600DBC6DE /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				04078EB427C2A6E500DBC6DE /* GetMyProfileRequest.swift */,
+				04078EB627C2A71800DBC6DE /* GetMyPhotoAlbumsRequest.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		04078EB327C2A63D00DBC6DE /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				04078EBD27C2A9D900DBC6DE /* Photos */,
+				04078EBC27C2A9D500DBC6DE /* User */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		04078EB827C2A88000DBC6DE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				04078EB027C2A42700DBC6DE /* FBAPIError.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		04078EBC27C2A9D500DBC6DE /* User */ = {
+			isa = PBXGroup;
+			children = (
+				7CE813652239BB02004A223E /* UserJSON.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		04078EBD27C2A9D900DBC6DE /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				04078EC427C39C1400DBC6DE /* New */,
+				04078EC327C39C0800DBC6DE /* Old */,
+			);
+			path = Photos;
+			sourceTree = "<group>";
+		};
+		04078EC027C2ADEF00DBC6DE /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				04078EC127C2ADFF00DBC6DE /* Data+JSON.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		04078EC327C39C0800DBC6DE /* Old */ = {
+			isa = PBXGroup;
+			children = (
+				7CE813672239BB2E004A223E /* FBPhotoAlbumJSON.swift */,
+				7C24DE8B223B866200A88EED /* FBPhotoJSON.swift */,
+			);
+			path = Old;
+			sourceTree = "<group>";
+		};
+		04078EC427C39C1400DBC6DE /* New */ = {
+			isa = PBXGroup;
+			children = (
+				04078EBE27C2AA9900DBC6DE /* GetMyPhotoAlbumsResponse.swift */,
+				04078ECA27C39D2A00DBC6DE /* GetMyPhotoAlbumsResponseData.swift */,
+				04078ECC27C39D5200DBC6DE /* FBAlbumCoverPhoto.swift */,
+				04078EDB27C39FAD00DBC6DE /* PhotosData */,
+				04078EDA27C39F9900DBC6DE /* Picture */,
+				04078EC927C39D0F00DBC6DE /* Pagination */,
+			);
+			path = New;
+			sourceTree = "<group>";
+		};
+		04078EC927C39D0F00DBC6DE /* Pagination */ = {
+			isa = PBXGroup;
+			children = (
+				04078EC527C39C5000DBC6DE /* GetMyPhotoAlbumsResponsePaging.swift */,
+				04078EC727C39CD200DBC6DE /* FBPaginationCursor.swift */,
+			);
+			path = Pagination;
+			sourceTree = "<group>";
+		};
+		04078EDA27C39F9900DBC6DE /* Picture */ = {
+			isa = PBXGroup;
+			children = (
+				04078ED627C39ECA00DBC6DE /* FBAlbumPicture.swift */,
+				04078ED827C39F0300DBC6DE /* FBAlbumPictureData.swift */,
+			);
+			path = Picture;
+			sourceTree = "<group>";
+		};
+		04078EDB27C39FAD00DBC6DE /* PhotosData */ = {
+			isa = PBXGroup;
+			children = (
+				04078ECE27C39DA200DBC6DE /* FBAlbumPhotos.swift */,
+				04078ED027C39DD400DBC6DE /* FBAlbumPhotoData.swift */,
+				04078ED227C39DF100DBC6DE /* FBAlbumImage.swift */,
+				04078ED427C39E3E00DBC6DE /* FBAlbumPhotosPaging.swift */,
+			);
+			path = PhotosData;
+			sourceTree = "<group>";
+		};
 		04123F9C27B7C76000AD5721 /* Development */ = {
 			isa = PBXGroup;
 			children = (
@@ -409,6 +562,7 @@
 		049CFADF26403F7D0021C7CA /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				04078EC027C2ADEF00DBC6DE /* Data */,
 				049CFAE026403F900021C7CA /* NSObject+Ext.swift */,
 				049CFAF1264042200021C7CA /* DateFormatter+Ext.swift */,
 			);
@@ -565,7 +719,7 @@
 				049CFA7426403D2E0021C7CA /* Protocols */,
 				049CFA7026403C4E0021C7CA /* BundleFiles */,
 				049CFA6F26403C3B0021C7CA /* AppDelegate */,
-				7CE813642239BAC7004A223E /* DataModels */,
+				7CE813642239BAC7004A223E /* Models */,
 				7CE813612239A9A8004A223E /* Services */,
 				7C816F4922385F84009C8EB8 /* UserStory */,
 				7CE8135E2239A58E004A223E /* Extensions */,
@@ -617,22 +771,20 @@
 		7CE813612239A9A8004A223E /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				04078EAD27C2A3AD00DBC6DE /* Facebook */,
 				049CFAEA2640412E0021C7CA /* LocalStorage */,
 				049CFAD726403EB90021C7CA /* Logger */,
-				7CE813622239A9BE004A223E /* FBApiManager.swift */,
 				7C24DE7F223B6F7100A88EED /* AlertPresenter.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
 		};
-		7CE813642239BAC7004A223E /* DataModels */ = {
+		7CE813642239BAC7004A223E /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				7CE813652239BB02004A223E /* User.swift */,
-				7CE813672239BB2E004A223E /* Album.swift */,
-				7C24DE8B223B866200A88EED /* Photo.swift */,
+				04078EAE27C2A3C400DBC6DE /* Networking */,
 			);
-			path = DataModels;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		D5374537158A3518669DBC77 /* Pods */ = {
@@ -926,20 +1078,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04078EC627C39C5000DBC6DE /* GetMyPhotoAlbumsResponsePaging.swift in Sources */,
 				7C44911E223D00C800169843 /* AlbumPhotosViewModel.swift in Sources */,
+				04078ED727C39ECA00DBC6DE /* FBAlbumPicture.swift in Sources */,
+				04078EB727C2A71800DBC6DE /* GetMyPhotoAlbumsRequest.swift in Sources */,
 				049CFAC326403D2E0021C7CA /* ExternalURLOpenable.swift in Sources */,
 				7C449121223D115700169843 /* AlbumPhotoCell.swift in Sources */,
 				049CFAB626403D2E0021C7CA /* UniqueIdentifiable.swift in Sources */,
 				049CFAAD26403D2E0021C7CA /* StatusBarResizable.swift in Sources */,
+				04078ED327C39DF100DBC6DE /* FBAlbumImage.swift in Sources */,
 				7C449128223D1BFE00169843 /* ViewPhotoView.swift in Sources */,
+				04078ECB27C39D2A00DBC6DE /* GetMyPhotoAlbumsResponseData.swift in Sources */,
 				049CFAE7264040D90021C7CA /* UserDefaults+Codable.swift in Sources */,
 				7C9755922236FFEC005F30B4 /* SignInVC.swift in Sources */,
 				049CFAB726403D2E0021C7CA /* Mockable.swift in Sources */,
+				04078ED127C39DD400DBC6DE /* FBAlbumPhotoData.swift in Sources */,
 				049CFA6C264037A90021C7CA /* UIView+AddAction.swift in Sources */,
+				04078EC227C2ADFF00DBC6DE /* Data+JSON.swift in Sources */,
 				049CFAD926403ECD0021C7CA /* AppInternalError.swift in Sources */,
+				04078EBF27C2AA9900DBC6DE /* GetMyPhotoAlbumsResponse.swift in Sources */,
 				049CFAD626403E580021C7CA /* BaseViewController.swift in Sources */,
 				7C44911C223D00BC00169843 /* AlbumPhotosView.swift in Sources */,
 				7C9755902236FFEC005F30B4 /* AppDelegate.swift in Sources */,
+				04078EBB27C2A90100DBC6DE /* FBGraphAPIManagerProtocol.swift in Sources */,
 				7C44911A223D004900169843 /* AlbumPhotosVC.swift in Sources */,
 				049CFAF0264041C40021C7CA /* AppConstants.swift in Sources */,
 				7C449123223D1B6E00169843 /* AlbumPhotosCollectionController.swift in Sources */,
@@ -947,32 +1108,39 @@
 				049CFADB26403EE30021C7CA /* LoggerService.swift in Sources */,
 				7C24DE8A223B72E800A88EED /* AlbumsListCell.swift in Sources */,
 				7C816F4B22386071009C8EB8 /* SignInVM.swift in Sources */,
-				7CE813632239A9BE004A223E /* FBApiManager.swift in Sources */,
+				04078ED927C39F0300DBC6DE /* FBAlbumPictureData.swift in Sources */,
+				7CE813632239A9BE004A223E /* FBGraphAPIManager.swift in Sources */,
 				7C24DE87223B727B00A88EED /* AlbumsListViewModel.swift in Sources */,
 				049CFAE426403FDB0021C7CA /* Environment.swift in Sources */,
 				7CE813602239A59F004A223E /* UIColor+Ext.swift in Sources */,
 				7C44912A223D1DA700169843 /* ViewPhotoViewModel.swift in Sources */,
 				049CFAEC2640413F0021C7CA /* LocalStorageKeys.swift in Sources */,
 				7C24DE83223B722300A88EED /* AlbumsListVC.swift in Sources */,
+				04078EB127C2A42700DBC6DE /* FBAPIError.swift in Sources */,
+				04078EB527C2A6E500DBC6DE /* GetMyProfileRequest.swift in Sources */,
 				049CFAC426403D2E0021C7CA /* ProgressShowable.swift in Sources */,
-				7C24DE8C223B866200A88EED /* Photo.swift in Sources */,
+				7C24DE8C223B866200A88EED /* FBPhotoJSON.swift in Sources */,
 				7C24DE80223B6F7100A88EED /* AlertPresenter.swift in Sources */,
 				049CFAF2264042200021C7CA /* DateFormatter+Ext.swift in Sources */,
 				7C449126223D1BF400169843 /* ViewPhotoVC.swift in Sources */,
 				049CFA6E264037D70021C7CA /* SharedTypeAliases.swift in Sources */,
-				7CE813662239BB02004A223E /* User.swift in Sources */,
+				04078ECD27C39D5200DBC6DE /* FBAlbumCoverPhoto.swift in Sources */,
+				7CE813662239BB02004A223E /* UserJSON.swift in Sources */,
 				049CFAB226403D2E0021C7CA /* NibLoadable.swift in Sources */,
+				04078EC827C39CD200DBC6DE /* FBPaginationCursor.swift in Sources */,
 				7C816F512238660B009C8EB8 /* R.generated.swift in Sources */,
 				049CFAAC26403D2E0021C7CA /* LocaleRefreshable.swift in Sources */,
 				049CFAD126403D2E0021C7CA /* ReusableView.swift in Sources */,
 				049CFAE9264040FA0021C7CA /* UserDefaults+AppSettings.swift in Sources */,
 				7CE8135D2239A3CF004A223E /* SignInView.swift in Sources */,
-				7CE813682239BB2E004A223E /* Album.swift in Sources */,
+				7CE813682239BB2E004A223E /* FBPhotoAlbumJSON.swift in Sources */,
+				04078ECF27C39DA200DBC6DE /* FBAlbumPhotos.swift in Sources */,
 				049CFAAE26403D2E0021C7CA /* Selectable.swift in Sources */,
 				049CFADE26403F300021C7CA /* OSLog+Ext.swift in Sources */,
 				049CFAB526403D2E0021C7CA /* JSONAble.swift in Sources */,
 				049CFAB326403D2E0021C7CA /* XIBLocalizable.swift in Sources */,
 				049CFAEE264041800021C7CA /* UserDefaults+Ext.swift in Sources */,
+				04078ED527C39E3E00DBC6DE /* FBAlbumPhotosPaging.swift in Sources */,
 				049CFAAF26403D2E0021C7CA /* ContentRefreshable.swift in Sources */,
 				049CFAE126403F900021C7CA /* NSObject+Ext.swift in Sources */,
 			);

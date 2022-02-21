@@ -11,9 +11,9 @@ import Kingfisher
 import UIKit
 
 final class AlbumsListCellViewModel: ViewModelInterface {
-    let album: Album
+    let album: FBPhotoAlbumJSON
     
-    init(album: Album) {
+    init(album: FBPhotoAlbumJSON) {
         self.album = album
     }
 }

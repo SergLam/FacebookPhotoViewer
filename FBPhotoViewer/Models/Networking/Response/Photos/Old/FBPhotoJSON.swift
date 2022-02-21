@@ -1,5 +1,5 @@
 //
-//  Photo.swift
+//  FBPhotoJSON.swift
 //  FBPhotoViewer
 //
 //  Created by Serg Liamtsev on 3/15/19.
@@ -9,11 +9,11 @@
 import Foundation
 import SwiftyJSON
 
-struct Photo {
+struct FBPhotoJSON {
     
-    static func fromJSON(_ data: [String: Any]) -> Photo {
+    static func fromJSON(_ data: [String: Any]) -> FBPhotoJSON {
         let json = JSON(data)
-        return Photo(json: json)
+        return FBPhotoJSON(json: json)
     }
     
     var id: String = ""
@@ -41,9 +41,9 @@ struct Photo {
     
 }
 
-extension Photo {
+extension FBPhotoJSON {
     
-    static func photosToJSON(_ photos: [Photo]) -> [String: Any] {
+    static func photosToJSON(_ photos: [FBPhotoJSON]) -> [String: Any] {
         var photosArray = [String: Any]()
         photos.forEach {
             photosArray.merge($0.toJSON()) { old, _ in

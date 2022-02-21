@@ -16,7 +16,7 @@ final class AlbumPhotosVC: BaseViewController {
     private let viewModel: AlbumPhotosViewModel
     
     // MARK: - Life cycle
-    init(album: Album) {
+    init(album: FBPhotoAlbumJSON) {
         viewModel = AlbumPhotosViewModel(album: album)
         controller = AlbumPhotosCollectionController(collectionView: contentView.collectionView)
         super.init(nibName: nil, bundle: nil)

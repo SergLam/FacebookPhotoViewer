@@ -12,9 +12,9 @@ import UIKit
 
 final class AlbumPhotoCellViewModel: ViewModelInterface {
     
-    let photo: Photo
+    let photo: FBPhotoJSON
     
-    init(photo: Photo) {
+    init(photo: FBPhotoJSON) {
         self.photo = photo
     }
 }
