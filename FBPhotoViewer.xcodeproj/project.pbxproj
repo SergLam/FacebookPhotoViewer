@@ -406,6 +406,14 @@
 			path = LaunchScreen;
 			sourceTree = "<group>";
 		};
+		0465EF6E27C6153600438543 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				7CE8135F2239A59F004A223E /* UIColor+Ext.swift */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
 		049CFA6F26403C3B0021C7CA /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
@@ -700,6 +708,7 @@
 		7C816F4E223861DF009C8EB8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0465EF6E27C6153600438543 /* Colors */,
 				04123FA127B7C89C00AD5721 /* LaunchScreen */,
 				049CFA7226403CB10021C7CA /* Images */,
 				049CFA7126403CA60021C7CA /* Localization */,
@@ -779,7 +788,6 @@
 			children = (
 				049CFADF26403F7D0021C7CA /* Foundation */,
 				049CFADC26403F170021C7CA /* OSLog */,
-				7CE8135F2239A59F004A223E /* UIColor+Ext.swift */,
 				049CFA6B264037A90021C7CA /* UIView+AddAction.swift */,
 			);
 			path = Extensions;
