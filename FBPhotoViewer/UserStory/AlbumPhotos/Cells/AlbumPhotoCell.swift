@@ -6,24 +6,15 @@
 //  Copyright © 2019 Serg Liamtsev. All rights reserved.
 //
 
-import AlisterSwift
 import Kingfisher
 import UIKit
 
-final class AlbumPhotoCellViewModel: ViewModelInterface {
+final class AlbumPhotoCell: UICollectionViewCell {
     
-    let photo: FBAlbumPhotoData
+    private let photoImageView = UIImageView()
+    private let placeholder = R.image.placeholder()
     
-    init(photo: FBAlbumPhotoData) {
-        self.photo = photo
-    }
-}
-
-final class AlbumPhotoCell: UICollectionViewCell, ReusableViewInterface {
-    
-    let photoImageView = UIImageView()
-    let placeholder = R.image.placeholder()
-    
+    // MARK: - Life cycle
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupLayout()
@@ -33,6 +24,14 @@ final class AlbumPhotoCell: UICollectionViewCell, ReusableViewInterface {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Public
+    func update(with model: AlbumPhotoCellViewModel) {
+        if let url = URL(string: model.photo.picture) {
+            photoImageView.kf.setImage(with: url, placeholder: placeholder)
+        }
+    }
+    
+    // MARK: - Private
     private func setupLayout() {
         contentView.addSubview(photoImageView)
         photoImageView.image = placeholder
@@ -45,12 +44,4 @@ final class AlbumPhotoCell: UICollectionViewCell, ReusableViewInterface {
             photoImageView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor)
         ])
     }
-    
-    func update(_ model: ViewModelInterface) {
-        guard let model = model as? AlbumPhotoCellViewModel else { return }
-        if let url = URL(string: model.photo.picture) {
-            photoImageView.kf.setImage(with: url, placeholder: placeholder)
-        }
-    }
-    
 }

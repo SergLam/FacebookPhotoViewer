@@ -58,6 +58,7 @@
 		04E36A6528244D9C0004959C /* EmptyListStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E36A6428244D9C0004959C /* EmptyListStateView.swift */; };
 		04E36A6828244E100004959C /* LayoutConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E36A6728244E0F0004959C /* LayoutConstants.swift */; };
 		04E36A6A282453F60004959C /* ActivityIndicatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E36A69282453F60004959C /* ActivityIndicatorViewController.swift */; };
+		04E36A6C28245BC40004959C /* AlbumPhotoCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E36A6B28245BC40004959C /* AlbumPhotoCellViewModel.swift */; };
 		45D36D0FA2471BFE4B9C5EB4 /* Pods_App_FBPhotoViewerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 539AC4AD4D0360C8829C8073 /* Pods_App_FBPhotoViewerTests.framework */; };
 		7C24DE80223B6F7100A88EED /* AlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C24DE7F223B6F7100A88EED /* AlertPresenter.swift */; };
 		7C24DE83223B722300A88EED /* AlbumsListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C24DE82223B722300A88EED /* AlbumsListVC.swift */; };
@@ -171,6 +172,7 @@
 		04E36A6428244D9C0004959C /* EmptyListStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyListStateView.swift; sourceTree = "<group>"; };
 		04E36A6728244E0F0004959C /* LayoutConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutConstants.swift; sourceTree = "<group>"; };
 		04E36A69282453F60004959C /* ActivityIndicatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorViewController.swift; sourceTree = "<group>"; };
+		04E36A6B28245BC40004959C /* AlbumPhotoCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumPhotoCellViewModel.swift; sourceTree = "<group>"; };
 		0D265B1626C5D88F6BE76FE4 /* Pods-fbphotoviewerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fbphotoviewerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-fbphotoviewerUITests/Pods-fbphotoviewerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		0DC6EE307EDBAB28770F83FB /* Pods-FBPhotoViewerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FBPhotoViewerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FBPhotoViewerUITests/Pods-FBPhotoViewerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		15B5C446EE0B0F7C3B166861 /* Pods-App-FBPhotoViewerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-FBPhotoViewerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-App-FBPhotoViewerTests/Pods-App-FBPhotoViewerTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -692,6 +694,7 @@
 			isa = PBXGroup;
 			children = (
 				7C449120223D115700169843 /* AlbumPhotoCell.swift */,
+				04E36A6B28245BC40004959C /* AlbumPhotoCellViewModel.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -1136,6 +1139,7 @@
 				049CFA6C264037A90021C7CA /* UIView+AddAction.swift in Sources */,
 				04078EC227C2ADFF00DBC6DE /* Data+JSON.swift in Sources */,
 				049CFAD926403ECD0021C7CA /* AppInternalError.swift in Sources */,
+				04E36A6C28245BC40004959C /* AlbumPhotoCellViewModel.swift in Sources */,
 				04E36A6528244D9C0004959C /* EmptyListStateView.swift in Sources */,
 				04078EBF27C2AA9900DBC6DE /* GetMyPhotoAlbumsResponse.swift in Sources */,
 				049CFAD626403E580021C7CA /* BaseViewController.swift in Sources */,

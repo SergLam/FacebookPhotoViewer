@@ -11,7 +11,7 @@ import UIKit
 final class AlbumPhotosView: UIView {
     
     private(set) var collectionView: UICollectionView
-    private let layout = UICollectionViewFlowLayout()
+    private let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
     
     // MARK: - Life cycle
     init() {
@@ -24,6 +24,7 @@ final class AlbumPhotosView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Private
     private func setupLayout() {
         
         backgroundColor = UIColor.white

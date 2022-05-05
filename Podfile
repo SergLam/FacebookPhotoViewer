@@ -24,7 +24,7 @@ def development_pods
   pod 'FBSDKShareKit', '~> 13.2.0'
   
   # UI
-  pod 'Kingfisher', '~> 6.3.0'
+  pod 'Kingfisher', '~> 7.2.0'
   pod 'AlisterSwift', :git => 'https://github.com/anodamobi/AlisterSwift.git', :branch => 'develop', :commit => 'ff395f6'
   
   # Resources

@@ -6,14 +6,67 @@
 //  Copyright © 2019 Serg Liamtsev. All rights reserved.
 //
 
-import AlisterSwift
 import UIKit
 
-final class AlbumPhotosCollectionController: CollectionController {
+protocol AlbumPhotosCollectionControllerDelegate: AnyObject {
     
-    let itemsSpacing: CGFloat = 0.5
+    func didSelectCell(_ model: AlbumPhotoCellViewModel)
+    func didFinishDataSourceUpdates()
+}
+
+final class AlbumPhotosCollectionController: NSObject {
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    weak var delegate: AlbumPhotosCollectionControllerDelegate?
+    
+    private let itemsSpacing: CGFloat = 0.5
+    
+    private var models: [AlbumPhotoCellViewModel] = []
+    
+    private let collectionView: UICollectionView
+    private let collectionViewUpdatesQueue: DispatchQueue = DispatchQueue(label: "\(AlbumPhotosCollectionController.self).list.diffs", qos: .userInteractive, attributes: [], autoreleaseFrequency: .workItem, target: nil)
+    
+    // MARK: - Life cycle
+    init(collectionView: UICollectionView) {
+        self.collectionView = collectionView
+        super.init()
+        collectionView.registerCellClass(AlbumPhotoCell.self)
+        collectionView.delegate = self
+        collectionView.dataSource = self
+    }
+    
+    // MARK: - Public
+    func update(with models: [AlbumPhotoCellViewModel]) {
+        collectionViewUpdatesQueue.async { [weak self] in
+            self?.models = models
+            self?.delegate?.didFinishDataSourceUpdates()
+        }
+    }
+}
+
+// MARK: - UICollectionViewDataSource
+extension AlbumPhotosCollectionController: UICollectionViewDataSource {
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return models.count
+    }
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(AlbumPhotoCell.self, for: indexPath)
+        cell.update(with: models[indexPath.row])
+        return cell
+    }
+}
+
+// MARK: - UICollectionViewDelegateFlowLayout
+extension AlbumPhotosCollectionController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView,
+           layout collectionViewLayout: UICollectionViewLayout,
+           sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = (collectionView.bounds.width / 3) - itemsSpacing * 2
         return CGSize(width: width, height: width)
     }
@@ -29,5 +82,13 @@ final class AlbumPhotosCollectionController: CollectionController {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets.zero
     }
+}
+
+// MARK: - UICollectionViewDelegate
+extension AlbumPhotosCollectionController: UICollectionViewDelegate {
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let model = models[indexPath.row]
+        delegate?.didSelectCell(model)
+    }
 }

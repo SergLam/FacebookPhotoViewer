@@ -6,19 +6,18 @@
 //  Copyright © 2019 Serg Liamtsev. All rights reserved.
 //
 
-import AlisterSwift
 import UIKit
 
 final class AlbumPhotosVC: BaseViewController {
     
     private let contentView = AlbumPhotosView()
-    private let controller: AlbumPhotosCollectionController
+    private let collectionController: AlbumPhotosCollectionController
     private let viewModel: AlbumPhotosViewModel
     
     // MARK: - Life cycle
     init(album: FBPhotoAlbum) {
         viewModel = AlbumPhotosViewModel(album: album)
-        controller = AlbumPhotosCollectionController(collectionView: contentView.collectionView)
+        collectionController = AlbumPhotosCollectionController(collectionView: contentView.collectionView)
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -31,30 +30,36 @@ final class AlbumPhotosVC: BaseViewController {
     }
     
     override func viewDidLoad() {
-        navigationItem.title = viewModel.album.name
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: Localizable.back(), style: .plain, target: nil, action: nil)
         super.viewDidLoad()
-        configureAlister()
+        configureNavBar()
+        collectionController.delegate = self
         showAlbumPhotos()
     }
     
-    private func configureAlister() {
-        controller.configureCells {
-            $0.register(cell: AlbumPhotoCell.self, for: AlbumPhotoCellViewModel.self)
-        }
-        controller.selection = { [unowned self] model, _ in
-            guard let model = model as? AlbumPhotoCellViewModel else { return }
-            let vc = ViewPhotoVC(url: model.photo.picture)
-            self.navigationController?.pushViewController(vc, animated: true)
-        }
+    private func configureNavBar() {
+        navigationItem.title = viewModel.album.name
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: Localizable.back(), style: .plain, target: nil, action: nil)
     }
     
     private func showAlbumPhotos() {
         let viewModels = viewModel.album.photos.data.map { AlbumPhotoCellViewModel(photo: $0)
         }
-        controller.storage.update {
-            $0.add(viewModels)
-        }
+        collectionController.update(with: viewModels)
     }
     
+}
+
+// MARK: - AlbumPhotosCollectionControllerDelegate
+extension AlbumPhotosVC: AlbumPhotosCollectionControllerDelegate {
+    
+    func didSelectCell(_ model: AlbumPhotoCellViewModel) {
+        let vc = ViewPhotoVC(url: model.photo.picture)
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func didFinishDataSourceUpdates() {
+        executeOnMain { [weak self] in
+            self?.contentView.collectionView.reloadData()
+        }
+    }
 }
