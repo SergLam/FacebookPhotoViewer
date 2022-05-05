@@ -6,18 +6,17 @@
 //  Copyright © 2019 Serg Liamtsev. All rights reserved.
 //
 
-import AlisterSwift
 import UIKit
 
 final class AlbumsListVC: BaseViewController {
     
-    private let contentView = AlbumsView()
-    private let viewModel = AlbumsListViewModel()
-    private let controller: TableController
+    private let contentView: AlbumsView = AlbumsView()
+    private let viewModel: AlbumsListViewModelProtocol = AlbumsListViewModel()
+    private let tableController: AlbumsListTableController
     
     // MARK: - Life cycle
     init() {
-        controller = TableController(tableView: contentView.tableView)
+        tableController = AlbumsListTableController(tableView: contentView.tableView)
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -30,38 +29,42 @@ final class AlbumsListVC: BaseViewController {
     }
     
     override func viewDidLoad() {
-        navigationItem.title = Localizable.albumsListScreenTitle()
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: Localizable.back(), style: .plain, target: nil, action: nil)
         super.viewDidLoad()
-        configureAlister()
+        configureNavBar()
         viewModel.delegate = self
-        
+        tableController.delegate = self
         showProgress()
         viewModel.loadUserAlbums()
     }
     
-    private func configureAlister() {
-        controller.configureCells {
-            $0.register(cell: AlbumsListCell.self, for: AlbumsListCellViewModel.self)
-        }
-        controller.selection = { [unowned self] model, _ in
-            guard let model = model as? AlbumsListCellViewModel else { return }
-            let vc = AlbumPhotosVC(album: model.album)
-            self.navigationController?.pushViewController(vc, animated: true)
-        }
+    private func configureNavBar() {
+        navigationItem.title = Localizable.albumsListScreenTitle()
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: Localizable.back(), style: .plain, target: nil, action: nil)
     }
     
     private func displayAlbums() {
-        controller.storage.update { [unowned self] updater in
-            var models: [AlbumsListCellViewModel] = []
-            for album in self.viewModel.albums {
-                models.append(AlbumsListCellViewModel(album: album))
-            }
-            contentView.setEmptyListViewVisibility(isHidden: !self.viewModel.albums.isEmpty)
-            updater.add(models)
+        var models: [AlbumsListCellViewModel] = []
+        for album in self.viewModel.albums {
+            models.append(AlbumsListCellViewModel(album: album))
         }
+        contentView.setEmptyListViewVisibility(isHidden: !self.viewModel.albums.isEmpty)
+        tableController.update(with: models)
+    }
+}
+
+// MARK: - AlbumsListTableControllerDelegate
+extension AlbumsListVC: AlbumsListTableControllerDelegate {
+    
+    func didSelectCell(_ model: AlbumsListCellViewModel) {
+        let vc = AlbumPhotosVC(album: model.album)
+        navigationController?.pushViewController(vc, animated: true)
     }
     
+    func didFinishDataSourceUpdates() {
+        executeOnMain{ [weak self] in
+            self?.contentView.tableView.reloadData()
+        }
+    }
 }
 
 // MARK: - AlbumsListViewModelDelegate

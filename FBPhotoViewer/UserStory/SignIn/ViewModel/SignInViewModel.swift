@@ -1,5 +1,5 @@
 //
-//  SignInVM.swift
+//  SignInViewModel.swift
 //  FBPhotoViewer
 //
 //  Created by Serg Liamtsev on 3/12/19.
@@ -10,16 +10,16 @@ import FBSDKCoreKit
 import FBSDKLoginKit
 import Foundation
 
-protocol SignInVMDelegate: AnyObject {
+protocol SignInViewModelDelegate: AnyObject {
     
     func onSignInError(_ error: String)
     func didUserCancelSignIn()
     func onSignInSuccess()
 }
 
-final class SignInVM {
+final class SignInViewModel {
     
-    weak var delegate: SignInVMDelegate?
+    weak var delegate: SignInViewModelDelegate?
     
     func signInViaFB(_ vc: UIViewController){
         

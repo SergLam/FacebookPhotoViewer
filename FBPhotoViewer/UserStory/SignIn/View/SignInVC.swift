@@ -11,7 +11,7 @@ import UIKit
 
 final class SignInVC: BaseViewController {
     
-    private let viewModel = SignInVM()
+    private let viewModel = SignInViewModel()
     private let contentView = SignInView()
     
     // MARK: - Life cycle
@@ -38,8 +38,8 @@ extension SignInVC: SignInViewDelegate {
     
 }
 
-// MARK: - SignInVMDelegate
-extension SignInVC: SignInVMDelegate {
+// MARK: - SignInViewModelDelegate
+extension SignInVC: SignInViewModelDelegate {
     
     func onSignInError(_ error: String) {
         executeOnMain { [weak self] in

@@ -6,20 +6,10 @@
 //  Copyright © 2019 Serg Liamtsev. All rights reserved.
 //
 
-import AlisterSwift
 import Kingfisher
 import UIKit
 
-final class AlbumsListCellViewModel: ViewModelInterface {
-    
-    let album: FBPhotoAlbum
-    
-    init(album: FBPhotoAlbum) {
-        self.album = album
-    }
-}
-
-final class AlbumsListCell: UITableViewCell, ReusableViewInterface {
+final class AlbumsListCell: UITableViewCell {
     
     private let albumImage = UIImageView()
     private let albumTitle = UILabel()
@@ -34,6 +24,15 @@ final class AlbumsListCell: UITableViewCell, ReusableViewInterface {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Public
+    func update(with model: AlbumsListCellViewModel) {
+        if let url = URL(string: model.album.picture.data.url) {
+            albumImage.kf.setImage(with: url, placeholder: R.image.placeholder())
+        }
+        albumTitle.text = model.album.name
+    }
+    
+    // MARK: - Private
     private func setupLayout() {
         
         contentView.backgroundColor = UIColor.white
@@ -59,13 +58,4 @@ final class AlbumsListCell: UITableViewCell, ReusableViewInterface {
             albumTitle.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -15)
         ])
     }
-    
-    func update(_ model: ViewModelInterface) {
-        guard let model = model as? AlbumsListCellViewModel else { return }
-        if let url = URL(string: model.album.picture.data.url) {
-            albumImage.kf.setImage(with: url, placeholder: R.image.placeholder())
-        }
-        albumTitle.text = model.album.name
-    }
-    
 }

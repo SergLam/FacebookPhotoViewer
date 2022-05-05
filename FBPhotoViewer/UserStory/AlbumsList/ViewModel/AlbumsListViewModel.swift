@@ -8,13 +8,7 @@
 
 import Foundation
 
-protocol AlbumsListViewModelDelegate: AnyObject {
-    
-    func didReceiveError(_ error: Error)
-    func onLoadAlbumsSuccess()
-}
-
-final class AlbumsListViewModel {
+final class AlbumsListViewModel: AlbumsListViewModelProtocol {
     
     weak var delegate: AlbumsListViewModelDelegate?
     

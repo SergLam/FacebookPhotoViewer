@@ -105,20 +105,6 @@ struct R: Rswift.Validatable {
   }
   #endif
 
-  /// This `R.file` struct is generated, and contains static references to 1 files.
-  struct file {
-    /// Resource file `Prod.xcconfig`.
-    static let prodXcconfig = Rswift.FileResource(bundle: R.hostingBundle, name: "Prod", pathExtension: "xcconfig")
-
-    /// `bundle.url(forResource: "Prod", withExtension: "xcconfig")`
-    static func prodXcconfig(_: Void = ()) -> Foundation.URL? {
-      let fileResource = R.file.prodXcconfig
-      return fileResource.bundle.url(forResource: fileResource)
-    }
-
-    fileprivate init() {}
-  }
-
   /// This `R.image` struct is generated, and contains static references to 2 images.
   struct image {
     /// Image `app-logo`.

@@ -1,5 +1,4 @@
 PODS:
-  - AlisterSwift (0.1.0)
   - FBAEMKit (13.2.0):
     - FBSDKCoreKit_Basics (= 13.2.0)
   - FBSDKCoreKit (13.2.0):
@@ -17,7 +16,6 @@ PODS:
   - SwiftLint (0.47.1)
 
 DEPENDENCIES:
-  - AlisterSwift (from `https://github.com/anodamobi/AlisterSwift.git`, commit `ff395f6`, branch `develop`)
   - FBSDKCoreKit (~> 13.2.0)
   - FBSDKLoginKit (~> 13.2.0)
   - FBSDKShareKit (~> 13.2.0)
@@ -37,19 +35,7 @@ SPEC REPOS:
     - R.swift.Library
     - SwiftLint
 
-EXTERNAL SOURCES:
-  AlisterSwift:
-    :branch: develop
-    :commit: ff395f6
-    :git: https://github.com/anodamobi/AlisterSwift.git
-
-CHECKOUT OPTIONS:
-  AlisterSwift:
-    :commit: 2256340f3359f592425a949c1bda641415603942
-    :git: https://github.com/anodamobi/AlisterSwift.git
-
 SPEC CHECKSUMS:
-  AlisterSwift: 19c1632b402a709714a63a4a2fc932eaa42f4943
   FBAEMKit: c2b2895363b7e57192013d1dc49fdf498b28624c
   FBSDKCoreKit: 58139803d861e72c7661dc875611a759352a55ac
   FBSDKCoreKit_Basics: 1ffc68326a5ece051d85574f02a0adcf27c2a5f2
@@ -60,6 +46,6 @@ SPEC CHECKSUMS:
   R.swift.Library: 0fc583cb55a99e28901299cc451614cad1161962
   SwiftLint: f80f1be7fa96d30e0aa68e58d45d4ea1ccaac519
 
-PODFILE CHECKSUM: f90913ff0a0c578188357ab3fd3f7aedc10486cf
+PODFILE CHECKSUM: 10048745d5a058307d98f832256ced0dc96ce6ab
 
 COCOAPODS: 1.11.3
