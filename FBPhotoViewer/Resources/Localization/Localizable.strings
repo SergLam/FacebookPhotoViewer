@@ -12,6 +12,7 @@
 "error" = "Error";
 "success" = "Success";
 "back" = "Back";
+"loading" = "Loading";
 
 // MARK: - Facebook errors
 "error.fb-empty-result" = "Facebook Autorization - unable to get result";

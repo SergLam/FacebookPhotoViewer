@@ -7,7 +7,6 @@
 //
 
 import AlisterSwift
-import PKHUD
 import UIKit
 
 final class AlbumsListVC: BaseViewController {

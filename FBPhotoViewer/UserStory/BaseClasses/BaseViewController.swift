@@ -7,13 +7,14 @@
 //
 
 import MessageUI
-import PKHUD
 import SafariServices
 import UIKit
 
 class BaseViewController: UIViewController, ProgressShowable, ExternalURLOpenable, StatusBarResizable, UniqueIdentifiable {
     
     var identifier: UUID = UUID()
+    
+    var progressViewController = ActivityIndicatorViewController()
     
     // MARK: - Life cycle
     deinit {

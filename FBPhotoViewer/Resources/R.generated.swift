@@ -145,7 +145,7 @@ struct R: Rswift.Validatable {
 
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 16 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 17 localization keys.
     struct localizable {
       /// Value: Back
       static let back = Rswift.StringResource(key: "back", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
@@ -161,6 +161,8 @@ struct R: Rswift.Validatable {
       static let errorFbCanceledByUser = Rswift.StringResource(key: "error.fb-canceled-by-user", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Failed to get access token
       static let errorFbAccessTokenNil = Rswift.StringResource(key: "error.fb-access-token-nil", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Loading
+      static let loading = Rswift.StringResource(key: "loading", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Mail failed: the email message was not sent. Please check your e-mail settings.
       static let emailSendFail = Rswift.StringResource(key: "email.send.fail", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Mail send: email message sent successfully.
@@ -269,6 +271,19 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("error.fb-access-token-nil", bundle: bundle, comment: "")
+      }
+
+      /// Value: Loading
+      static func loading(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("loading", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "loading"
+        }
+
+        return NSLocalizedString("loading", bundle: bundle, comment: "")
       }
 
       /// Value: Mail failed: the email message was not sent. Please check your e-mail settings.

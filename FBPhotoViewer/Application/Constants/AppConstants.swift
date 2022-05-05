@@ -29,14 +29,7 @@ struct AppConstants {
     static let previewBigDevice: [String] = ["iPhone 12 Pro Max"]
     
     static var prettyJsonOptions: JSONSerialization.WritingOptions {
-        let options: JSONSerialization.WritingOptions
-        if #available(iOS 13.0, *) {
-            options = [.prettyPrinted, .sortedKeys, .withoutEscapingSlashes]
-        } else if #available(iOS 11.0, *) {
-            options = [.prettyPrinted, .sortedKeys]
-        } else {
-            options = [.prettyPrinted]
-        }
+        let options: JSONSerialization.WritingOptions = [.prettyPrinted, .sortedKeys, .withoutEscapingSlashes]
         return options
     }
 }

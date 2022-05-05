@@ -1,6 +1,6 @@
 # Uncomment the next line to define a global platform for your project
-platform :ios, '11.0'
-deployment_target = '11.0'
+platform :ios, '13.0'
+deployment_target = '13.0'
 
 install! 'cocoapods', :disable_input_output_paths => true, :warn_for_unused_master_specs_repo => false
 
@@ -19,26 +19,25 @@ def development_pods
   inhibit_all_warnings!
   
   # Facebook
-  pod 'FBSDKLoginKit', '~> 12.3.0'
-  pod 'FBSDKCoreKit', '~> 12.3.0'
-  pod 'FBSDKShareKit', '~> 12.3.0'
+  pod 'FBSDKLoginKit', '~> 13.2.0'
+  pod 'FBSDKCoreKit', '~> 13.2.0'
+  pod 'FBSDKShareKit', '~> 13.2.0'
   
   # UI
   pod 'Kingfisher', '~> 6.3.0'
   pod 'AlisterSwift', :git => 'https://github.com/anodamobi/AlisterSwift.git', :branch => 'develop', :commit => 'ff395f6'
-  pod 'PKHUD', '~> 5.3.0'
   
   # Resources
   pod 'R.swift', '~> 6.1.0'
 
   # Code-style
-  pod 'SwiftLint', '~> 0.46.2'
+  pod 'SwiftLint', '~> 0.47.1'
 end
 
 def testing_pods
   
   # Code-style
-  pod 'SwiftLint', '~> 0.46.2'
+  pod 'SwiftLint', '~> 0.47.1'
 end
 
 abstract_target 'App' do

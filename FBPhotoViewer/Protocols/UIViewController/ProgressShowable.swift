@@ -6,48 +6,39 @@
 //  Copyright © 2021 Serg Liamtsev. All rights reserved.
 //
 
-import PKHUD
 import UIKit
 
 protocol ProgressShowable {
     
-    func showProgress()
-    func hideProgress()
-    func hideProgress(completion: @escaping VoidClosure)
+    func showProgress(_ title: String?)
+    func hideProgress(completion: VoidClosure?)
 }
 
 extension ProgressShowable where Self: BaseViewController {
     
-    func showProgress() {
+    func showProgress(_ title: String? = Localizable.loading(preferredLanguages: [UserDefaults.shared.selectedLocaleCode])) {
         
-        executeOnMain { [weak self] in
-            guard let self = self else { return }
-//            let text: String = Localizable.loading(preferredLanguages: [UserDefaults.shared.selectedLocaleCode])
-            HUD.show(.labeledProgress(title: nil, subtitle: nil), onView: self.view)
+        DispatchQueue.main.async { [weak self] in
+            guard let `self` = self else { return }
+            `self`.addChild(self.progressViewController)
+            `self`.progressViewController.view.frame = `self`.view.frame
+            `self`.view.addSubview(`self`.progressViewController.view)
+            `self`.progressViewController.didMove(toParent: `self`)
+            `self`.progressViewController.showProgress(title)
         }
     }
     
-    func showProgress(_ text: String? = nil) {
+    func hideProgress(completion: VoidClosure? = nil) {
         
-        executeOnMain { [weak self] in
-            guard let self = self else { return }
-//            let text: String = Localizable.loading(preferredLanguages: [UserDefaults.shared.selectedLocaleCode])
-            HUD.show(.labeledProgress(title: nil, subtitle: nil), onView: self.view)
-        }
-    }
-    
-    func hideProgress() {
-        
-        executeOnMain {
-            HUD.hide(animated: true)
-        }
-    }
-    
-    func hideProgress(completion: @escaping VoidClosure) {
-        
-        executeOnMain {
-            HUD.hide(animated: true)
-            completion()
+        DispatchQueue.main.async { [weak self] in
+            
+            self?.progressViewController.hideProgress(completion: { [weak self] in
+                
+                self?.progressViewController.willMove(toParent: nil)
+                self?.progressViewController.view.removeFromSuperview()
+                self?.progressViewController.removeFromParent()
+                completion?()
+            })
         }
     }
 }
