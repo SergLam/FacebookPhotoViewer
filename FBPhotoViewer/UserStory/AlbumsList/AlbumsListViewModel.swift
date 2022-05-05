@@ -17,18 +17,18 @@ final class AlbumsListViewModel {
     
     weak var delegate: AlbumsListViewModelDelegate?
     
-    var albums: [FBPhotoAlbumJSON] = []
+    var albums: [FBPhotoAlbum] = []
     
     private let fbApiManager = FBGraphAPIManager()
     
     func loadUserAlbums() {
-        fbApiManager.getUserAlbums(completion: {  [weak self] albums, error in
-            if let error = error {
-                self?.delegate?.didFailToLoadData(error.localizedDescription)
-            }
-            if let albums = albums {
-                self?.albums = albums
+        fbApiManager.getUserAlbums(completion: { [weak self] result in
+            switch result {
+            case .success(let response):
+                self?.albums = response.data
                 self?.delegate?.onLoadAlbumsSuccess()
+            case .failure(let error):
+                self?.delegate?.didFailToLoadData(error.localizedDescription)
             }
         })
     }

@@ -1,5 +1,5 @@
 //
-//  GetMyPhotoAlbumsResponseData.swift
+//  FBPhotoAlbum.swift
 //  FBPhotoViewer
 //
 //  Created by Serhii Liamtsev on 2/21/22.
@@ -8,18 +8,18 @@
 
 import Foundation
 
-struct GetMyPhotoAlbumsResponseData: Codable {
+struct FBPhotoAlbum: Codable {
     
-    var coverPhoto: FBAlbumCoverPhoto
     var id: String
+    var coverPhoto: FBAlbumCoverPhoto
     var name: String
     var photoCount: Int
     var photos: FBAlbumPhotos
     var picture: FBAlbumPicture
 
     enum CodingKeys: String, CodingKey {
-        case coverPhoto = "cover_photo"
         case id = "id"
+        case coverPhoto = "cover_photo"
         case name = "name"
         case photoCount = "photo_count"
         case photos = "photos"

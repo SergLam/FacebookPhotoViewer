@@ -16,7 +16,7 @@ final class AlbumPhotosVC: BaseViewController {
     private let viewModel: AlbumPhotosViewModel
     
     // MARK: - Life cycle
-    init(album: FBPhotoAlbumJSON) {
+    init(album: FBPhotoAlbum) {
         viewModel = AlbumPhotosViewModel(album: album)
         controller = AlbumPhotosCollectionController(collectionView: contentView.collectionView)
         super.init(nibName: nil, bundle: nil)
@@ -44,13 +44,14 @@ final class AlbumPhotosVC: BaseViewController {
         }
         controller.selection = { [unowned self] model, _ in
             guard let model = model as? AlbumPhotoCellViewModel else { return }
-            let vc = ViewPhotoVC(url: model.photo.photoUrl)
+            let vc = ViewPhotoVC(url: model.photo.picture)
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }
     
     private func showAlbumPhotos() {
-        let viewModels = viewModel.album.photos.map { AlbumPhotoCellViewModel(photo: $0) }
+        let viewModels = viewModel.album.photos.data.map { AlbumPhotoCellViewModel(photo: $0)
+        }
         controller.storage.update {
             $0.add(viewModels)
         }

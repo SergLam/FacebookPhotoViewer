@@ -10,8 +10,8 @@ import Foundation
 
 struct GetMyPhotoAlbumsResponse: Codable {
     
-    var data: [GetMyPhotoAlbumsResponseData]
-    var paging: GetMyPhotoAlbumsResponsePaging
+    var data: [FBPhotoAlbum]
+    var paging: FBPagingData
 
     enum CodingKeys: String, CodingKey {
         case data = "data"

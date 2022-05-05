@@ -8,8 +8,11 @@
 
 import Foundation
 
-struct GetMyPhotoAlbumsRequest {
-    let path = "me/albums"
-    let parameters: [String: Any] = ["fields":
+struct GetMyPhotoAlbumsRequest: FBGraphAPIRequestModelProtocol {
+    
+    var path: String {
+        return "me/albums"
+    }
+    var parameters: [String: Any] = ["fields":
         "id, photo_count, name, photos{picture, id, images}, cover_photo, picture"]
 }

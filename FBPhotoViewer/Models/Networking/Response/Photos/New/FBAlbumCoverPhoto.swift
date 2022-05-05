@@ -9,6 +9,7 @@
 import Foundation
 
 struct FBAlbumCoverPhoto: Codable {
+    
     var createdTime: Date
     var id: String
     var name: String?

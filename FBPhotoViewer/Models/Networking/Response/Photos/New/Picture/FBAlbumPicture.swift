@@ -9,6 +9,7 @@
 import Foundation
 
 struct FBAlbumPicture: Codable {
+    
     var data: FBAlbumPictureData
 
     enum CodingKeys: String, CodingKey {

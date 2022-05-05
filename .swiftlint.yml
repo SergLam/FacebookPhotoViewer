@@ -48,7 +48,16 @@ type_name:
     max_length:
         warning: 60
         error: 80
-        
+
+force_cast:
+  severity: error
+
+force_try:
+  severity: error
+  
+force_unwrapping:
+  severity: error
+  
 excluded:
     - Carthage
     - FBPhotoViewer/Pods

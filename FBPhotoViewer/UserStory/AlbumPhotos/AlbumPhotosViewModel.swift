@@ -10,10 +10,10 @@ import Foundation
 
 final class AlbumPhotosViewModel {
     
-    var album: FBPhotoAlbumJSON
+    var album: FBPhotoAlbum
     
     // MARK: - Life cycle
-    init(album: FBPhotoAlbumJSON) {
+    init(album: FBPhotoAlbum) {
         self.album = album
     }
     

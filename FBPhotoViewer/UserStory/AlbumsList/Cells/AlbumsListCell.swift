@@ -11,9 +11,10 @@ import Kingfisher
 import UIKit
 
 final class AlbumsListCellViewModel: ViewModelInterface {
-    let album: FBPhotoAlbumJSON
     
-    init(album: FBPhotoAlbumJSON) {
+    let album: FBPhotoAlbum
+    
+    init(album: FBPhotoAlbum) {
         self.album = album
     }
 }
@@ -61,7 +62,7 @@ final class AlbumsListCell: UITableViewCell, ReusableViewInterface {
     
     func update(_ model: ViewModelInterface) {
         guard let model = model as? AlbumsListCellViewModel else { return }
-        if let url = URL(string: model.album.coverPhotoUrl) {
+        if let url = URL(string: model.album.picture.data.url) {
             albumImage.kf.setImage(with: url, placeholder: R.image.placeholder())
         }
         albumTitle.text = model.album.name

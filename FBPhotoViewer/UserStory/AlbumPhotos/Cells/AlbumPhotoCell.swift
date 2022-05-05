@@ -12,9 +12,9 @@ import UIKit
 
 final class AlbumPhotoCellViewModel: ViewModelInterface {
     
-    let photo: FBPhotoJSON
+    let photo: FBAlbumPhotoData
     
-    init(photo: FBPhotoJSON) {
+    init(photo: FBAlbumPhotoData) {
         self.photo = photo
     }
 }
@@ -48,7 +48,7 @@ final class AlbumPhotoCell: UICollectionViewCell, ReusableViewInterface {
     
     func update(_ model: ViewModelInterface) {
         guard let model = model as? AlbumPhotoCellViewModel else { return }
-        if let url = URL(string: model.photo.thumbnailUrl) {
+        if let url = URL(string: model.photo.picture) {
             photoImageView.kf.setImage(with: url, placeholder: placeholder)
         }
     }

@@ -8,13 +8,16 @@
 
 import FBSDKCoreKit
 import Foundation
-import SwiftyJSON
 
 final class FBGraphAPIManager: FBGraphAPIManagerProtocol {
     
-    private let decoder: JSONDecoder = JSONDecoder()
+    var decoder: JSONDecoder = JSONDecoder()
     
-    func getUserProfile(completion: @escaping (Result<UserJSON, Error>) -> Void) {
+    init() {
+        decoder.dateDecodingStrategy = .formatted(DateFormatter.feedPostDateTime)
+    }
+    
+    func getUserProfile(completion: @escaping ResultClosure<UserJSON>) {
         let request = GetMyProfileRequest()
         let graphRequest = GraphRequest(graphPath: request.path, parameters: request.parameters)
         graphRequest.start(completion: { [weak self] _, result, error in
@@ -42,45 +45,32 @@ final class FBGraphAPIManager: FBGraphAPIManagerProtocol {
     }
     
     // TODO: - Add pagination
-    func getUserAlbums(completion: @escaping ([FBPhotoAlbumJSON]?, Error?) -> Void) {
+    func getUserAlbums(completion: @escaping ResultClosure<GetMyPhotoAlbumsResponse>) {
+        
         let request = GetMyPhotoAlbumsRequest()
         let graphRequest = GraphRequest(graphPath: request.path, parameters: request.parameters)
-        graphRequest.start(completion: { _, result, error in
-            if let result = result {
-                let json = JSON(result)
-                let albums_data = json["data"].arrayValue
-                var albums: [FBPhotoAlbumJSON] = []
-                for data in albums_data {
-                    albums.append(FBPhotoAlbumJSON(json: data))
+        graphRequest.start(completion: { [weak self] _, result, error in
+            
+            guard let `self` = self else { return }
+            guard let error = error else {
+                guard let result = result else {
+                    completion(.failure(FBAPIError.emptyResponseValues))
+                    return
                 }
-                completion(albums, error)
-                
-                // TODO: - Migration to codable models
-                
-//                guard let `self` = self else { return }
-//                guard let error = error else {
-//                    guard let result = result else {
-//                        completion(.failure(FBAPIError.emptyResponseValues))
-//                        return
-//                    }
-//                    guard let jsonDictionary = result as? [String: Any] else {
-//                        completion(.failure(FBAPIError.unableToGetResponseData))
-//                        return
-//                    }
-//                    do {
-//                        let jsonData = try JSONSerialization.data(withJSONObject: jsonDictionary, options: [AppConstants.prettyJsonOptions])
-//                        let user = try self.decoder.decode(GetMyPhotoAlbumsResponse.self, from: jsonData)
-//                        completion(.success(user))
-//                    } catch {
-//                        completion(.failure(error))
-//                    }
-//                    return
-//                }
-//                completion(.failure(error))
-                
-            } else {
-                completion(nil, error)
+                guard let jsonDictionary = result as? [String: Any] else {
+                    completion(.failure(FBAPIError.unableToGetResponseData))
+                    return
+                }
+                do {
+                    let jsonData = try JSONSerialization.data(withJSONObject: jsonDictionary, options: [AppConstants.prettyJsonOptions])
+                    let response = try self.decoder.decode(GetMyPhotoAlbumsResponse.self, from: jsonData)
+                    completion(.success(response))
+                } catch {
+                    completion(.failure(error))
+                }
+                return
             }
+            completion(.failure(error))
         })
     }
     

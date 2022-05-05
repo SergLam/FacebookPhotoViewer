@@ -9,6 +9,7 @@
 import Foundation
 
 struct FBAlbumPictureData: Codable {
+    
     var isSilhouette: Bool
     var url: String
 

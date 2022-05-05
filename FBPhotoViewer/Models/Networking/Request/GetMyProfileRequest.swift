@@ -8,7 +8,9 @@
 
 import Foundation
 
-struct GetMyProfileRequest {
-    let path = "me"
-    let parameters: [String: Any] = ["fields": "id, first_name, last_name, name"]
+struct GetMyProfileRequest: FBGraphAPIRequestModelProtocol {
+    var path: String {
+        return "me"
+    }
+    var parameters: [String: Any] = ["fields": "id, first_name, last_name, name"]
 }

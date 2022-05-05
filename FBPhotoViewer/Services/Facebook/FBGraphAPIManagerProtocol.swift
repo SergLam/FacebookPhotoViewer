@@ -10,5 +10,9 @@ import Foundation
 
 protocol FBGraphAPIManagerProtocol: AnyObject {
     
-    func getUserProfile(completion: @escaping (Result<UserJSON, Error>) -> Void)
+    var decoder: JSONDecoder { get set }
+    
+    func getUserProfile(completion: @escaping ResultClosure<UserJSON>)
+    
+    func getUserAlbums(completion: @escaping ResultClosure<GetMyPhotoAlbumsResponse>)
 }

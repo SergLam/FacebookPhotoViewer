@@ -129,4 +129,12 @@ extension DateFormatter {
         return formatter
     }()
     
+    static let feedPostDateTime: DateFormatter = {
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeZone = TimeZone.current
+        dateFormatter.calendar = Calendar(identifier: .iso8601)
+        dateFormatter.locale = Locale(identifier: "en_US_POSIX")
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ" // "2022-03-11T10:52:23+0000"
+        return dateFormatter
+    }()
 }

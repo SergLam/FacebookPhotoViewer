@@ -23,9 +23,6 @@ def development_pods
   pod 'FBSDKCoreKit', '~> 12.3.0'
   pod 'FBSDKShareKit', '~> 12.3.0'
   
-  # Networking
-  pod 'SwiftyJSON', '~> 5.0.1'
-  
   # UI
   pod 'Kingfisher', '~> 6.3.0'
   pod 'AlisterSwift', :git => 'https://github.com/anodamobi/AlisterSwift.git', :branch => 'develop', :commit => 'ff395f6'

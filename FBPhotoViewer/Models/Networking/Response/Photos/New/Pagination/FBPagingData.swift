@@ -1,5 +1,5 @@
 //
-//  GetMyPhotoAlbumsResponsePaging.swift
+//  FBPagingData.swift
 //  FBPhotoViewer
 //
 //  Created by Serhii Liamtsev on 2/21/22.
@@ -8,7 +8,8 @@
 
 import Foundation
 
-struct GetMyPhotoAlbumsResponsePaging: Codable {
+struct FBPagingData: Codable {
+    
     var cursors: FBPaginationCursor
 
     enum CodingKeys: String, CodingKey {
