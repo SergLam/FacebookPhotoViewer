@@ -11,6 +11,7 @@ import UIKit
 final class AlbumsView: UIView {
     
     private(set) var tableView = UITableView()
+    private let emptyStateView: EmptyListStateView = EmptyListStateView()
     
     // MARK: - Life cycle
     override init(frame: CGRect) {
@@ -22,6 +23,14 @@ final class AlbumsView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Public
+    func setEmptyListViewVisibility(isHidden: Bool) {
+        
+        tableView.backgroundView = isHidden ? nil : emptyStateView
+        emptyStateView.isHidden = isHidden
+    }
+    
+    // MARK: - Private
     private func setupLayout() {
         backgroundColor = UIColor.white
         
@@ -35,5 +44,18 @@ final class AlbumsView: UIView {
             tableView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor)
         ])
+        
+        tableView.backgroundView = emptyStateView
+        emptyStateView.isHidden = true
+        emptyStateView.update(title: emptyAlbumsListTitle(), description: nil)
+    }
+    
+    private func emptyAlbumsListTitle() -> NSAttributedString {
+        let text = Localizable.albumsListEmptyStateTitle()
+        let attributes: [NSAttributedString.Key: Any] = [
+            .font: UIFont.systemFont(ofSize: 25, weight: .bold),
+            .foregroundColor: UIColor.darkGray]
+        let attributedString = NSAttributedString(string: text, attributes: attributes)
+        return attributedString
     }
 }

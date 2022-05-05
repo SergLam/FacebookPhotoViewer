@@ -55,6 +55,8 @@
 		049CFAF2264042200021C7CA /* DateFormatter+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CFAF1264042200021C7CA /* DateFormatter+Ext.swift */; };
 		04C2942227AAD40400598B5E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04C2942127AAD40400598B5E /* Images.xcassets */; };
 		04E36A62282446EF0004959C /* FBGraphAPIRequestModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E36A61282446EF0004959C /* FBGraphAPIRequestModelProtocol.swift */; };
+		04E36A6528244D9C0004959C /* EmptyListStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E36A6428244D9C0004959C /* EmptyListStateView.swift */; };
+		04E36A6828244E100004959C /* LayoutConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E36A6728244E0F0004959C /* LayoutConstants.swift */; };
 		45D36D0FA2471BFE4B9C5EB4 /* Pods_App_FBPhotoViewerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 539AC4AD4D0360C8829C8073 /* Pods_App_FBPhotoViewerTests.framework */; };
 		7C24DE80223B6F7100A88EED /* AlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C24DE7F223B6F7100A88EED /* AlertPresenter.swift */; };
 		7C24DE83223B722300A88EED /* AlbumsListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C24DE82223B722300A88EED /* AlbumsListVC.swift */; };
@@ -165,6 +167,8 @@
 		049CFAF1264042200021C7CA /* DateFormatter+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Ext.swift"; sourceTree = "<group>"; };
 		04C2942127AAD40400598B5E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		04E36A61282446EF0004959C /* FBGraphAPIRequestModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBGraphAPIRequestModelProtocol.swift; sourceTree = "<group>"; };
+		04E36A6428244D9C0004959C /* EmptyListStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyListStateView.swift; sourceTree = "<group>"; };
+		04E36A6728244E0F0004959C /* LayoutConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutConstants.swift; sourceTree = "<group>"; };
 		0D265B1626C5D88F6BE76FE4 /* Pods-fbphotoviewerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fbphotoviewerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-fbphotoviewerUITests/Pods-fbphotoviewerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		0DC6EE307EDBAB28770F83FB /* Pods-FBPhotoViewerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FBPhotoViewerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FBPhotoViewerUITests/Pods-FBPhotoViewerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		15B5C446EE0B0F7C3B166861 /* Pods-App-FBPhotoViewerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-FBPhotoViewerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-App-FBPhotoViewerTests/Pods-App-FBPhotoViewerTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -612,6 +616,23 @@
 			path = LocalStorage;
 			sourceTree = "<group>";
 		};
+		04E36A6328244D330004959C /* CoreUI */ = {
+			isa = PBXGroup;
+			children = (
+				04E36A6428244D9C0004959C /* EmptyListStateView.swift */,
+			);
+			path = CoreUI;
+			sourceTree = "<group>";
+		};
+		04E36A6628244DCD0004959C /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				049CFAEF264041C40021C7CA /* AppConstants.swift */,
+				04E36A6728244E0F0004959C /* LayoutConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		6366EF0AB769ACCE7F714DB9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -644,10 +665,10 @@
 		7C2C671E2237971000D0AF8A /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				04E36A6628244DCD0004959C /* Constants */,
 				049CFAE226403FB40021C7CA /* Environment */,
 				049CFA7326403CC20021C7CA /* Configuration */,
 				049CFA6D264037D70021C7CA /* SharedTypeAliases.swift */,
-				049CFAEF264041C40021C7CA /* AppConstants.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -740,6 +761,7 @@
 				7CE8135E2239A58E004A223E /* Extensions */,
 				7C816F4E223861DF009C8EB8 /* Resources */,
 				7C2C671E2237971000D0AF8A /* Application */,
+				04E36A6328244D330004959C /* CoreUI */,
 			);
 			path = FBPhotoViewer;
 			sourceTree = "<group>";
@@ -1107,9 +1129,11 @@
 				7C9755922236FFEC005F30B4 /* SignInVC.swift in Sources */,
 				049CFAB726403D2E0021C7CA /* Mockable.swift in Sources */,
 				04078ED127C39DD400DBC6DE /* FBAlbumPhotoData.swift in Sources */,
+				04E36A6828244E100004959C /* LayoutConstants.swift in Sources */,
 				049CFA6C264037A90021C7CA /* UIView+AddAction.swift in Sources */,
 				04078EC227C2ADFF00DBC6DE /* Data+JSON.swift in Sources */,
 				049CFAD926403ECD0021C7CA /* AppInternalError.swift in Sources */,
+				04E36A6528244D9C0004959C /* EmptyListStateView.swift in Sources */,
 				04078EBF27C2AA9900DBC6DE /* GetMyPhotoAlbumsResponse.swift in Sources */,
 				049CFAD626403E580021C7CA /* BaseViewController.swift in Sources */,
 				7C44911C223D00BC00169843 /* AlbumPhotosView.swift in Sources */,

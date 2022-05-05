@@ -26,7 +26,6 @@ def development_pods
   # UI
   pod 'Kingfisher', '~> 6.3.0'
   pod 'AlisterSwift', :git => 'https://github.com/anodamobi/AlisterSwift.git', :branch => 'develop', :commit => 'ff395f6'
-  pod 'DZNEmptyDataSet', '~> 1.8.1'
   pod 'PKHUD', '~> 5.3.0'
   
   # Resources

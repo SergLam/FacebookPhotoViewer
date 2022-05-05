@@ -9,7 +9,8 @@
 import Foundation
 
 protocol AlbumsListViewModelDelegate: AnyObject {
-    func didFailToLoadData(_ error: String)
+    
+    func didReceiveError(_ error: Error)
     func onLoadAlbumsSuccess()
 }
 
@@ -28,7 +29,7 @@ final class AlbumsListViewModel {
                 self?.albums = response.data
                 self?.delegate?.onLoadAlbumsSuccess()
             case .failure(let error):
-                self?.delegate?.didFailToLoadData(error.localizedDescription)
+                self?.delegate?.didReceiveError(error)
             }
         })
     }

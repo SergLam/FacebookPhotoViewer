@@ -7,7 +7,6 @@
 //
 
 import AlisterSwift
-import DZNEmptyDataSet
 import PKHUD
 import UIKit
 
@@ -36,7 +35,6 @@ final class AlbumsListVC: BaseViewController {
         navigationItem.backBarButtonItem = UIBarButtonItem(title: Localizable.back(), style: .plain, target: nil, action: nil)
         super.viewDidLoad()
         configureAlister()
-        contentView.tableView.emptyDataSetSource = self
         viewModel.delegate = self
         
         showProgress()
@@ -60,6 +58,7 @@ final class AlbumsListVC: BaseViewController {
             for album in self.viewModel.albums {
                 models.append(AlbumsListCellViewModel(album: album))
             }
+            contentView.setEmptyListViewVisibility(isHidden: !self.viewModel.albums.isEmpty)
             updater.add(models)
         }
     }
@@ -69,11 +68,12 @@ final class AlbumsListVC: BaseViewController {
 // MARK: - AlbumsListViewModelDelegate
 extension AlbumsListVC: AlbumsListViewModelDelegate {
     
-    func didFailToLoadData(_ error: String) {
+    func didReceiveError(_ error: Error) {
         executeOnMain { [weak self] in
             guard let `self` = self else { return }
             self.hideProgress()
-            AlertPresenter.showErrorAlert(on: self, error: error)
+            self.contentView.setEmptyListViewVisibility(isHidden: !self.viewModel.albums.isEmpty)
+            AlertPresenter.showErrorAlert(on: self, error: error.localizedDescription)
         }
     }
     
@@ -83,20 +83,6 @@ extension AlbumsListVC: AlbumsListViewModelDelegate {
             self.hideProgress()
             self.displayAlbums()
         }
-    }
-    
-}
-
-// MARK: - DZNEmptyDataSetSource
-extension AlbumsListVC: DZNEmptyDataSetSource {
-    
-    func title(forEmptyDataSet scrollView: UIScrollView!) -> NSAttributedString! {
-        let text = Localizable.albumsListEmptyStateTitle()
-        let attributes: [NSAttributedString.Key: Any] = [
-            .font: UIFont.systemFont(ofSize: 25, weight: .bold),
-            .foregroundColor: UIColor.darkGray]
-        let attributedString = NSAttributedString(string: text, attributes: attributes)
-        return attributedString
     }
     
 }
