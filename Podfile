@@ -23,7 +23,7 @@ def development_pods
   pod 'FBSDKCoreKit', '~> 13.2.0'
   pod 'FBSDKShareKit', '~> 13.2.0'
   
-  # UI
+  # Networking
   pod 'Kingfisher', '~> 7.2.0'
   
   # Resources
