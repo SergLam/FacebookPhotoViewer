@@ -105,12 +105,52 @@ struct R: Rswift.Validatable {
   }
   #endif
 
-  /// This `R.image` struct is generated, and contains static references to 2 images.
+  /// This `R.image` struct is generated, and contains static references to 22 images.
   struct image {
+    /// Image `app-logo-zoom`.
+    static let appLogoZoom = Rswift.ImageResource(bundle: R.hostingBundle, name: "app-logo-zoom")
     /// Image `app-logo`.
     static let appLogo = Rswift.ImageResource(bundle: R.hostingBundle, name: "app-logo")
+    /// Image `auth-logo`.
+    static let authLogo = Rswift.ImageResource(bundle: R.hostingBundle, name: "auth-logo")
+    /// Image `camera-icon`.
+    static let cameraIcon = Rswift.ImageResource(bundle: R.hostingBundle, name: "camera-icon")
+    /// Image `cancel-cross`.
+    static let cancelCross = Rswift.ImageResource(bundle: R.hostingBundle, name: "cancel-cross")
+    /// Image `clear-text-icon`.
+    static let clearTextIcon = Rswift.ImageResource(bundle: R.hostingBundle, name: "clear-text-icon")
+    /// Image `fb-logo-black`.
+    static let fbLogoBlack = Rswift.ImageResource(bundle: R.hostingBundle, name: "fb-logo-black")
+    /// Image `fb-logo-white`.
+    static let fbLogoWhite = Rswift.ImageResource(bundle: R.hostingBundle, name: "fb-logo-white")
+    /// Image `gallery-icon`.
+    static let galleryIcon = Rswift.ImageResource(bundle: R.hostingBundle, name: "gallery-icon")
+    /// Image `like-icon`.
+    static let likeIcon = Rswift.ImageResource(bundle: R.hostingBundle, name: "like-icon")
+    /// Image `login-button`.
+    static let loginButton = Rswift.ImageResource(bundle: R.hostingBundle, name: "login-button")
+    /// Image `my-profile-header-background`.
+    static let myProfileHeaderBackground = Rswift.ImageResource(bundle: R.hostingBundle, name: "my-profile-header-background")
+    /// Image `my-profile-log-out-icon`.
+    static let myProfileLogOutIcon = Rswift.ImageResource(bundle: R.hostingBundle, name: "my-profile-log-out-icon")
     /// Image `placeholder`.
     static let placeholder = Rswift.ImageResource(bundle: R.hostingBundle, name: "placeholder")
+    /// Image `post-image`.
+    static let postImage = Rswift.ImageResource(bundle: R.hostingBundle, name: "post-image")
+    /// Image `profile-placeholder`.
+    static let profilePlaceholder = Rswift.ImageResource(bundle: R.hostingBundle, name: "profile-placeholder")
+    /// Image `share-icon`.
+    static let shareIcon = Rswift.ImageResource(bundle: R.hostingBundle, name: "share-icon")
+    /// Image `tab-bar-feed-filled`.
+    static let tabBarFeedFilled = Rswift.ImageResource(bundle: R.hostingBundle, name: "tab-bar-feed-filled")
+    /// Image `tab-bar-feed-outlined`.
+    static let tabBarFeedOutlined = Rswift.ImageResource(bundle: R.hostingBundle, name: "tab-bar-feed-outlined")
+    /// Image `tab-bar-user-profile-filled`.
+    static let tabBarUserProfileFilled = Rswift.ImageResource(bundle: R.hostingBundle, name: "tab-bar-user-profile-filled")
+    /// Image `tab-bar-user-profile-outlined`.
+    static let tabBarUserProfileOutlined = Rswift.ImageResource(bundle: R.hostingBundle, name: "tab-bar-user-profile-outlined")
+    /// Image `take-photo-icon`.
+    static let takePhotoIcon = Rswift.ImageResource(bundle: R.hostingBundle, name: "take-photo-icon")
 
     #if os(iOS) || os(tvOS)
     /// `UIImage(named: "app-logo", bundle: ..., traitCollection: ...)`
@@ -120,9 +160,149 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "app-logo-zoom", bundle: ..., traitCollection: ...)`
+    static func appLogoZoom(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.appLogoZoom, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "auth-logo", bundle: ..., traitCollection: ...)`
+    static func authLogo(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.authLogo, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "camera-icon", bundle: ..., traitCollection: ...)`
+    static func cameraIcon(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.cameraIcon, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "cancel-cross", bundle: ..., traitCollection: ...)`
+    static func cancelCross(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.cancelCross, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "clear-text-icon", bundle: ..., traitCollection: ...)`
+    static func clearTextIcon(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.clearTextIcon, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "fb-logo-black", bundle: ..., traitCollection: ...)`
+    static func fbLogoBlack(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.fbLogoBlack, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "fb-logo-white", bundle: ..., traitCollection: ...)`
+    static func fbLogoWhite(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.fbLogoWhite, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "gallery-icon", bundle: ..., traitCollection: ...)`
+    static func galleryIcon(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.galleryIcon, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "like-icon", bundle: ..., traitCollection: ...)`
+    static func likeIcon(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.likeIcon, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "login-button", bundle: ..., traitCollection: ...)`
+    static func loginButton(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.loginButton, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "my-profile-header-background", bundle: ..., traitCollection: ...)`
+    static func myProfileHeaderBackground(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.myProfileHeaderBackground, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "my-profile-log-out-icon", bundle: ..., traitCollection: ...)`
+    static func myProfileLogOutIcon(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.myProfileLogOutIcon, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIImage(named: "placeholder", bundle: ..., traitCollection: ...)`
     static func placeholder(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.placeholder, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "post-image", bundle: ..., traitCollection: ...)`
+    static func postImage(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.postImage, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "profile-placeholder", bundle: ..., traitCollection: ...)`
+    static func profilePlaceholder(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.profilePlaceholder, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "share-icon", bundle: ..., traitCollection: ...)`
+    static func shareIcon(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.shareIcon, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "tab-bar-feed-filled", bundle: ..., traitCollection: ...)`
+    static func tabBarFeedFilled(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.tabBarFeedFilled, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "tab-bar-feed-outlined", bundle: ..., traitCollection: ...)`
+    static func tabBarFeedOutlined(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.tabBarFeedOutlined, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "tab-bar-user-profile-filled", bundle: ..., traitCollection: ...)`
+    static func tabBarUserProfileFilled(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.tabBarUserProfileFilled, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "tab-bar-user-profile-outlined", bundle: ..., traitCollection: ...)`
+    static func tabBarUserProfileOutlined(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.tabBarUserProfileOutlined, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "take-photo-icon", bundle: ..., traitCollection: ...)`
+    static func takePhotoIcon(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.takePhotoIcon, compatibleWith: traitCollection)
     }
     #endif
 

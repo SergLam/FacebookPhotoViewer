@@ -16,7 +16,7 @@ final class SignInView: UIView {
     
     weak var delegate: SignInViewDelegate?
     
-    private let fbLoginButton = UIButton()
+    private let fbLoginButton = FacebookSignInButton()
     
     // MARK: - Life cycle
     override init(frame: CGRect) {
@@ -28,25 +28,26 @@ final class SignInView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Public
+    func setFBImage(animated: Bool = true) {
+        
+    }
+    
+    // MARK: - Private
     private func setupLayout() {
         
         backgroundColor = UIColor.white
         
         addSubview(fbLoginButton)
         let buttonHeight: CGFloat = 46
-        fbLoginButton.backgroundColor = .facebookLogo
-        fbLoginButton.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .bold)
-        fbLoginButton.titleLabel?.adjustsFontSizeToFitWidth = true
-        fbLoginButton.titleLabel?.minimumScaleFactor = 0.5
         fbLoginButton.setTitle(Localizable.signInFbLoginButtonTitle(), for: .normal)
-        fbLoginButton.setTitleColor(.white, for: .normal)
-        fbLoginButton.layer.cornerRadius = buttonHeight / 2
         
         fbLoginButton.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             fbLoginButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -20),
             fbLoginButton.centerXAnchor.constraint(equalTo: centerXAnchor),
-            fbLoginButton.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.5),
+            fbLoginButton.leadingAnchor.constraint(greaterThanOrEqualTo: leadingAnchor, constant: LayoutConstants.contentInset),
+            fbLoginButton.trailingAnchor.constraint(lessThanOrEqualTo: trailingAnchor, constant: -LayoutConstants.contentInset),
             fbLoginButton.heightAnchor.constraint(equalToConstant: buttonHeight)
         ])
         

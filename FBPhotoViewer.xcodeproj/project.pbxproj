@@ -26,6 +26,22 @@
 		04078EDF27C3A12100DBC6DE /* Codable+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04078EDE27C3A12100DBC6DE /* Codable+Ext.swift */; };
 		04078EE127C3A13F00DBC6DE /* Codable+Force.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04078EE027C3A13F00DBC6DE /* Codable+Force.swift */; };
 		04078EE327C3A16B00DBC6DE /* Decodable+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04078EE227C3A16B00DBC6DE /* Decodable+Ext.swift */; };
+		04767D1A282556EE00A6E13F /* UIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04767D19282556EE00A6E13F /* UIProvider.swift */; };
+		04767D1E2825576E00A6E13F /* BasicLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04767D1D2825576E00A6E13F /* BasicLabel.swift */; };
+		04767D21282557BE00A6E13F /* UIProvider+Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04767D20282557BE00A6E13F /* UIProvider+Label.swift */; };
+		04767D232825580200A6E13F /* LabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04767D222825580200A6E13F /* LabelStyle.swift */; };
+		04767D252825581E00A6E13F /* LabelDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04767D242825581E00A6E13F /* LabelDecorator.swift */; };
+		04767D2A2825588F00A6E13F /* SystemSemiboldLeft16Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04767D292825588F00A6E13F /* SystemSemiboldLeft16Label.swift */; };
+		04767D2F28255AA500A6E13F /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04767D2E28255AA500A6E13F /* ButtonStyle.swift */; };
+		04767D3128255AC200A6E13F /* ButtonDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04767D3028255AC200A6E13F /* ButtonDecorator.swift */; };
+		04767D3328255AEE00A6E13F /* BasicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04767D3228255AEE00A6E13F /* BasicButton.swift */; };
+		04767D3628255B4500A6E13F /* UIProvider+Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04767D3528255B4500A6E13F /* UIProvider+Button.swift */; };
+		04767D3828255BDB00A6E13F /* TermsOfUseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04767D3728255BDB00A6E13F /* TermsOfUseButton.swift */; };
+		04767D3B28255C6400A6E13F /* UIColor+RGBA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04767D3A28255C6400A6E13F /* UIColor+RGBA.swift */; };
+		04767D3F28255D3C00A6E13F /* UIView+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04767D3E28255D3C00A6E13F /* UIView+Gradient.swift */; };
+		04767D42282561D400A6E13F /* UIButton+AnimatedSetImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04767D41282561D400A6E13F /* UIButton+AnimatedSetImage.swift */; };
+		04767D442825629400A6E13F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04767D432825629400A6E13F /* Images.xcassets */; };
+		04767D4628256A9500A6E13F /* FacebookSignInButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04767D4528256A9500A6E13F /* FacebookSignInButton.swift */; };
 		049CFA6C264037A90021C7CA /* UIView+AddAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CFA6B264037A90021C7CA /* UIView+AddAction.swift */; };
 		049CFA6E264037D70021C7CA /* SharedTypeAliases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CFA6D264037D70021C7CA /* SharedTypeAliases.swift */; };
 		049CFAAC26403D2E0021C7CA /* LocaleRefreshable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CFA7626403D2E0021C7CA /* LocaleRefreshable.swift */; };
@@ -52,7 +68,6 @@
 		049CFAEE264041800021C7CA /* UserDefaults+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CFAED264041800021C7CA /* UserDefaults+Ext.swift */; };
 		049CFAF0264041C40021C7CA /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CFAEF264041C40021C7CA /* AppConstants.swift */; };
 		049CFAF2264042200021C7CA /* DateFormatter+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CFAF1264042200021C7CA /* DateFormatter+Ext.swift */; };
-		04C2942227AAD40400598B5E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04C2942127AAD40400598B5E /* Images.xcassets */; };
 		04E36A62282446EF0004959C /* FBGraphAPIRequestModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E36A61282446EF0004959C /* FBGraphAPIRequestModelProtocol.swift */; };
 		04E36A6528244D9C0004959C /* EmptyListStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E36A6428244D9C0004959C /* EmptyListStateView.swift */; };
 		04E36A6828244E100004959C /* LayoutConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E36A6728244E0F0004959C /* LayoutConstants.swift */; };
@@ -131,6 +146,22 @@
 		04078EE227C3A16B00DBC6DE /* Decodable+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decodable+Ext.swift"; sourceTree = "<group>"; };
 		04123F9E27B7C78400AD5721 /* Prod.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Prod.xcconfig; sourceTree = "<group>"; };
 		04123FA027B7C79900AD5721 /* Dev.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Dev.xcconfig; sourceTree = "<group>"; };
+		04767D19282556EE00A6E13F /* UIProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIProvider.swift; sourceTree = "<group>"; };
+		04767D1D2825576E00A6E13F /* BasicLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicLabel.swift; sourceTree = "<group>"; };
+		04767D20282557BE00A6E13F /* UIProvider+Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIProvider+Label.swift"; sourceTree = "<group>"; };
+		04767D222825580200A6E13F /* LabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelStyle.swift; sourceTree = "<group>"; };
+		04767D242825581E00A6E13F /* LabelDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelDecorator.swift; sourceTree = "<group>"; };
+		04767D292825588F00A6E13F /* SystemSemiboldLeft16Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemSemiboldLeft16Label.swift; sourceTree = "<group>"; };
+		04767D2E28255AA500A6E13F /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
+		04767D3028255AC200A6E13F /* ButtonDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonDecorator.swift; sourceTree = "<group>"; };
+		04767D3228255AEE00A6E13F /* BasicButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicButton.swift; sourceTree = "<group>"; };
+		04767D3528255B4500A6E13F /* UIProvider+Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIProvider+Button.swift"; sourceTree = "<group>"; };
+		04767D3728255BDB00A6E13F /* TermsOfUseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsOfUseButton.swift; sourceTree = "<group>"; };
+		04767D3A28255C6400A6E13F /* UIColor+RGBA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+RGBA.swift"; sourceTree = "<group>"; };
+		04767D3E28255D3C00A6E13F /* UIView+Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Gradient.swift"; sourceTree = "<group>"; };
+		04767D41282561D400A6E13F /* UIButton+AnimatedSetImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+AnimatedSetImage.swift"; sourceTree = "<group>"; };
+		04767D432825629400A6E13F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		04767D4528256A9500A6E13F /* FacebookSignInButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookSignInButton.swift; sourceTree = "<group>"; };
 		049CFA6B264037A90021C7CA /* UIView+AddAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AddAction.swift"; sourceTree = "<group>"; };
 		049CFA6D264037D70021C7CA /* SharedTypeAliases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTypeAliases.swift; sourceTree = "<group>"; };
 		049CFA7626403D2E0021C7CA /* LocaleRefreshable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocaleRefreshable.swift; sourceTree = "<group>"; };
@@ -169,7 +200,6 @@
 		049CFAED264041800021C7CA /* UserDefaults+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Ext.swift"; sourceTree = "<group>"; };
 		049CFAEF264041C40021C7CA /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		049CFAF1264042200021C7CA /* DateFormatter+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Ext.swift"; sourceTree = "<group>"; };
-		04C2942127AAD40400598B5E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		04E36A61282446EF0004959C /* FBGraphAPIRequestModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBGraphAPIRequestModelProtocol.swift; sourceTree = "<group>"; };
 		04E36A6428244D9C0004959C /* EmptyListStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyListStateView.swift; sourceTree = "<group>"; };
 		04E36A6728244E0F0004959C /* LayoutConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutConstants.swift; sourceTree = "<group>"; };
@@ -416,6 +446,123 @@
 			path = Colors;
 			sourceTree = "<group>";
 		};
+		04767D18282556E200A6E13F /* UIProvider */ = {
+			isa = PBXGroup;
+			children = (
+				04767D19282556EE00A6E13F /* UIProvider.swift */,
+			);
+			path = UIProvider;
+			sourceTree = "<group>";
+		};
+		04767D1B2825572A00A6E13F /* ReusableViews */ = {
+			isa = PBXGroup;
+			children = (
+				04767D2B28255A7800A6E13F /* Buttons */,
+				04767D1C2825574E00A6E13F /* Labels */,
+			);
+			path = ReusableViews;
+			sourceTree = "<group>";
+		};
+		04767D1C2825574E00A6E13F /* Labels */ = {
+			isa = PBXGroup;
+			children = (
+				04767D1F2825579800A6E13F /* Style */,
+				04767D262825584800A6E13F /* StyledLabels */,
+				04767D1D2825576E00A6E13F /* BasicLabel.swift */,
+			);
+			path = Labels;
+			sourceTree = "<group>";
+		};
+		04767D1F2825579800A6E13F /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				04767D20282557BE00A6E13F /* UIProvider+Label.swift */,
+				04767D222825580200A6E13F /* LabelStyle.swift */,
+				04767D242825581E00A6E13F /* LabelDecorator.swift */,
+			);
+			path = Style;
+			sourceTree = "<group>";
+		};
+		04767D262825584800A6E13F /* StyledLabels */ = {
+			isa = PBXGroup;
+			children = (
+				04767D272825587900A6E13F /* System */,
+			);
+			path = StyledLabels;
+			sourceTree = "<group>";
+		};
+		04767D272825587900A6E13F /* System */ = {
+			isa = PBXGroup;
+			children = (
+				04767D282825587D00A6E13F /* Semibold */,
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
+		04767D282825587D00A6E13F /* Semibold */ = {
+			isa = PBXGroup;
+			children = (
+				04767D292825588F00A6E13F /* SystemSemiboldLeft16Label.swift */,
+			);
+			path = Semibold;
+			sourceTree = "<group>";
+		};
+		04767D2B28255A7800A6E13F /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				04767D3228255AEE00A6E13F /* BasicButton.swift */,
+				04767D2C28255A8400A6E13F /* Style */,
+				04767D2D28255A8F00A6E13F /* StyledButtons */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		04767D2C28255A8400A6E13F /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				04767D2E28255AA500A6E13F /* ButtonStyle.swift */,
+				04767D3028255AC200A6E13F /* ButtonDecorator.swift */,
+				04767D3528255B4500A6E13F /* UIProvider+Button.swift */,
+			);
+			path = Style;
+			sourceTree = "<group>";
+		};
+		04767D2D28255A8F00A6E13F /* StyledButtons */ = {
+			isa = PBXGroup;
+			children = (
+				04767D3728255BDB00A6E13F /* TermsOfUseButton.swift */,
+				04767D4528256A9500A6E13F /* FacebookSignInButton.swift */,
+			);
+			path = StyledButtons;
+			sourceTree = "<group>";
+		};
+		04767D3928255C5900A6E13F /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				04767D40282561C500A6E13F /* UIButton */,
+				04767D3C28255D1900A6E13F /* UIView */,
+				04767D3A28255C6400A6E13F /* UIColor+RGBA.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		04767D3C28255D1900A6E13F /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				049CFA6B264037A90021C7CA /* UIView+AddAction.swift */,
+				04767D3E28255D3C00A6E13F /* UIView+Gradient.swift */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		04767D40282561C500A6E13F /* UIButton */ = {
+			isa = PBXGroup;
+			children = (
+				04767D41282561D400A6E13F /* UIButton+AnimatedSetImage.swift */,
+			);
+			path = UIButton;
+			sourceTree = "<group>";
+		};
 		049CFA6F26403C3B0021C7CA /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
@@ -443,8 +590,8 @@
 		049CFA7226403CB10021C7CA /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				04767D432825629400A6E13F /* Images.xcassets */,
 				7C9755962236FFED005F30B4 /* Assets.xcassets */,
-				04C2942127AAD40400598B5E /* Images.xcassets */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -629,6 +776,8 @@
 		04E36A6328244D330004959C /* CoreUI */ = {
 			isa = PBXGroup;
 			children = (
+				04767D18282556E200A6E13F /* UIProvider */,
+				04767D1B2825572A00A6E13F /* ReusableViews */,
 				04E36A6428244D9C0004959C /* EmptyListStateView.swift */,
 			);
 			path = CoreUI;
@@ -859,9 +1008,9 @@
 		7CE8135E2239A58E004A223E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				04767D3928255C5900A6E13F /* UIKit */,
 				049CFADF26403F7D0021C7CA /* Foundation */,
 				049CFADC26403F170021C7CA /* OSLog */,
-				049CFA6B264037A90021C7CA /* UIView+AddAction.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1025,8 +1174,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04767D442825629400A6E13F /* Images.xcassets in Resources */,
 				7C97559A2236FFED005F30B4 /* LaunchScreen.storyboard in Resources */,
-				04C2942227AAD40400598B5E /* Images.xcassets in Resources */,
 				7C816F4D223861A7009C8EB8 /* Localizable.strings in Resources */,
 				7C9755972236FFED005F30B4 /* Assets.xcassets in Resources */,
 			);
@@ -1179,6 +1328,8 @@
 				7C44911E223D00C800169843 /* AlbumPhotosViewModel.swift in Sources */,
 				04078ED727C39ECA00DBC6DE /* FBAlbumPicture.swift in Sources */,
 				04078EB727C2A71800DBC6DE /* GetMyPhotoAlbumsRequest.swift in Sources */,
+				04767D232825580200A6E13F /* LabelStyle.swift in Sources */,
+				04767D3B28255C6400A6E13F /* UIColor+RGBA.swift in Sources */,
 				049CFAC326403D2E0021C7CA /* ExternalURLOpenable.swift in Sources */,
 				7C449121223D115700169843 /* AlbumPhotoCell.swift in Sources */,
 				049CFAB626403D2E0021C7CA /* UniqueIdentifiable.swift in Sources */,
@@ -1187,8 +1338,10 @@
 				7C449128223D1BFE00169843 /* ViewPhotoView.swift in Sources */,
 				04078ECB27C39D2A00DBC6DE /* FBPhotoAlbum.swift in Sources */,
 				049CFAE7264040D90021C7CA /* UserDefaults+Codable.swift in Sources */,
+				04767D21282557BE00A6E13F /* UIProvider+Label.swift in Sources */,
 				7C9755922236FFEC005F30B4 /* SignInVC.swift in Sources */,
 				049CFAB726403D2E0021C7CA /* Mockable.swift in Sources */,
+				04767D252825581E00A6E13F /* LabelDecorator.swift in Sources */,
 				04078ED127C39DD400DBC6DE /* FBAlbumPhotoData.swift in Sources */,
 				04E36A6828244E100004959C /* LayoutConstants.swift in Sources */,
 				049CFA6C264037A90021C7CA /* UIView+AddAction.swift in Sources */,
@@ -1196,13 +1349,18 @@
 				049CFAD926403ECD0021C7CA /* AppInternalError.swift in Sources */,
 				04E36A6C28245BC40004959C /* AlbumPhotoCellViewModel.swift in Sources */,
 				04E36A6528244D9C0004959C /* EmptyListStateView.swift in Sources */,
+				04767D42282561D400A6E13F /* UIButton+AnimatedSetImage.swift in Sources */,
+				04767D2F28255AA500A6E13F /* ButtonStyle.swift in Sources */,
 				04078EBF27C2AA9900DBC6DE /* GetMyPhotoAlbumsResponse.swift in Sources */,
+				04767D1A282556EE00A6E13F /* UIProvider.swift in Sources */,
+				04767D3F28255D3C00A6E13F /* UIView+Gradient.swift in Sources */,
 				049CFAD626403E580021C7CA /* BaseViewController.swift in Sources */,
 				7C44911C223D00BC00169843 /* AlbumPhotosView.swift in Sources */,
 				7C9755902236FFEC005F30B4 /* AppDelegate.swift in Sources */,
 				04078EBB27C2A90100DBC6DE /* FBGraphAPIManagerProtocol.swift in Sources */,
 				7C44911A223D004900169843 /* AlbumPhotosVC.swift in Sources */,
 				049CFAF0264041C40021C7CA /* AppConstants.swift in Sources */,
+				04767D3128255AC200A6E13F /* ButtonDecorator.swift in Sources */,
 				04078EE327C3A16B00DBC6DE /* Decodable+Ext.swift in Sources */,
 				7C449123223D1B6E00169843 /* AlbumPhotosCollectionController.swift in Sources */,
 				7C24DE85223B726E00A88EED /* AlbumsListView.swift in Sources */,
@@ -1229,13 +1387,18 @@
 				04078ECD27C39D5200DBC6DE /* FBAlbumCoverPhoto.swift in Sources */,
 				7CE813662239BB02004A223E /* UserJSON.swift in Sources */,
 				04E36A62282446EF0004959C /* FBGraphAPIRequestModelProtocol.swift in Sources */,
+				04767D3328255AEE00A6E13F /* BasicButton.swift in Sources */,
 				049CFAB226403D2E0021C7CA /* NibLoadable.swift in Sources */,
 				04E36A6A282453F60004959C /* ActivityIndicatorViewController.swift in Sources */,
+				04767D1E2825576E00A6E13F /* BasicLabel.swift in Sources */,
+				04767D4628256A9500A6E13F /* FacebookSignInButton.swift in Sources */,
 				04078EC827C39CD200DBC6DE /* FBPaginationCursor.swift in Sources */,
 				7C816F512238660B009C8EB8 /* R.generated.swift in Sources */,
 				049CFAAC26403D2E0021C7CA /* LocaleRefreshable.swift in Sources */,
 				04078EDF27C3A12100DBC6DE /* Codable+Ext.swift in Sources */,
 				049CFAD126403D2E0021C7CA /* ReusableView.swift in Sources */,
+				04767D2A2825588F00A6E13F /* SystemSemiboldLeft16Label.swift in Sources */,
+				04767D3628255B4500A6E13F /* UIProvider+Button.swift in Sources */,
 				049CFAE9264040FA0021C7CA /* UserDefaults+AppSettings.swift in Sources */,
 				7CE8135D2239A3CF004A223E /* SignInView.swift in Sources */,
 				04E36A7228246A930004959C /* AlbumsListCellViewModel.swift in Sources */,
@@ -1249,6 +1412,7 @@
 				04078ED527C39E3E00DBC6DE /* FBAlbumPhotosPaging.swift in Sources */,
 				049CFAAF26403D2E0021C7CA /* ContentRefreshable.swift in Sources */,
 				049CFAE126403F900021C7CA /* NSObject+Ext.swift in Sources */,
+				04767D3828255BDB00A6E13F /* TermsOfUseButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

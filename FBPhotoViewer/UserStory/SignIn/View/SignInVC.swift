@@ -26,6 +26,11 @@ final class SignInVC: BaseViewController {
         navigationItem.title = Localizable.signInFbLoginScreenTitle()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        contentView.setFBImage(animated: true)
+    }
+    
 }
 
 // MARK: - SignInViewDelegate
