@@ -42,6 +42,9 @@
 		04767D42282561D400A6E13F /* UIButton+AnimatedSetImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04767D41282561D400A6E13F /* UIButton+AnimatedSetImage.swift */; };
 		04767D442825629400A6E13F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04767D432825629400A6E13F /* Images.xcassets */; };
 		04767D4628256A9500A6E13F /* FacebookSignInButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04767D4528256A9500A6E13F /* FacebookSignInButton.swift */; };
+		047CFE9D28295AE400915F91 /* UIButton+SetImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047CFE9C28295AE400915F91 /* UIButton+SetImage.swift */; };
+		047CFE9F2829681600915F91 /* UIButton+UIViewAnimateKeyframesImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047CFE9E2829681600915F91 /* UIButton+UIViewAnimateKeyframesImage.swift */; };
+		047CFEA1282987B900915F91 /* UIButton+UIViewAnimateImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047CFEA0282987B900915F91 /* UIButton+UIViewAnimateImage.swift */; };
 		049CFA6C264037A90021C7CA /* UIView+AddAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CFA6B264037A90021C7CA /* UIView+AddAction.swift */; };
 		049CFA6E264037D70021C7CA /* SharedTypeAliases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CFA6D264037D70021C7CA /* SharedTypeAliases.swift */; };
 		049CFAAC26403D2E0021C7CA /* LocaleRefreshable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CFA7626403D2E0021C7CA /* LocaleRefreshable.swift */; };
@@ -162,6 +165,9 @@
 		04767D41282561D400A6E13F /* UIButton+AnimatedSetImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+AnimatedSetImage.swift"; sourceTree = "<group>"; };
 		04767D432825629400A6E13F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		04767D4528256A9500A6E13F /* FacebookSignInButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookSignInButton.swift; sourceTree = "<group>"; };
+		047CFE9C28295AE400915F91 /* UIButton+SetImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+SetImage.swift"; sourceTree = "<group>"; };
+		047CFE9E2829681600915F91 /* UIButton+UIViewAnimateKeyframesImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+UIViewAnimateKeyframesImage.swift"; sourceTree = "<group>"; };
+		047CFEA0282987B900915F91 /* UIButton+UIViewAnimateImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+UIViewAnimateImage.swift"; sourceTree = "<group>"; };
 		049CFA6B264037A90021C7CA /* UIView+AddAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AddAction.swift"; sourceTree = "<group>"; };
 		049CFA6D264037D70021C7CA /* SharedTypeAliases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTypeAliases.swift; sourceTree = "<group>"; };
 		049CFA7626403D2E0021C7CA /* LocaleRefreshable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocaleRefreshable.swift; sourceTree = "<group>"; };
@@ -559,6 +565,9 @@
 			isa = PBXGroup;
 			children = (
 				04767D41282561D400A6E13F /* UIButton+AnimatedSetImage.swift */,
+				047CFE9C28295AE400915F91 /* UIButton+SetImage.swift */,
+				047CFE9E2829681600915F91 /* UIButton+UIViewAnimateKeyframesImage.swift */,
+				047CFEA0282987B900915F91 /* UIButton+UIViewAnimateImage.swift */,
 			);
 			path = UIButton;
 			sourceTree = "<group>";
@@ -1332,6 +1341,7 @@
 				04767D3B28255C6400A6E13F /* UIColor+RGBA.swift in Sources */,
 				049CFAC326403D2E0021C7CA /* ExternalURLOpenable.swift in Sources */,
 				7C449121223D115700169843 /* AlbumPhotoCell.swift in Sources */,
+				047CFEA1282987B900915F91 /* UIButton+UIViewAnimateImage.swift in Sources */,
 				049CFAB626403D2E0021C7CA /* UniqueIdentifiable.swift in Sources */,
 				049CFAAD26403D2E0021C7CA /* StatusBarResizable.swift in Sources */,
 				04078ED327C39DF100DBC6DE /* FBAlbumImage.swift in Sources */,
@@ -1382,6 +1392,7 @@
 				049CFAC426403D2E0021C7CA /* ProgressShowable.swift in Sources */,
 				7C24DE80223B6F7100A88EED /* AlertPresenter.swift in Sources */,
 				049CFAF2264042200021C7CA /* DateFormatter+Ext.swift in Sources */,
+				047CFE9D28295AE400915F91 /* UIButton+SetImage.swift in Sources */,
 				7C449126223D1BF400169843 /* ViewPhotoVC.swift in Sources */,
 				049CFA6E264037D70021C7CA /* SharedTypeAliases.swift in Sources */,
 				04078ECD27C39D5200DBC6DE /* FBAlbumCoverPhoto.swift in Sources */,
@@ -1408,6 +1419,7 @@
 				049CFADE26403F300021C7CA /* OSLog+Ext.swift in Sources */,
 				049CFAB526403D2E0021C7CA /* JSONAble.swift in Sources */,
 				049CFAB326403D2E0021C7CA /* XIBLocalizable.swift in Sources */,
+				047CFE9F2829681600915F91 /* UIButton+UIViewAnimateKeyframesImage.swift in Sources */,
 				049CFAEE264041800021C7CA /* UserDefaults+Ext.swift in Sources */,
 				04078ED527C39E3E00DBC6DE /* FBAlbumPhotosPaging.swift in Sources */,
 				049CFAAF26403D2E0021C7CA /* ContentRefreshable.swift in Sources */,
