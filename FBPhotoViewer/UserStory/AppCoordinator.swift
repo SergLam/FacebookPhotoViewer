@@ -71,10 +71,10 @@ final class AppCoordinator: Coordinator {
     }
     
     func startMainFlow() {
-//        let tabBarCoordinator = TabBarCoordinator(navigationController: navigationController, diContainer: diContainer, keyWindow: keyWindow)
-//        tabBarCoordinator.parentCoordinator = self
-//        children.append(tabBarCoordinator)
-//        tabBarCoordinator.start()
+        let userAlbumsCoordinator = UserAlbumsCoordinator(navigationController: navigationController, diContainer: diContainer)
+        userAlbumsCoordinator.parentCoordinator = self
+        children.append(userAlbumsCoordinator)
+        userAlbumsCoordinator.start()
     }
     
     func logOut() {

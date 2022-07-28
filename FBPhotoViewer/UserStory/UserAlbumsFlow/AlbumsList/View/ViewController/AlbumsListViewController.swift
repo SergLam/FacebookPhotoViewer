@@ -8,14 +8,15 @@
 
 import UIKit
 
-final class AlbumsListViewController: BaseViewController {
+final class AlbumsListViewController: BaseViewController, AlbumsListViewControllerProtocol {
     
     private let contentView: AlbumsView = AlbumsView()
-    private let viewModel: AlbumsListViewModelProtocol = AlbumsListViewModel()
+    private var viewModel: AlbumsListViewModelProtocol
     private let tableController: AlbumsListTableController
     
     // MARK: - Life cycle
-    init() {
+    init(viewModel: AlbumsListViewModelProtocol) {
+        self.viewModel = viewModel
         tableController = AlbumsListTableController(tableView: contentView.tableView)
         super.init(nibName: nil, bundle: nil)
     }

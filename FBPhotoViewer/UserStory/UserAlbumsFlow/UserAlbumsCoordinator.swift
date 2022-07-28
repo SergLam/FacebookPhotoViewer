@@ -29,7 +29,8 @@ final class UserAlbumsCoordinator: UserAlbumsCoordinatorProtocol {
     }
     
     func start() {
-        
+        let vc = AlbumsListViewController(viewModel: AlbumsListViewModel())
+        navigationController.pushViewController(vc, animated: true)
     }
     
     func childDidFinish(_ child: Coordinator) {

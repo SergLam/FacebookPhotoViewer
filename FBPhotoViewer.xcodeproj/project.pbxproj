@@ -90,6 +90,10 @@
 		049F36272892E5E90057F787 /* UserAlbumsCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F36262892E5E90057F787 /* UserAlbumsCoordinatorProtocol.swift */; };
 		049F362B289302CB0057F787 /* AlbumPhotosViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F362A289302CB0057F787 /* AlbumPhotosViewModelProtocol.swift */; };
 		049F362F2893036B0057F787 /* ViewPhotoViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F362E2893036B0057F787 /* ViewPhotoViewModelProtocol.swift */; };
+		049F3632289308FD0057F787 /* AlbumsListScreenBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F3631289308FD0057F787 /* AlbumsListScreenBuilder.swift */; };
+		049F36342893092F0057F787 /* AlbumsListViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F36332893092F0057F787 /* AlbumsListViewControllerProtocol.swift */; };
+		049F363828930B2D0057F787 /* AlbumPhotosScreenBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F363728930B2D0057F787 /* AlbumPhotosScreenBuilder.swift */; };
+		049F363B28930B700057F787 /* AlbumPhotosViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F363A28930B700057F787 /* AlbumPhotosViewControllerProtocol.swift */; };
 		04E36A62282446EF0004959C /* FBGraphAPIRequestModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E36A61282446EF0004959C /* FBGraphAPIRequestModelProtocol.swift */; };
 		04E36A6528244D9C0004959C /* EmptyListStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E36A6428244D9C0004959C /* EmptyListStateView.swift */; };
 		04E36A6828244E100004959C /* LayoutConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E36A6728244E0F0004959C /* LayoutConstants.swift */; };
@@ -244,6 +248,10 @@
 		049F36262892E5E90057F787 /* UserAlbumsCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAlbumsCoordinatorProtocol.swift; sourceTree = "<group>"; };
 		049F362A289302CB0057F787 /* AlbumPhotosViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumPhotosViewModelProtocol.swift; sourceTree = "<group>"; };
 		049F362E2893036B0057F787 /* ViewPhotoViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPhotoViewModelProtocol.swift; sourceTree = "<group>"; };
+		049F3631289308FD0057F787 /* AlbumsListScreenBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsListScreenBuilder.swift; sourceTree = "<group>"; };
+		049F36332893092F0057F787 /* AlbumsListViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsListViewControllerProtocol.swift; sourceTree = "<group>"; };
+		049F363728930B2D0057F787 /* AlbumPhotosScreenBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumPhotosScreenBuilder.swift; sourceTree = "<group>"; };
+		049F363A28930B700057F787 /* AlbumPhotosViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumPhotosViewControllerProtocol.swift; sourceTree = "<group>"; };
 		04E36A61282446EF0004959C /* FBGraphAPIRequestModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBGraphAPIRequestModelProtocol.swift; sourceTree = "<group>"; };
 		04E36A6428244D9C0004959C /* EmptyListStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyListStateView.swift; sourceTree = "<group>"; };
 		04E36A6728244E0F0004959C /* LayoutConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutConstants.swift; sourceTree = "<group>"; };
@@ -907,8 +915,8 @@
 		049F36282893029B0057F787 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				049F363928930B550057F787 /* ViewController */,
 				04E36A6D282467A20004959C /* CollectionController */,
-				7C449119223D004900169843 /* AlbumPhotosViewController.swift */,
 				7C44911B223D00BC00169843 /* AlbumPhotosView.swift */,
 			);
 			path = View;
@@ -939,6 +947,40 @@
 				7C449129223D1DA700169843 /* ViewPhotoViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		049F3630289308E90057F787 /* ScreenBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				049F3631289308FD0057F787 /* AlbumsListScreenBuilder.swift */,
+			);
+			path = ScreenBuilder;
+			sourceTree = "<group>";
+		};
+		049F3635289309920057F787 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				049F36332893092F0057F787 /* AlbumsListViewControllerProtocol.swift */,
+				7C24DE82223B722300A88EED /* AlbumsListViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		049F363628930B0D0057F787 /* ScreenBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				049F363728930B2D0057F787 /* AlbumPhotosScreenBuilder.swift */,
+			);
+			path = ScreenBuilder;
+			sourceTree = "<group>";
+		};
+		049F363928930B550057F787 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				049F363A28930B700057F787 /* AlbumPhotosViewControllerProtocol.swift */,
+				7C449119223D004900169843 /* AlbumPhotosViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		04E36A6328244D330004959C /* CoreUI */ = {
@@ -981,8 +1023,8 @@
 		04E36A7328246C1C0004959C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				049F3635289309920057F787 /* ViewController */,
 				04E36A6E282467B30004959C /* TableController */,
-				7C24DE82223B722300A88EED /* AlbumsListViewController.swift */,
 				7C24DE84223B726E00A88EED /* AlbumsListView.swift */,
 			);
 			path = View;
@@ -1029,6 +1071,7 @@
 		7C24DE81223B721000A88EED /* AlbumsList */ = {
 			isa = PBXGroup;
 			children = (
+				049F3630289308E90057F787 /* ScreenBuilder */,
 				04E36A7328246C1C0004959C /* View */,
 				04E36A7428246C2C0004959C /* ViewModel */,
 			);
@@ -1060,6 +1103,7 @@
 		7C449118223CFF3D00169843 /* AlbumPhotos */ = {
 			isa = PBXGroup;
 			children = (
+				049F363628930B0D0057F787 /* ScreenBuilder */,
 				049F3629289302AD0057F787 /* ViewModel */,
 				049F36282893029B0057F787 /* View */,
 			);
@@ -1494,6 +1538,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				049F363828930B2D0057F787 /* AlbumPhotosScreenBuilder.swift in Sources */,
 				04078EC627C39C5000DBC6DE /* FBPagingData.swift in Sources */,
 				7C44911E223D00C800169843 /* AlbumPhotosViewModel.swift in Sources */,
 				04078ED727C39ECA00DBC6DE /* FBAlbumPicture.swift in Sources */,
@@ -1553,12 +1598,14 @@
 				04E36A7628246C460004959C /* AlbumsListViewModelProtocol.swift in Sources */,
 				049F36132892C68F0057F787 /* KeychainError.swift in Sources */,
 				7CE813602239A59F004A223E /* UIColor+Ext.swift in Sources */,
+				049F363B28930B700057F787 /* AlbumPhotosViewControllerProtocol.swift in Sources */,
 				04078EE127C3A13F00DBC6DE /* Codable+Force.swift in Sources */,
 				7C44912A223D1DA700169843 /* ViewPhotoViewModel.swift in Sources */,
 				049CFAEC2640413F0021C7CA /* UserDefaultsKeys.swift in Sources */,
 				7C24DE83223B722300A88EED /* AlbumsListViewController.swift in Sources */,
 				04078EB127C2A42700DBC6DE /* FBAPIError.swift in Sources */,
 				04078EB527C2A6E500DBC6DE /* GetMyProfileRequest.swift in Sources */,
+				049F36342893092F0057F787 /* AlbumsListViewControllerProtocol.swift in Sources */,
 				049CFAC426403D2E0021C7CA /* ProgressShowable.swift in Sources */,
 				049F36162892E0190057F787 /* AppDIContainer.swift in Sources */,
 				7C24DE80223B6F7100A88EED /* AlertPresenter.swift in Sources */,
@@ -1605,6 +1652,7 @@
 				049CFAE126403F900021C7CA /* NSObject+Ext.swift in Sources */,
 				049F36082892C4960057F787 /* AppCoordinatorProtocol.swift in Sources */,
 				04767D3828255BDB00A6E13F /* TermsOfUseButton.swift in Sources */,
+				049F3632289308FD0057F787 /* AlbumsListScreenBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

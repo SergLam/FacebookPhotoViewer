@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class AlbumPhotosViewController: BaseViewController {
+final class AlbumPhotosViewController: BaseViewController, AlbumPhotosViewControllerProtocol {
     
     private let contentView = AlbumPhotosView()
     private let collectionController: AlbumPhotosCollectionController

@@ -10,6 +10,8 @@ import Foundation
 
 final class AlbumsListViewModel: AlbumsListViewModelProtocol {
     
+    weak var coordinator: UserAlbumsCoordinatorProtocol?
+    
     weak var delegate: AlbumsListViewModelDelegate?
     
     var albums: [FBPhotoAlbum] = []

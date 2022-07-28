@@ -16,6 +16,8 @@ protocol AlbumsListViewModelDelegate: AnyObject {
 
 protocol AlbumsListViewModelProtocol: AnyObject {
     
+    var coordinator: UserAlbumsCoordinatorProtocol? { get set }
+    
     var delegate: AlbumsListViewModelDelegate? { get set }
     
     var albums: [FBPhotoAlbum] { get set }
