@@ -1,5 +1,5 @@
 //
-//  SignInCoordinator.swift
+//  UserAlbumsCoordinator.swift
 //  FBPhotoViewer
 //
 //  Created by Serhii Liamtsev on 7/28/22.
@@ -8,11 +8,11 @@
 
 import UIKit
 
-final class SignInCoordinator: SignInCoordinatorProtocol {
+final class UserAlbumsCoordinator: UserAlbumsCoordinatorProtocol {
     
     var id: UUID = UUID()
     
-    var type: CoordinatorType = .signIn
+    var type: CoordinatorType = .userAlbums
     
     var navigationController: UINavigationController
     
@@ -29,8 +29,7 @@ final class SignInCoordinator: SignInCoordinatorProtocol {
     }
     
     func start() {
-        let viewController = SignInScreenBuilder.makeModule(with: (), coordinator: self)
-        navigationController.setViewControllers([viewController], animated: false)
+        
     }
     
     func childDidFinish(_ child: Coordinator) {

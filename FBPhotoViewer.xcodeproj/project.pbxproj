@@ -86,6 +86,8 @@
 		049F361E2892E2060057F787 /* SignInScreenBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F361D2892E2060057F787 /* SignInScreenBuilder.swift */; };
 		049F36202892E2650057F787 /* SignInViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F361F2892E2650057F787 /* SignInViewControllerProtocol.swift */; };
 		049F36222892E2A20057F787 /* SignInViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F36212892E2A20057F787 /* SignInViewModelProtocol.swift */; };
+		049F36252892E5DE0057F787 /* UserAlbumsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F36242892E5DE0057F787 /* UserAlbumsCoordinator.swift */; };
+		049F36272892E5E90057F787 /* UserAlbumsCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F36262892E5E90057F787 /* UserAlbumsCoordinatorProtocol.swift */; };
 		04E36A62282446EF0004959C /* FBGraphAPIRequestModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E36A61282446EF0004959C /* FBGraphAPIRequestModelProtocol.swift */; };
 		04E36A6528244D9C0004959C /* EmptyListStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E36A6428244D9C0004959C /* EmptyListStateView.swift */; };
 		04E36A6828244E100004959C /* LayoutConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E36A6728244E0F0004959C /* LayoutConstants.swift */; };
@@ -236,6 +238,8 @@
 		049F361D2892E2060057F787 /* SignInScreenBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInScreenBuilder.swift; sourceTree = "<group>"; };
 		049F361F2892E2650057F787 /* SignInViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewControllerProtocol.swift; sourceTree = "<group>"; };
 		049F36212892E2A20057F787 /* SignInViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModelProtocol.swift; sourceTree = "<group>"; };
+		049F36242892E5DE0057F787 /* UserAlbumsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAlbumsCoordinator.swift; sourceTree = "<group>"; };
+		049F36262892E5E90057F787 /* UserAlbumsCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAlbumsCoordinatorProtocol.swift; sourceTree = "<group>"; };
 		04E36A61282446EF0004959C /* FBGraphAPIRequestModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBGraphAPIRequestModelProtocol.swift; sourceTree = "<group>"; };
 		04E36A6428244D9C0004959C /* EmptyListStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyListStateView.swift; sourceTree = "<group>"; };
 		04E36A6728244E0F0004959C /* LayoutConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutConstants.swift; sourceTree = "<group>"; };
@@ -884,6 +888,18 @@
 			path = ScreenBuilder;
 			sourceTree = "<group>";
 		};
+		049F36232892E5AA0057F787 /* UserAlbumsFlow */ = {
+			isa = PBXGroup;
+			children = (
+				049F36262892E5E90057F787 /* UserAlbumsCoordinatorProtocol.swift */,
+				049F36242892E5DE0057F787 /* UserAlbumsCoordinator.swift */,
+				7C449124223D1BE300169843 /* ViewPhoto */,
+				7C449118223CFF3D00169843 /* AlbumPhotos */,
+				7C24DE81223B721000A88EED /* AlbumsList */,
+			);
+			path = UserAlbumsFlow;
+			sourceTree = "<group>";
+		};
 		04E36A6328244D330004959C /* CoreUI */ = {
 			isa = PBXGroup;
 			children = (
@@ -1033,12 +1049,10 @@
 		7C816F4922385F84009C8EB8 /* UserStory */ = {
 			isa = PBXGroup;
 			children = (
+				049CFAD426403E490021C7CA /* BaseClasses */,
 				049F36072892C4960057F787 /* AppCoordinatorProtocol.swift */,
 				049F36092892C4A40057F787 /* AppCoordinator.swift */,
-				049CFAD426403E490021C7CA /* BaseClasses */,
-				7C449124223D1BE300169843 /* ViewPhoto */,
-				7C449118223CFF3D00169843 /* AlbumPhotos */,
-				7C24DE81223B721000A88EED /* AlbumsList */,
+				049F36232892E5AA0057F787 /* UserAlbumsFlow */,
 				7CE8135B2239A3BD004A223E /* SignInFlow */,
 			);
 			path = UserStory;
@@ -1454,6 +1468,7 @@
 				049CFAB626403D2E0021C7CA /* UniqueIdentifiable.swift in Sources */,
 				049CFAAD26403D2E0021C7CA /* StatusBarResizable.swift in Sources */,
 				04078ED327C39DF100DBC6DE /* FBAlbumImage.swift in Sources */,
+				049F36272892E5E90057F787 /* UserAlbumsCoordinatorProtocol.swift in Sources */,
 				049F36042892C3080057F787 /* TabBarPage.swift in Sources */,
 				7C449128223D1BFE00169843 /* ViewPhotoView.swift in Sources */,
 				04078ECB27C39D2A00DBC6DE /* FBPhotoAlbum.swift in Sources */,
@@ -1543,6 +1558,7 @@
 				047CFE9F2829681600915F91 /* UIButton+UIViewAnimateKeyframesImage.swift in Sources */,
 				049F36222892E2A20057F787 /* SignInViewModelProtocol.swift in Sources */,
 				049CFAEE264041800021C7CA /* UserDefaults+Ext.swift in Sources */,
+				049F36252892E5DE0057F787 /* UserAlbumsCoordinator.swift in Sources */,
 				049F36192892E0ED0057F787 /* SignInCoordinatorProtocol.swift in Sources */,
 				04078ED527C39E3E00DBC6DE /* FBAlbumPhotosPaging.swift in Sources */,
 				049CFAAF26403D2E0021C7CA /* ContentRefreshable.swift in Sources */,

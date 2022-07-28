@@ -64,10 +64,10 @@ final class AppCoordinator: Coordinator {
     }
     
     func goToLogInPage() {
-//        let signInCoordinator = SignInCoordinator(navigationController: navigationController, diContainer: diContainer)
-//        signInCoordinator.parentCoordinator = self
-//        children.append(signInCoordinator)
-//        signInCoordinator.start()
+        let signInCoordinator = SignInCoordinator(navigationController: navigationController, diContainer: diContainer)
+        signInCoordinator.parentCoordinator = self
+        children.append(signInCoordinator)
+        signInCoordinator.start()
     }
     
     func startMainFlow() {

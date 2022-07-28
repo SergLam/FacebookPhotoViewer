@@ -1,5 +1,5 @@
 //
-//  SignInCoordinatorProtocol.swift
+//  UserAlbumsCoordinatorProtocol.swift
 //  FBPhotoViewer
 //
 //  Created by Serhii Liamtsev on 7/28/22.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol SignInCoordinatorProtocol: Coordinator {
+protocol UserAlbumsCoordinatorProtocol: Coordinator {
     
     init(navigationController: UINavigationController, diContainer: AppDIContainer)
 }

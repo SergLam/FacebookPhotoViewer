@@ -17,9 +17,10 @@ protocol Coordinator: AnyObject {
     var parentCoordinator: Coordinator? { get set }
     var children: [Coordinator] { get set }
     
+    func start()
+    
     func childDidFinish(_ child: Coordinator)
     
-    func start()
     func finish()
     
     func isEqual(to coordinator: Coordinator) -> Bool
