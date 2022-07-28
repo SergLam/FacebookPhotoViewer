@@ -20,10 +20,10 @@ extension UserDefaults {
     var selectedLocaleCode: String {
         get {
             // Locale.current.languageCode
-            return UserDefaults.shared.value(forKey: LocalStorageKeys.selectedLocaleCode.rawValue) as? String ?? "en"
+            return UserDefaults.shared.value(forKey: UserDefaultsKeys.selectedLocaleCode.rawValue) as? String ?? "en"
         }
         set {
-            UserDefaults.shared.set(newValue, forKey: LocalStorageKeys.selectedLocaleCode.rawValue)
+            UserDefaults.shared.set(newValue, forKey: UserDefaultsKeys.selectedLocaleCode.rawValue)
         }
     }
     

@@ -29,9 +29,6 @@ final class SignInView: UIView {
     }
     
     // MARK: - Public
-    func setFBImage(animated: Bool = true) {
-        
-    }
     
     // MARK: - Private
     private func setupLayout() {
@@ -41,13 +38,13 @@ final class SignInView: UIView {
         addSubview(fbLoginButton)
         let buttonHeight: CGFloat = 46
         fbLoginButton.setTitle(Localizable.signInFbLoginButtonTitle(), for: .normal)
+        fbLoginButton.titleLabel?.lineBreakMode = .byWordWrapping
         
         fbLoginButton.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             fbLoginButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -20),
             fbLoginButton.centerXAnchor.constraint(equalTo: centerXAnchor),
-            fbLoginButton.leadingAnchor.constraint(greaterThanOrEqualTo: leadingAnchor, constant: LayoutConstants.contentInset),
-            fbLoginButton.trailingAnchor.constraint(lessThanOrEqualTo: trailingAnchor, constant: -LayoutConstants.contentInset),
+            fbLoginButton.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.7),
             fbLoginButton.heightAnchor.constraint(equalToConstant: buttonHeight)
         ])
         

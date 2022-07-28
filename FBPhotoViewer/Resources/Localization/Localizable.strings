@@ -34,3 +34,7 @@
 "email.send.fail" = "Mail failed: the email message was not sent. Please check your e-mail settings.";
 "email.send.success" = "Mail send: email message sent successfully.";
 "email.send.not-configured" = "Your device has not been configured to send emails. Please sign in to your email at the default iOS Mail app.";
+
+// MARK: - Tab bar items title
+"tab-bar.feed-title" = "Feed";
+"tab-bar.profile-title" = "Profile";

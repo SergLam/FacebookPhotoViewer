@@ -1,5 +1,5 @@
 //
-//  LocalStorageKeys.swift
+//  UserDefaultsKeys.swift
 //  FBPhotoViewer
 //
 //  Created by Serhii Liamtsev on 5/3/21.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum LocalStorageKeys: String, CaseIterable {
+enum UserDefaultsKeys: String, CaseIterable {
     
     /// Use for app interface language change
     case selectedLocaleCode = "settings.locale_code"

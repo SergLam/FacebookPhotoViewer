@@ -311,7 +311,7 @@ struct R: Rswift.Validatable {
 
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 17 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 19 localization keys.
     struct localizable {
       /// Value: Back
       static let back = Rswift.StringResource(key: "back", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
@@ -327,6 +327,8 @@ struct R: Rswift.Validatable {
       static let errorFbCanceledByUser = Rswift.StringResource(key: "error.fb-canceled-by-user", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Failed to get access token
       static let errorFbAccessTokenNil = Rswift.StringResource(key: "error.fb-access-token-nil", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Feed
+      static let tabBarFeedTitle = Rswift.StringResource(key: "tab-bar.feed-title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Loading
       static let loading = Rswift.StringResource(key: "loading", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Mail failed: the email message was not sent. Please check your e-mail settings.
@@ -337,6 +339,8 @@ struct R: Rswift.Validatable {
       static let albumsListScreenTitle = Rswift.StringResource(key: "albums-list.screenTitle", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Ok
       static let ok = Rswift.StringResource(key: "ok", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Profile
+      static let tabBarProfileTitle = Rswift.StringResource(key: "tab-bar.profile-title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Sign In
       static let signInFbLoginScreenTitle = Rswift.StringResource(key: "sign-in.fb-login.screen-title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Success
@@ -439,6 +443,19 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("error.fb-access-token-nil", bundle: bundle, comment: "")
       }
 
+      /// Value: Feed
+      static func tabBarFeedTitle(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("tab-bar.feed-title", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "tab-bar.feed-title"
+        }
+
+        return NSLocalizedString("tab-bar.feed-title", bundle: bundle, comment: "")
+      }
+
       /// Value: Loading
       static func loading(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
@@ -502,6 +519,19 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("ok", bundle: bundle, comment: "")
+      }
+
+      /// Value: Profile
+      static func tabBarProfileTitle(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("tab-bar.profile-title", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "tab-bar.profile-title"
+        }
+
+        return NSLocalizedString("tab-bar.profile-title", bundle: bundle, comment: "")
       }
 
       /// Value: Sign In

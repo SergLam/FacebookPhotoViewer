@@ -67,10 +67,19 @@
 		049CFAE426403FDB0021C7CA /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CFAE326403FDB0021C7CA /* Environment.swift */; };
 		049CFAE7264040D90021C7CA /* UserDefaults+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CFAE6264040D90021C7CA /* UserDefaults+Codable.swift */; };
 		049CFAE9264040FA0021C7CA /* UserDefaults+AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CFAE8264040FA0021C7CA /* UserDefaults+AppSettings.swift */; };
-		049CFAEC2640413F0021C7CA /* LocalStorageKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CFAEB2640413F0021C7CA /* LocalStorageKeys.swift */; };
+		049CFAEC2640413F0021C7CA /* UserDefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CFAEB2640413F0021C7CA /* UserDefaultsKeys.swift */; };
 		049CFAEE264041800021C7CA /* UserDefaults+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CFAED264041800021C7CA /* UserDefaults+Ext.swift */; };
 		049CFAF0264041C40021C7CA /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CFAEF264041C40021C7CA /* AppConstants.swift */; };
 		049CFAF2264042200021C7CA /* DateFormatter+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CFAF1264042200021C7CA /* DateFormatter+Ext.swift */; };
+		049F36032892C3080057F787 /* CoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F35FE2892C3080057F787 /* CoordinatorType.swift */; };
+		049F36042892C3080057F787 /* TabBarPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F36002892C3080057F787 /* TabBarPage.swift */; };
+		049F36052892C3080057F787 /* TabBarCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F36012892C3080057F787 /* TabBarCoordinatorProtocol.swift */; };
+		049F36062892C3080057F787 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F36022892C3080057F787 /* CoordinatorProtocol.swift */; };
+		049F36082892C4960057F787 /* AppCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F36072892C4960057F787 /* AppCoordinatorProtocol.swift */; };
+		049F360A2892C4A40057F787 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F36092892C4A40057F787 /* AppCoordinator.swift */; };
+		049F36112892C68F0057F787 /* KeyChainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F360C2892C68F0057F787 /* KeyChainService.swift */; };
+		049F36122892C68F0057F787 /* KeyChainItemsHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F360E2892C68F0057F787 /* KeyChainItemsHolder.swift */; };
+		049F36132892C68F0057F787 /* KeychainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F36102892C68F0057F787 /* KeychainError.swift */; };
 		04E36A62282446EF0004959C /* FBGraphAPIRequestModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E36A61282446EF0004959C /* FBGraphAPIRequestModelProtocol.swift */; };
 		04E36A6528244D9C0004959C /* EmptyListStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E36A6428244D9C0004959C /* EmptyListStateView.swift */; };
 		04E36A6828244E100004959C /* LayoutConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E36A6728244E0F0004959C /* LayoutConstants.swift */; };
@@ -202,10 +211,19 @@
 		049CFAE326403FDB0021C7CA /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		049CFAE6264040D90021C7CA /* UserDefaults+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Codable.swift"; sourceTree = "<group>"; };
 		049CFAE8264040FA0021C7CA /* UserDefaults+AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+AppSettings.swift"; sourceTree = "<group>"; };
-		049CFAEB2640413F0021C7CA /* LocalStorageKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorageKeys.swift; sourceTree = "<group>"; };
+		049CFAEB2640413F0021C7CA /* UserDefaultsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKeys.swift; sourceTree = "<group>"; };
 		049CFAED264041800021C7CA /* UserDefaults+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Ext.swift"; sourceTree = "<group>"; };
 		049CFAEF264041C40021C7CA /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		049CFAF1264042200021C7CA /* DateFormatter+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Ext.swift"; sourceTree = "<group>"; };
+		049F35FE2892C3080057F787 /* CoordinatorType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinatorType.swift; sourceTree = "<group>"; };
+		049F36002892C3080057F787 /* TabBarPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarPage.swift; sourceTree = "<group>"; };
+		049F36012892C3080057F787 /* TabBarCoordinatorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		049F36022892C3080057F787 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
+		049F36072892C4960057F787 /* AppCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		049F36092892C4A40057F787 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		049F360C2892C68F0057F787 /* KeyChainService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyChainService.swift; sourceTree = "<group>"; };
+		049F360E2892C68F0057F787 /* KeyChainItemsHolder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyChainItemsHolder.swift; sourceTree = "<group>"; };
+		049F36102892C68F0057F787 /* KeychainError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainError.swift; sourceTree = "<group>"; };
 		04E36A61282446EF0004959C /* FBGraphAPIRequestModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBGraphAPIRequestModelProtocol.swift; sourceTree = "<group>"; };
 		04E36A6428244D9C0004959C /* EmptyListStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyListStateView.swift; sourceTree = "<group>"; };
 		04E36A6728244E0F0004959C /* LayoutConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutConstants.swift; sourceTree = "<group>"; };
@@ -616,6 +634,7 @@
 		049CFA7426403D2E0021C7CA /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				049F35FD2892C3080057F787 /* Coordinator */,
 				049CFA7526403D2E0021C7CA /* UI */,
 				049CFA7D26403D2E0021C7CA /* XIB */,
 				049CFA8226403D2E0021C7CA /* DataModels */,
@@ -777,9 +796,54 @@
 			isa = PBXGroup;
 			children = (
 				049CFAE5264040C60021C7CA /* UserDefaults */,
-				049CFAEB2640413F0021C7CA /* LocalStorageKeys.swift */,
+				049CFAEB2640413F0021C7CA /* UserDefaultsKeys.swift */,
 			);
 			path = LocalStorage;
+			sourceTree = "<group>";
+		};
+		049F35FD2892C3080057F787 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				049F35FE2892C3080057F787 /* CoordinatorType.swift */,
+				049F35FF2892C3080057F787 /* TabBarCoordinator */,
+				049F36022892C3080057F787 /* CoordinatorProtocol.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		049F35FF2892C3080057F787 /* TabBarCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				049F36002892C3080057F787 /* TabBarPage.swift */,
+				049F36012892C3080057F787 /* TabBarCoordinatorProtocol.swift */,
+			);
+			path = TabBarCoordinator;
+			sourceTree = "<group>";
+		};
+		049F360B2892C68F0057F787 /* KeyChain */ = {
+			isa = PBXGroup;
+			children = (
+				049F360C2892C68F0057F787 /* KeyChainService.swift */,
+				049F360D2892C68F0057F787 /* Models */,
+				049F360F2892C68F0057F787 /* Errors */,
+			);
+			path = KeyChain;
+			sourceTree = "<group>";
+		};
+		049F360D2892C68F0057F787 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				049F360E2892C68F0057F787 /* KeyChainItemsHolder.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		049F360F2892C68F0057F787 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				049F36102892C68F0057F787 /* KeychainError.swift */,
+			);
+			path = Errors;
 			sourceTree = "<group>";
 		};
 		04E36A6328244D330004959C /* CoreUI */ = {
@@ -927,6 +991,8 @@
 		7C816F4922385F84009C8EB8 /* UserStory */ = {
 			isa = PBXGroup;
 			children = (
+				049F36072892C4960057F787 /* AppCoordinatorProtocol.swift */,
+				049F36092892C4A40057F787 /* AppCoordinator.swift */,
 				049CFAD426403E490021C7CA /* BaseClasses */,
 				7C449124223D1BE300169843 /* ViewPhoto */,
 				7C449118223CFF3D00169843 /* AlbumPhotos */,
@@ -1027,6 +1093,7 @@
 		7CE813612239A9A8004A223E /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				049F360B2892C68F0057F787 /* KeyChain */,
 				04078EAD27C2A3AD00DBC6DE /* Facebook */,
 				049CFAEA2640412E0021C7CA /* LocalStorage */,
 				049CFAD726403EB90021C7CA /* Logger */,
@@ -1345,6 +1412,7 @@
 				049CFAB626403D2E0021C7CA /* UniqueIdentifiable.swift in Sources */,
 				049CFAAD26403D2E0021C7CA /* StatusBarResizable.swift in Sources */,
 				04078ED327C39DF100DBC6DE /* FBAlbumImage.swift in Sources */,
+				049F36042892C3080057F787 /* TabBarPage.swift in Sources */,
 				7C449128223D1BFE00169843 /* ViewPhotoView.swift in Sources */,
 				04078ECB27C39D2A00DBC6DE /* FBPhotoAlbum.swift in Sources */,
 				049CFAE7264040D90021C7CA /* UserDefaults+Codable.swift in Sources */,
@@ -1356,6 +1424,7 @@
 				04E36A6828244E100004959C /* LayoutConstants.swift in Sources */,
 				049CFA6C264037A90021C7CA /* UIView+AddAction.swift in Sources */,
 				04078EC227C2ADFF00DBC6DE /* Data+JSON.swift in Sources */,
+				049F36032892C3080057F787 /* CoordinatorType.swift in Sources */,
 				049CFAD926403ECD0021C7CA /* AppInternalError.swift in Sources */,
 				04E36A6C28245BC40004959C /* AlbumPhotoCellViewModel.swift in Sources */,
 				04E36A6528244D9C0004959C /* EmptyListStateView.swift in Sources */,
@@ -1363,6 +1432,7 @@
 				04767D2F28255AA500A6E13F /* ButtonStyle.swift in Sources */,
 				04078EBF27C2AA9900DBC6DE /* GetMyPhotoAlbumsResponse.swift in Sources */,
 				04767D1A282556EE00A6E13F /* UIProvider.swift in Sources */,
+				049F36122892C68F0057F787 /* KeyChainItemsHolder.swift in Sources */,
 				04767D3F28255D3C00A6E13F /* UIView+Gradient.swift in Sources */,
 				049CFAD626403E580021C7CA /* BaseViewController.swift in Sources */,
 				7C44911C223D00BC00169843 /* AlbumPhotosView.swift in Sources */,
@@ -1379,13 +1449,15 @@
 				7C816F4B22386071009C8EB8 /* SignInViewModel.swift in Sources */,
 				04078ED927C39F0300DBC6DE /* FBAlbumPictureData.swift in Sources */,
 				7CE813632239A9BE004A223E /* FBGraphAPIManager.swift in Sources */,
+				049F360A2892C4A40057F787 /* AppCoordinator.swift in Sources */,
 				7C24DE87223B727B00A88EED /* AlbumsListViewModel.swift in Sources */,
 				049CFAE426403FDB0021C7CA /* Environment.swift in Sources */,
 				04E36A7628246C460004959C /* AlbumsListViewModelProtocol.swift in Sources */,
+				049F36132892C68F0057F787 /* KeychainError.swift in Sources */,
 				7CE813602239A59F004A223E /* UIColor+Ext.swift in Sources */,
 				04078EE127C3A13F00DBC6DE /* Codable+Force.swift in Sources */,
 				7C44912A223D1DA700169843 /* ViewPhotoViewModel.swift in Sources */,
-				049CFAEC2640413F0021C7CA /* LocalStorageKeys.swift in Sources */,
+				049CFAEC2640413F0021C7CA /* UserDefaultsKeys.swift in Sources */,
 				7C24DE83223B722300A88EED /* AlbumsListVC.swift in Sources */,
 				04078EB127C2A42700DBC6DE /* FBAPIError.swift in Sources */,
 				04078EB527C2A6E500DBC6DE /* GetMyProfileRequest.swift in Sources */,
@@ -1405,6 +1477,7 @@
 				04767D4628256A9500A6E13F /* FacebookSignInButton.swift in Sources */,
 				04078EC827C39CD200DBC6DE /* FBPaginationCursor.swift in Sources */,
 				7C816F512238660B009C8EB8 /* R.generated.swift in Sources */,
+				049F36062892C3080057F787 /* CoordinatorProtocol.swift in Sources */,
 				049CFAAC26403D2E0021C7CA /* LocaleRefreshable.swift in Sources */,
 				04078EDF27C3A12100DBC6DE /* Codable+Ext.swift in Sources */,
 				049CFAD126403D2E0021C7CA /* ReusableView.swift in Sources */,
@@ -1413,6 +1486,8 @@
 				049CFAE9264040FA0021C7CA /* UserDefaults+AppSettings.swift in Sources */,
 				7CE8135D2239A3CF004A223E /* SignInView.swift in Sources */,
 				04E36A7228246A930004959C /* AlbumsListCellViewModel.swift in Sources */,
+				049F36112892C68F0057F787 /* KeyChainService.swift in Sources */,
+				049F36052892C3080057F787 /* TabBarCoordinatorProtocol.swift in Sources */,
 				04E36A70282468D20004959C /* AlbumsListTableController.swift in Sources */,
 				04078ECF27C39DA200DBC6DE /* FBAlbumPhotos.swift in Sources */,
 				049CFAAE26403D2E0021C7CA /* Selectable.swift in Sources */,
@@ -1424,6 +1499,7 @@
 				04078ED527C39E3E00DBC6DE /* FBAlbumPhotosPaging.swift in Sources */,
 				049CFAAF26403D2E0021C7CA /* ContentRefreshable.swift in Sources */,
 				049CFAE126403F900021C7CA /* NSObject+Ext.swift in Sources */,
+				049F36082892C4960057F787 /* AppCoordinatorProtocol.swift in Sources */,
 				04767D3828255BDB00A6E13F /* TermsOfUseButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
