@@ -67,7 +67,7 @@ extension SignInViewController: SignInViewModelDelegate {
     func onSignInSuccess() {
         executeOnMain { [weak self] in
             self?.hideProgress()
-            let vc = AlbumsListVC()
+            let vc = AlbumsListViewController()
             self?.navigationController?.pushViewController(vc, animated: true)
         }
     }

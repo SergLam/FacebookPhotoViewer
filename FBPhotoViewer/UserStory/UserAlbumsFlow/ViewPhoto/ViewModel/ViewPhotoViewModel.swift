@@ -8,9 +8,9 @@
 
 import Foundation
 
-final class ViewPhotoViewModel {
+final class ViewPhotoViewModel: ViewPhotoViewModelProtocol {
     
-    let photoURL: String
+    var photoURL: String
     
     // MARK: - Life cycle
     init(url: String) {

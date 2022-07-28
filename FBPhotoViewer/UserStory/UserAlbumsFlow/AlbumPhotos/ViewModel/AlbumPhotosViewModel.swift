@@ -8,7 +8,7 @@
 
 import Foundation
 
-final class AlbumPhotosViewModel {
+final class AlbumPhotosViewModel: AlbumPhotosViewModelProtocol {
     
     var album: FBPhotoAlbum
     
@@ -16,5 +16,4 @@ final class AlbumPhotosViewModel {
     init(album: FBPhotoAlbum) {
         self.album = album
     }
-    
 }

@@ -1,5 +1,5 @@
 //
-//  AlbumVC.swift
+//  AlbumPhotosViewController.swift
 //  FBPhotoViewer
 //
 //  Created by Serg Liamtsev on 3/16/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class AlbumPhotosVC: BaseViewController {
+final class AlbumPhotosViewController: BaseViewController {
     
     private let contentView = AlbumPhotosView()
     private let collectionController: AlbumPhotosCollectionController
@@ -50,10 +50,10 @@ final class AlbumPhotosVC: BaseViewController {
 }
 
 // MARK: - AlbumPhotosCollectionControllerDelegate
-extension AlbumPhotosVC: AlbumPhotosCollectionControllerDelegate {
+extension AlbumPhotosViewController: AlbumPhotosCollectionControllerDelegate {
     
     func didSelectCell(_ model: AlbumPhotoCellViewModel) {
-        let vc = ViewPhotoVC(url: model.photo.picture)
+        let vc = ViewPhotoViewController(url: model.photo.picture)
         navigationController?.pushViewController(vc, animated: true)
     }
     

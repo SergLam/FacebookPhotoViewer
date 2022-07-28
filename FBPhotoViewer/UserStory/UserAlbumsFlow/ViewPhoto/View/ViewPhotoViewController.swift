@@ -1,5 +1,5 @@
 //
-//  ViewPhotoVC.swift
+//  ViewPhotoViewController.swift
 //  FBPhotoViewer
 //
 //  Created by Serg Liamtsev on 3/16/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class ViewPhotoVC: BaseViewController {
+final class ViewPhotoViewController: BaseViewController {
     
     private let contentView = ViewPhotoView()
     private let viewModel: ViewPhotoViewModel
