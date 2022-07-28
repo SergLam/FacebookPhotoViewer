@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SignInViewController.swift
 //  FBPhotoViewer
 //
 //  Created by Serg Liamtsev on 3/11/19.
@@ -9,12 +9,21 @@
 import FBSDKCoreKit
 import UIKit
 
-final class SignInVC: BaseViewController {
+final class SignInViewController: BaseViewController, SignInViewControllerProtocol {
     
-    private let viewModel = SignInViewModel()
+    private var viewModel: SignInViewModelProtocol
     private let contentView = SignInView()
     
     // MARK: - Life cycle
+    init(viewModel: SignInViewModelProtocol) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func loadView() {
         view = contentView
     }
@@ -29,7 +38,7 @@ final class SignInVC: BaseViewController {
 }
 
 // MARK: - SignInViewDelegate
-extension SignInVC: SignInViewDelegate {
+extension SignInViewController: SignInViewDelegate {
     
     func didTapFBLoginButton() {
         showProgress()
@@ -39,7 +48,7 @@ extension SignInVC: SignInViewDelegate {
 }
 
 // MARK: - SignInViewModelDelegate
-extension SignInVC: SignInViewModelDelegate {
+extension SignInViewController: SignInViewModelDelegate {
     
     func onSignInError(_ error: String) {
         executeOnMain { [weak self] in

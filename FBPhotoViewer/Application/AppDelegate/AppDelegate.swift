@@ -33,7 +33,7 @@ extension AppDelegate: UIApplicationDelegate {
         window?.backgroundColor = .white
         window?.makeKeyAndVisible()
         
-        let rootVC = SignInVC()
+        let rootVC = SignInViewController(viewModel: SignInViewModel())
         let navVC = UINavigationController(rootViewController: rootVC)
         window?.rootViewController = navVC
         

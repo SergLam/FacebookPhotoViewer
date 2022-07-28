@@ -22,25 +22,26 @@ final class AppCoordinator: Coordinator {
     var navigationController: UINavigationController = UINavigationController()
     
     var keyWindow: UIWindow
+    var diContainer: AppDIContainer
     
     init(
-        keyWindow: UIWindow
+        keyWindow: UIWindow,
+        diContainer: AppDIContainer
     ) {
         self.keyWindow = keyWindow
+        self.diContainer = diContainer
     }
     
     func start() {
         keyWindow.rootViewController = navigationController
         keyWindow.makeKeyAndVisible()
         
-        // TODO: - Add keychain token read here
-        switch true {
+        switch diContainer.isUserAuthorized {
         case true:
             startMainFlow()
         case false:
             goToLogInPage()
         }
-        
     }
     
     func childDidFinish(_ child: Coordinator) {
@@ -50,7 +51,7 @@ final class AppCoordinator: Coordinator {
             switch child.type {
             case .signIn:
                 startMainFlow()
-            case .tabBar:
+            case .userAlbums:
                 logOut()
             default:
                 assertionFailure("Unknown user flow - \(child.type)")

@@ -80,6 +80,12 @@
 		049F36112892C68F0057F787 /* KeyChainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F360C2892C68F0057F787 /* KeyChainService.swift */; };
 		049F36122892C68F0057F787 /* KeyChainItemsHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F360E2892C68F0057F787 /* KeyChainItemsHolder.swift */; };
 		049F36132892C68F0057F787 /* KeychainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F36102892C68F0057F787 /* KeychainError.swift */; };
+		049F36162892E0190057F787 /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F36152892E0190057F787 /* AppDIContainer.swift */; };
+		049F36192892E0ED0057F787 /* SignInCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F36182892E0ED0057F787 /* SignInCoordinatorProtocol.swift */; };
+		049F361B2892E0F60057F787 /* SignInCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F361A2892E0F60057F787 /* SignInCoordinator.swift */; };
+		049F361E2892E2060057F787 /* SignInScreenBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F361D2892E2060057F787 /* SignInScreenBuilder.swift */; };
+		049F36202892E2650057F787 /* SignInViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F361F2892E2650057F787 /* SignInViewControllerProtocol.swift */; };
+		049F36222892E2A20057F787 /* SignInViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F36212892E2A20057F787 /* SignInViewModelProtocol.swift */; };
 		04E36A62282446EF0004959C /* FBGraphAPIRequestModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E36A61282446EF0004959C /* FBGraphAPIRequestModelProtocol.swift */; };
 		04E36A6528244D9C0004959C /* EmptyListStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E36A6428244D9C0004959C /* EmptyListStateView.swift */; };
 		04E36A6828244E100004959C /* LayoutConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E36A6728244E0F0004959C /* LayoutConstants.swift */; };
@@ -106,7 +112,7 @@
 		7C816F4D223861A7009C8EB8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7C816F4C223861A7009C8EB8 /* Localizable.strings */; };
 		7C816F512238660B009C8EB8 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C816F502238660B009C8EB8 /* R.generated.swift */; };
 		7C9755902236FFEC005F30B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C97558F2236FFEC005F30B4 /* AppDelegate.swift */; };
-		7C9755922236FFEC005F30B4 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9755912236FFEC005F30B4 /* SignInVC.swift */; };
+		7C9755922236FFEC005F30B4 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9755912236FFEC005F30B4 /* SignInViewController.swift */; };
 		7C9755972236FFED005F30B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C9755962236FFED005F30B4 /* Assets.xcassets */; };
 		7C97559A2236FFED005F30B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C9755982236FFED005F30B4 /* LaunchScreen.storyboard */; };
 		7C9755A52236FFEE005F30B4 /* fbphotoviewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9755A42236FFEE005F30B4 /* fbphotoviewerTests.swift */; };
@@ -224,6 +230,12 @@
 		049F360C2892C68F0057F787 /* KeyChainService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyChainService.swift; sourceTree = "<group>"; };
 		049F360E2892C68F0057F787 /* KeyChainItemsHolder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyChainItemsHolder.swift; sourceTree = "<group>"; };
 		049F36102892C68F0057F787 /* KeychainError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainError.swift; sourceTree = "<group>"; };
+		049F36152892E0190057F787 /* AppDIContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
+		049F36182892E0ED0057F787 /* SignInCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		049F361A2892E0F60057F787 /* SignInCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInCoordinator.swift; sourceTree = "<group>"; };
+		049F361D2892E2060057F787 /* SignInScreenBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInScreenBuilder.swift; sourceTree = "<group>"; };
+		049F361F2892E2650057F787 /* SignInViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewControllerProtocol.swift; sourceTree = "<group>"; };
+		049F36212892E2A20057F787 /* SignInViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModelProtocol.swift; sourceTree = "<group>"; };
 		04E36A61282446EF0004959C /* FBGraphAPIRequestModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBGraphAPIRequestModelProtocol.swift; sourceTree = "<group>"; };
 		04E36A6428244D9C0004959C /* EmptyListStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyListStateView.swift; sourceTree = "<group>"; };
 		04E36A6728244E0F0004959C /* LayoutConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutConstants.swift; sourceTree = "<group>"; };
@@ -262,7 +274,7 @@
 		7C816F502238660B009C8EB8 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = R.generated.swift; path = fbphotoviewer/Resources/R.generated.swift; sourceTree = SOURCE_ROOT; };
 		7C97558C2236FFEC005F30B4 /* FBPhotoViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FBPhotoViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C97558F2236FFEC005F30B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7C9755912236FFEC005F30B4 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
+		7C9755912236FFEC005F30B4 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		7C9755962236FFED005F30B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C9755992236FFED005F30B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7C97559B2236FFED005F30B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -846,6 +858,32 @@
 			path = Errors;
 			sourceTree = "<group>";
 		};
+		049F36142892E0190057F787 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				049F36152892E0190057F787 /* AppDIContainer.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		049F36172892E0CC0057F787 /* SignInScreen */ = {
+			isa = PBXGroup;
+			children = (
+				049F361C2892E18F0057F787 /* ScreenBuilder */,
+				04E36A7828246E260004959C /* ViewModel */,
+				04E36A7728246E1E0004959C /* View */,
+			);
+			path = SignInScreen;
+			sourceTree = "<group>";
+		};
+		049F361C2892E18F0057F787 /* ScreenBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				049F361D2892E2060057F787 /* SignInScreenBuilder.swift */,
+			);
+			path = ScreenBuilder;
+			sourceTree = "<group>";
+		};
 		04E36A6328244D330004959C /* CoreUI */ = {
 			isa = PBXGroup;
 			children = (
@@ -905,7 +943,8 @@
 		04E36A7728246E1E0004959C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				7C9755912236FFEC005F30B4 /* SignInVC.swift */,
+				049F361F2892E2650057F787 /* SignInViewControllerProtocol.swift */,
+				7C9755912236FFEC005F30B4 /* SignInViewController.swift */,
 				7CE8135C2239A3CF004A223E /* SignInView.swift */,
 			);
 			path = View;
@@ -914,6 +953,7 @@
 		04E36A7828246E260004959C /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				049F36212892E2A20057F787 /* SignInViewModelProtocol.swift */,
 				7C816F4A22386071009C8EB8 /* SignInViewModel.swift */,
 			);
 			path = ViewModel;
@@ -950,6 +990,8 @@
 		7C2C671E2237971000D0AF8A /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				049F36142892E0190057F787 /* DI */,
+				049CFA6F26403C3B0021C7CA /* AppDelegate */,
 				04E36A6628244DCD0004959C /* Constants */,
 				049CFAE226403FB40021C7CA /* Environment */,
 				049CFA7326403CC20021C7CA /* Configuration */,
@@ -997,7 +1039,7 @@
 				7C449124223D1BE300169843 /* ViewPhoto */,
 				7C449118223CFF3D00169843 /* AlbumPhotos */,
 				7C24DE81223B721000A88EED /* AlbumsList */,
-				7CE8135B2239A3BD004A223E /* SignIn */,
+				7CE8135B2239A3BD004A223E /* SignInFlow */,
 			);
 			path = UserStory;
 			sourceTree = "<group>";
@@ -1041,7 +1083,6 @@
 			children = (
 				049CFA7426403D2E0021C7CA /* Protocols */,
 				049CFA7026403C4E0021C7CA /* BundleFiles */,
-				049CFA6F26403C3B0021C7CA /* AppDelegate */,
 				7CE813642239BAC7004A223E /* Models */,
 				7CE813612239A9A8004A223E /* Services */,
 				7C816F4922385F84009C8EB8 /* UserStory */,
@@ -1071,13 +1112,14 @@
 			path = FBPhotoViewerUITests;
 			sourceTree = "<group>";
 		};
-		7CE8135B2239A3BD004A223E /* SignIn */ = {
+		7CE8135B2239A3BD004A223E /* SignInFlow */ = {
 			isa = PBXGroup;
 			children = (
-				04E36A7828246E260004959C /* ViewModel */,
-				04E36A7728246E1E0004959C /* View */,
+				049F36182892E0ED0057F787 /* SignInCoordinatorProtocol.swift */,
+				049F361A2892E0F60057F787 /* SignInCoordinator.swift */,
+				049F36172892E0CC0057F787 /* SignInScreen */,
 			);
-			path = SignIn;
+			path = SignInFlow;
 			sourceTree = "<group>";
 		};
 		7CE8135E2239A58E004A223E /* Extensions */ = {
@@ -1417,7 +1459,7 @@
 				04078ECB27C39D2A00DBC6DE /* FBPhotoAlbum.swift in Sources */,
 				049CFAE7264040D90021C7CA /* UserDefaults+Codable.swift in Sources */,
 				04767D21282557BE00A6E13F /* UIProvider+Label.swift in Sources */,
-				7C9755922236FFEC005F30B4 /* SignInVC.swift in Sources */,
+				7C9755922236FFEC005F30B4 /* SignInViewController.swift in Sources */,
 				049CFAB726403D2E0021C7CA /* Mockable.swift in Sources */,
 				04767D252825581E00A6E13F /* LabelDecorator.swift in Sources */,
 				04078ED127C39DD400DBC6DE /* FBAlbumPhotoData.swift in Sources */,
@@ -1428,6 +1470,7 @@
 				049CFAD926403ECD0021C7CA /* AppInternalError.swift in Sources */,
 				04E36A6C28245BC40004959C /* AlbumPhotoCellViewModel.swift in Sources */,
 				04E36A6528244D9C0004959C /* EmptyListStateView.swift in Sources */,
+				049F361E2892E2060057F787 /* SignInScreenBuilder.swift in Sources */,
 				04767D42282561D400A6E13F /* UIButton+AnimatedSetImage.swift in Sources */,
 				04767D2F28255AA500A6E13F /* ButtonStyle.swift in Sources */,
 				04078EBF27C2AA9900DBC6DE /* GetMyPhotoAlbumsResponse.swift in Sources */,
@@ -1462,6 +1505,7 @@
 				04078EB127C2A42700DBC6DE /* FBAPIError.swift in Sources */,
 				04078EB527C2A6E500DBC6DE /* GetMyProfileRequest.swift in Sources */,
 				049CFAC426403D2E0021C7CA /* ProgressShowable.swift in Sources */,
+				049F36162892E0190057F787 /* AppDIContainer.swift in Sources */,
 				7C24DE80223B6F7100A88EED /* AlertPresenter.swift in Sources */,
 				049CFAF2264042200021C7CA /* DateFormatter+Ext.swift in Sources */,
 				047CFE9D28295AE400915F91 /* UIButton+SetImage.swift in Sources */,
@@ -1474,6 +1518,7 @@
 				049CFAB226403D2E0021C7CA /* NibLoadable.swift in Sources */,
 				04E36A6A282453F60004959C /* ActivityIndicatorViewController.swift in Sources */,
 				04767D1E2825576E00A6E13F /* BasicLabel.swift in Sources */,
+				049F36202892E2650057F787 /* SignInViewControllerProtocol.swift in Sources */,
 				04767D4628256A9500A6E13F /* FacebookSignInButton.swift in Sources */,
 				04078EC827C39CD200DBC6DE /* FBPaginationCursor.swift in Sources */,
 				7C816F512238660B009C8EB8 /* R.generated.swift in Sources */,
@@ -1485,6 +1530,7 @@
 				04767D3628255B4500A6E13F /* UIProvider+Button.swift in Sources */,
 				049CFAE9264040FA0021C7CA /* UserDefaults+AppSettings.swift in Sources */,
 				7CE8135D2239A3CF004A223E /* SignInView.swift in Sources */,
+				049F361B2892E0F60057F787 /* SignInCoordinator.swift in Sources */,
 				04E36A7228246A930004959C /* AlbumsListCellViewModel.swift in Sources */,
 				049F36112892C68F0057F787 /* KeyChainService.swift in Sources */,
 				049F36052892C3080057F787 /* TabBarCoordinatorProtocol.swift in Sources */,
@@ -1495,7 +1541,9 @@
 				049CFAB526403D2E0021C7CA /* JSONAble.swift in Sources */,
 				049CFAB326403D2E0021C7CA /* XIBLocalizable.swift in Sources */,
 				047CFE9F2829681600915F91 /* UIButton+UIViewAnimateKeyframesImage.swift in Sources */,
+				049F36222892E2A20057F787 /* SignInViewModelProtocol.swift in Sources */,
 				049CFAEE264041800021C7CA /* UserDefaults+Ext.swift in Sources */,
+				049F36192892E0ED0057F787 /* SignInCoordinatorProtocol.swift in Sources */,
 				04078ED527C39E3E00DBC6DE /* FBAlbumPhotosPaging.swift in Sources */,
 				049CFAAF26403D2E0021C7CA /* ContentRefreshable.swift in Sources */,
 				049CFAE126403F900021C7CA /* NSObject+Ext.swift in Sources */,

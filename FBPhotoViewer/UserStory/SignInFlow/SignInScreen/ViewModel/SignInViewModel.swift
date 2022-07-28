@@ -17,7 +17,9 @@ protocol SignInViewModelDelegate: AnyObject {
     func onSignInSuccess()
 }
 
-final class SignInViewModel {
+final class SignInViewModel: SignInViewModelProtocol {
+    
+    weak var coordinator: SignInCoordinatorProtocol?
     
     weak var delegate: SignInViewModelDelegate?
     
