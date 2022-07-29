@@ -28,6 +28,7 @@ final class ActivityIndicatorViewController: UIViewController {
     private(set) var activityIndicatorTitleLabel: UILabel = UILabel()
     private let activityIndicatorTitleLabelFont = UIFont.systemFont(ofSize: 18, weight: .medium)
     
+    // MARK: - Life cycle
     override func loadView() {
         contentView.frame = UIScreen.main.bounds
         view = contentView
