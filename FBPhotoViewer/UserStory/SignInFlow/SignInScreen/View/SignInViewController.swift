@@ -66,8 +66,9 @@ extension SignInViewController: SignInViewModelDelegate {
     
     func onSignInSuccess() {
         executeOnMain { [weak self] in
-            self?.hideProgress()
-            self?.viewModel.coordinator?.finish()
+            self?.hideProgress{
+                self?.viewModel.coordinator?.finish()
+            }
         }
     }
     
