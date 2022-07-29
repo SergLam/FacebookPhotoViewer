@@ -10,5 +10,7 @@ import Foundation
 
 protocol AlbumPhotosViewModelProtocol {
     
+    var coordinator: UserAlbumsCoordinatorProtocol? { get set }
+    
     var album: FBPhotoAlbum { get set }
 }

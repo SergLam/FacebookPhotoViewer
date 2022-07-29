@@ -29,6 +29,10 @@ protocol Coordinator: AnyObject {
 // MARK: - Equatable
 extension Coordinator {
     
+    func finish() {
+        parentCoordinator?.childDidFinish(self)
+    }
+    
     func isEqual(to coordinator: Coordinator) -> Bool {
         return self.id == coordinator.id && self.type == coordinator.type
     }

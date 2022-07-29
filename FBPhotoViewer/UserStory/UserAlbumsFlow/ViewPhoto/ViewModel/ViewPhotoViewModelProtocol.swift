@@ -10,5 +10,7 @@ import Foundation
 
 protocol ViewPhotoViewModelProtocol {
     
-    var photoURL: String { get set }
+    var coordinator: UserAlbumsCoordinatorProtocol? { get set }
+    
+    var model: FBAlbumPhotoData { get set }
 }

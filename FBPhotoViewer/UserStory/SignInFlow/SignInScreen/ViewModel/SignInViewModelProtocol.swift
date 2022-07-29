@@ -14,5 +14,7 @@ protocol SignInViewModelProtocol {
     
     var delegate: SignInViewModelDelegate? { get set }
     
+    var keyChainService: KeyChainServiceProtocol { get set }
+    
     func signInViaFB(_ vc: UIViewController)
 }

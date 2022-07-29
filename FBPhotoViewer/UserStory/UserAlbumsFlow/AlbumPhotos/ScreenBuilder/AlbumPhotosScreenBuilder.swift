@@ -10,11 +10,11 @@ import Foundation
 
 final class AlbumPhotosScreenBuilder {
     
-    class func makeModule(with model: Void, coordinator: UserAlbumsCoordinatorProtocol) -> AlbumsListViewControllerProtocol {
+    class func makeModule(with model: FBPhotoAlbum, coordinator: UserAlbumsCoordinatorProtocol) -> AlbumPhotosViewControllerProtocol {
         
-        let viewModel: AlbumsListViewModelProtocol = AlbumsListViewModel()
+        let viewModel: AlbumPhotosViewModel = AlbumPhotosViewModel(album: model)
         viewModel.coordinator = coordinator
-        let viewController: AlbumsListViewController = AlbumsListViewController(viewModel: viewModel)
+        let viewController: AlbumPhotosViewController = AlbumPhotosViewController(viewModel: viewModel)
         return viewController
     }
 }

@@ -8,10 +8,10 @@
 
 import UIKit
 
-final class AlertPresenter {
+final class AlertPresenter: NSObject {
     
     static func showErrorAlert(on viewController: UIViewController, error: String) {
-        DispatchQueue.main.async {
+        executeOnMain {
             let alert = UIAlertController(title: Localizable.error(), message: error, preferredStyle: .alert)
             let action = UIAlertAction(title: Localizable.ok(), style: .default, handler: { _ in
                 alert.dismiss(animated: true, completion: nil)
@@ -24,13 +24,37 @@ final class AlertPresenter {
     static func showSuccessAlert(on viewController: UIViewController,
                                  message: String,
                                  _ completion: VoidClosure?) {
-        DispatchQueue.main.async {
+        executeOnMain {
             let alert = UIAlertController(title: Localizable.success(), message: message, preferredStyle: .alert)
             let action = UIAlertAction(title: Localizable.ok(), style: .default, handler: { _ in
                 completion?()
             })
             alert.addAction(action)
             viewController.present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    // MARK: - Log out alert
+    static func showLogOutAlert(at vc: UIViewController,
+                                logOutClosure: @escaping VoidClosure) {
+        executeOnMain {
+            let title = Localizable.appName(preferredLanguages: [UserDefaults.shared.selectedLocaleCode])
+            let message = Localizable.logOutAlertText(preferredLanguages: [UserDefaults.shared.selectedLocaleCode])
+            
+            let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+            
+            let logOutAction = UIAlertAction(title: Localizable.logOutAlertTitle(preferredLanguages: [UserDefaults.shared.selectedLocaleCode]), style: .default) { _ in
+                logOutClosure()
+            }
+            let cancelAction = UIAlertAction(title: Localizable.cancel(preferredLanguages: [UserDefaults.shared.selectedLocaleCode]), style: .default) { _ in
+                alert.dismiss(animated: true, completion: nil)
+            }
+            
+            alert.addAction(logOutAction)
+            alert.addAction(cancelAction)
+            alert.preferredAction = logOutAction
+            
+            vc.present(alert, animated: true, completion: nil)
         }
     }
     

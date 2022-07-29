@@ -11,4 +11,10 @@ import UIKit
 protocol UserAlbumsCoordinatorProtocol: Coordinator {
     
     init(navigationController: UINavigationController, diContainer: AppDIContainer)
+    
+    func openAlbumDetails(model: FBPhotoAlbum)
+    
+    func openPhotoDetails(model: FBAlbumPhotoData)
+    
+    func logOut()
 }

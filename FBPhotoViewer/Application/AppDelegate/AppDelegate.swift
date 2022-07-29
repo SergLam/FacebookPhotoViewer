@@ -14,7 +14,20 @@ import UIKit
 final class AppDelegate: UIResponder {
 
     var window: UIWindow?
-
+    
+    var appCoordinator: AppCoordinator!
+    
+    var diContainer = AppDIContainer()
+    
+    static var shared: AppDelegate {
+        guard let delegate = UIApplication.shared.delegate as? AppDelegate else {
+            let message: String = "Unable to cast app delegate"
+            // ErrorLoggerService.logWithTrace(message)
+            preconditionFailure(message)
+        }
+        return delegate
+    }
+    
     // TEST USER:
     // qqcjdtzyuy_1552376613@tfbnw.net
     // password123456
@@ -30,13 +43,8 @@ extension AppDelegate: UIApplicationDelegate {
         
         // Override point for customization after application launch.
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.backgroundColor = .white
-        window?.makeKeyAndVisible()
-        
-        let rootVC = SignInViewController(viewModel: SignInViewModel())
-        let navVC = UINavigationController(rootViewController: rootVC)
-        window?.rootViewController = navVC
-        
+        appCoordinator = AppCoordinator(keyWindow: window ?? UIWindow(frame: UIScreen.main.bounds), diContainer: diContainer)
+        appCoordinator.start()
         return true
     }
     

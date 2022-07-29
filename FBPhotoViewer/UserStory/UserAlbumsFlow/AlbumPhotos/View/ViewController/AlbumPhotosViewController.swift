@@ -12,11 +12,11 @@ final class AlbumPhotosViewController: BaseViewController, AlbumPhotosViewContro
     
     private let contentView = AlbumPhotosView()
     private let collectionController: AlbumPhotosCollectionController
-    private let viewModel: AlbumPhotosViewModel
+    private let viewModel: AlbumPhotosViewModelProtocol
     
     // MARK: - Life cycle
-    init(album: FBPhotoAlbum) {
-        viewModel = AlbumPhotosViewModel(album: album)
+    init(viewModel: AlbumPhotosViewModelProtocol) {
+        self.viewModel = viewModel
         collectionController = AlbumPhotosCollectionController(collectionView: contentView.collectionView)
         super.init(nibName: nil, bundle: nil)
     }
@@ -53,8 +53,7 @@ final class AlbumPhotosViewController: BaseViewController, AlbumPhotosViewContro
 extension AlbumPhotosViewController: AlbumPhotosCollectionControllerDelegate {
     
     func didSelectCell(_ model: AlbumPhotoCellViewModel) {
-        let vc = ViewPhotoViewController(url: model.photo.picture)
-        navigationController?.pushViewController(vc, animated: true)
+        viewModel.coordinator?.openPhotoDetails(model: model.photo)
     }
     
     func didFinishDataSourceUpdates() {

@@ -33,6 +33,7 @@ final class AppCoordinator: Coordinator {
     }
     
     func start() {
+        keyWindow.backgroundColor = .white
         keyWindow.rootViewController = navigationController
         keyWindow.makeKeyAndVisible()
         

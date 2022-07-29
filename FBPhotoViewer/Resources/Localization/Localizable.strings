@@ -13,6 +13,7 @@
 "success" = "Success";
 "back" = "Back";
 "loading" = "Loading";
+"app-name" = "Facebook Photo Viewer";
 
 // MARK: - Facebook errors
 "error.fb-empty-result" = "Facebook Autorization - unable to get result";
@@ -27,6 +28,9 @@
 "albums-list.screenTitle" = "My Albums List";
 "albums-list.empty-state-title" = "User does not have albums yet";
 
+// MARK: - Albums list nav bar items
+"albums-list.nav-bar.log-out" = "Log out";
+
 // MARK: - View photo
 "view-photo.title" = "View photo";
 
@@ -38,3 +42,7 @@
 // MARK: - Tab bar items title
 "tab-bar.feed-title" = "Feed";
 "tab-bar.profile-title" = "Profile";
+
+// MARK: - Log out alert
+"log-out-alert.title" = "Logout";
+"log-out-alert.text" = "Are you sure you want to logout ?";

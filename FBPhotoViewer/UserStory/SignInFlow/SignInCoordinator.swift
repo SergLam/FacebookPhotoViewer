@@ -38,6 +38,6 @@ final class SignInCoordinator: SignInCoordinatorProtocol {
     }
     
     func finish() {
-        
+        parentCoordinator?.childDidFinish(self)
     }
 }

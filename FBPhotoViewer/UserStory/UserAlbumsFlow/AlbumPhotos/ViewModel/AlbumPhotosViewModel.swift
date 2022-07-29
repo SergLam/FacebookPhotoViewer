@@ -10,6 +10,8 @@ import Foundation
 
 final class AlbumPhotosViewModel: AlbumPhotosViewModelProtocol {
     
+    weak var coordinator: UserAlbumsCoordinatorProtocol?
+    
     var album: FBPhotoAlbum
     
     // MARK: - Life cycle

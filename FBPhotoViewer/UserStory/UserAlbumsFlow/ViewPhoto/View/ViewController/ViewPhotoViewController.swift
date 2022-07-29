@@ -8,14 +8,14 @@
 
 import UIKit
 
-final class ViewPhotoViewController: BaseViewController {
+final class ViewPhotoViewController: BaseViewController, ViewPhotoViewControllerProtocol {
     
     private let contentView = ViewPhotoView()
-    private let viewModel: ViewPhotoViewModel
+    private let viewModel: ViewPhotoViewModelProtocol
     
     // MARK: - Life cycle
-    init(url: String) {
-        viewModel = ViewPhotoViewModel(url: url)
+    init(viewModel: ViewPhotoViewModelProtocol) {
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -34,7 +34,7 @@ final class ViewPhotoViewController: BaseViewController {
     }
     
     private func loadPhoto() {
-        contentView.loadPhoto(withURL: viewModel.photoURL)
+        contentView.loadPhoto(withURL: viewModel.model.picture)
     }
     
 }

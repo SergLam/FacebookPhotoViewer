@@ -23,6 +23,8 @@ final class SignInViewModel: SignInViewModelProtocol {
     
     weak var delegate: SignInViewModelDelegate?
     
+    var keyChainService: KeyChainServiceProtocol = KeyChainService()
+    
     func signInViaFB(_ vc: UIViewController){
         
         LoginManager().logOut()
@@ -44,9 +46,17 @@ final class SignInViewModel: SignInViewModelProtocol {
                 self?.delegate?.onSignInError(Localizable.errorFbAccessTokenNil())
                 return
             }
-            // TODO: save tokens for re-authentication
-            debugPrint(accessToken)
-            self?.delegate?.onSignInSuccess()
+            guard let tokenData = accessToken.tokenString.data(using: String.Encoding.utf8) else {
+                self?.delegate?.onSignInError(Localizable.errorFbAccessTokenNil())
+                return
+            }
+            do {
+                let item = KeyChainItemsHolder.facebookToken
+                try self?.keyChainService.write(item: item, data: tokenData)
+                self?.delegate?.onSignInSuccess()
+            } catch {
+                self?.delegate?.onSignInError(error.localizedDescription)
+            }
         }
         
     }

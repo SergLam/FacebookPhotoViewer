@@ -311,8 +311,10 @@ struct R: Rswift.Validatable {
 
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 19 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 23 localization keys.
     struct localizable {
+      /// Value: Are you sure you want to logout ?
+      static let logOutAlertText = Rswift.StringResource(key: "log-out-alert.text", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Back
       static let back = Rswift.StringResource(key: "back", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Cancel
@@ -325,12 +327,18 @@ struct R: Rswift.Validatable {
       static let errorFbEmptyResult = Rswift.StringResource(key: "error.fb-empty-result", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Facebook Autorization canceled by user
       static let errorFbCanceledByUser = Rswift.StringResource(key: "error.fb-canceled-by-user", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Facebook Photo Viewer
+      static let appName = Rswift.StringResource(key: "app-name", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Failed to get access token
       static let errorFbAccessTokenNil = Rswift.StringResource(key: "error.fb-access-token-nil", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Feed
       static let tabBarFeedTitle = Rswift.StringResource(key: "tab-bar.feed-title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Loading
       static let loading = Rswift.StringResource(key: "loading", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Log out
+      static let albumsListNavBarLogOut = Rswift.StringResource(key: "albums-list.nav-bar.log-out", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Logout
+      static let logOutAlertTitle = Rswift.StringResource(key: "log-out-alert.title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Mail failed: the email message was not sent. Please check your e-mail settings.
       static let emailSendFail = Rswift.StringResource(key: "email.send.fail", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Mail send: email message sent successfully.
@@ -351,6 +359,19 @@ struct R: Rswift.Validatable {
       static let viewPhotoTitle = Rswift.StringResource(key: "view-photo.title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Your device has not been configured to send emails. Please sign in to your email at the default iOS Mail app.
       static let emailSendNotConfigured = Rswift.StringResource(key: "email.send.not-configured", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+
+      /// Value: Are you sure you want to logout ?
+      static func logOutAlertText(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("log-out-alert.text", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "log-out-alert.text"
+        }
+
+        return NSLocalizedString("log-out-alert.text", bundle: bundle, comment: "")
+      }
 
       /// Value: Back
       static func back(preferredLanguages: [String]? = nil) -> String {
@@ -430,6 +451,19 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("error.fb-canceled-by-user", bundle: bundle, comment: "")
       }
 
+      /// Value: Facebook Photo Viewer
+      static func appName(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("app-name", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "app-name"
+        }
+
+        return NSLocalizedString("app-name", bundle: bundle, comment: "")
+      }
+
       /// Value: Failed to get access token
       static func errorFbAccessTokenNil(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
@@ -467,6 +501,32 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("loading", bundle: bundle, comment: "")
+      }
+
+      /// Value: Log out
+      static func albumsListNavBarLogOut(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("albums-list.nav-bar.log-out", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "albums-list.nav-bar.log-out"
+        }
+
+        return NSLocalizedString("albums-list.nav-bar.log-out", bundle: bundle, comment: "")
+      }
+
+      /// Value: Logout
+      static func logOutAlertTitle(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("log-out-alert.title", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "log-out-alert.title"
+        }
+
+        return NSLocalizedString("log-out-alert.title", bundle: bundle, comment: "")
       }
 
       /// Value: Mail failed: the email message was not sent. Please check your e-mail settings.

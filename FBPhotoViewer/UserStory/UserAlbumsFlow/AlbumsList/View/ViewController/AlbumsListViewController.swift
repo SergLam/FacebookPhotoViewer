@@ -40,7 +40,7 @@ final class AlbumsListViewController: BaseViewController, AlbumsListViewControll
     
     private func configureNavBar() {
         navigationItem.title = Localizable.albumsListScreenTitle()
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: Localizable.back(), style: .plain, target: nil, action: nil)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: Localizable.albumsListNavBarLogOut(preferredLanguages: [UserDefaults.shared.selectedLocaleCode]), style: .plain, target: self, action: #selector(didTapLogOutButton))
     }
     
     private func displayAlbums() {
@@ -51,14 +51,19 @@ final class AlbumsListViewController: BaseViewController, AlbumsListViewControll
         contentView.setEmptyListViewVisibility(isHidden: !self.viewModel.albums.isEmpty)
         tableController.update(with: models)
     }
+    
+    // MARK: - Actions
+    @objc
+    private func didTapLogOutButton() {
+        viewModel.coordinator?.logOut()
+    }
 }
 
 // MARK: - AlbumsListTableControllerDelegate
 extension AlbumsListViewController: AlbumsListTableControllerDelegate {
     
     func didSelectCell(_ model: AlbumsListCellViewModel) {
-        let vc = AlbumPhotosViewController(album: model.album)
-        navigationController?.pushViewController(vc, animated: true)
+        viewModel.coordinator?.openAlbumDetails(model: model.album)
     }
     
     func didFinishDataSourceUpdates() {

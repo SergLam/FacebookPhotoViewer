@@ -10,10 +10,12 @@ import Foundation
 
 final class ViewPhotoViewModel: ViewPhotoViewModelProtocol {
     
-    var photoURL: String
+    weak var coordinator: UserAlbumsCoordinatorProtocol?
+    
+    var model: FBAlbumPhotoData
     
     // MARK: - Life cycle
-    init(url: String) {
-        self.photoURL = url
+    init(model: FBAlbumPhotoData) {
+        self.model = model
     }
 }
