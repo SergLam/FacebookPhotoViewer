@@ -39,8 +39,8 @@ final class AlbumsListViewController: BaseViewController, AlbumsListViewControll
     }
     
     private func configureNavBar() {
-        navigationItem.title = Localizable.albumsListScreenTitle()
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: Localizable.albumsListNavBarLogOut(preferredLanguages: [UserDefaults.shared.selectedLocaleCode]), style: .plain, target: self, action: #selector(didTapLogOutButton))
+        navigationItem.title = LocalizedStrings.albumsListScreenTitle
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: LocalizedStrings.albumsListNavBarLogOut, style: .plain, target: self, action: #selector(didTapLogOutButton))
     }
     
     private func displayAlbums() {

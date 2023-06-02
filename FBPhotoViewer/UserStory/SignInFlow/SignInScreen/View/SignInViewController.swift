@@ -32,7 +32,7 @@ final class SignInViewController: BaseViewController, SignInViewControllerProtoc
         super.viewDidLoad()
         contentView.delegate = self
         viewModel.delegate = self
-        navigationItem.title = Localizable.signInFbLoginScreenTitle()
+        navigationItem.title = LocalizedStrings.signInFbLoginScreenTitle
     }
     
 }

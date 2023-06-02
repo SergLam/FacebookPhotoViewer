@@ -29,7 +29,7 @@ final class ViewPhotoViewController: BaseViewController, ViewPhotoViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = Localizable.viewPhotoTitle()
+        navigationItem.title = LocalizedStrings.viewPhotoTitle
         loadPhoto()
     }
     

@@ -8,8 +8,6 @@
 
 import UIKit
 
-typealias Localizable = R.string.localizable
-
 typealias TypeClosure<T> = (T) -> Void
 
 typealias VoidClosure = () -> Void

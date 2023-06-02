@@ -38,7 +38,7 @@ final class AlbumPhotosViewController: BaseViewController, AlbumPhotosViewContro
     
     private func configureNavBar() {
         navigationItem.title = viewModel.album.name
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: Localizable.back(), style: .plain, target: nil, action: nil)
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: LocalizedStrings.back, style: .plain, target: nil, action: nil)
     }
     
     private func showAlbumPhotos() {

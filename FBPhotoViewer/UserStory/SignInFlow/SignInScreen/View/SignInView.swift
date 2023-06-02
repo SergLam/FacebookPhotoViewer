@@ -37,7 +37,7 @@ final class SignInView: UIView {
         
         addSubview(fbLoginButton)
         let buttonHeight: CGFloat = 46
-        fbLoginButton.setTitle(Localizable.signInFbLoginButtonTitle(), for: .normal)
+        fbLoginButton.setTitle(LocalizedStrings.signInFbLoginButtonTitle, for: .normal)
         fbLoginButton.titleLabel?.lineBreakMode = .byWordWrapping
         
         fbLoginButton.translatesAutoresizingMaskIntoConstraints = false

@@ -35,7 +35,7 @@ final class SignInViewModel: SignInViewModelProtocol {
                 return
             }
             guard let result = result else {
-                self?.delegate?.onSignInError(Localizable.errorFbEmptyResult())
+                self?.delegate?.onSignInError(LocalizedStrings.errorFbEmptyResult)
                 return
             }
             guard !result.isCancelled else {
@@ -43,11 +43,11 @@ final class SignInViewModel: SignInViewModelProtocol {
                 return
             }
             guard let accessToken = AccessToken.current else {
-                self?.delegate?.onSignInError(Localizable.errorFbAccessTokenNil())
+                self?.delegate?.onSignInError(LocalizedStrings.errorFbAccessTokenNil)
                 return
             }
             guard let tokenData = accessToken.tokenString.data(using: String.Encoding.utf8) else {
-                self?.delegate?.onSignInError(Localizable.errorFbAccessTokenNil())
+                self?.delegate?.onSignInError(LocalizedStrings.errorFbAccessTokenNil)
                 return
             }
             do {

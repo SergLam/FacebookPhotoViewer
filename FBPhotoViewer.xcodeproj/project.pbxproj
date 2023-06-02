@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -26,6 +26,8 @@
 		04078EDF27C3A12100DBC6DE /* Codable+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04078EDE27C3A12100DBC6DE /* Codable+Ext.swift */; };
 		04078EE127C3A13F00DBC6DE /* Codable+Force.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04078EE027C3A13F00DBC6DE /* Codable+Force.swift */; };
 		04078EE327C3A16B00DBC6DE /* Decodable+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04078EE227C3A16B00DBC6DE /* Decodable+Ext.swift */; };
+		042538A92A2A0B0E0060967A /* LocalizedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042538A82A2A0B0E0060967A /* LocalizedStrings.swift */; };
+		042538AB2A2A0E450060967A /* AppImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042538AA2A2A0E450060967A /* AppImages.swift */; };
 		04767D1A282556EE00A6E13F /* UIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04767D19282556EE00A6E13F /* UIProvider.swift */; };
 		04767D1E2825576E00A6E13F /* BasicLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04767D1D2825576E00A6E13F /* BasicLabel.swift */; };
 		04767D21282557BE00A6E13F /* UIProvider+Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04767D20282557BE00A6E13F /* UIProvider+Label.swift */; };
@@ -120,12 +122,11 @@
 		7C44912A223D1DA700169843 /* ViewPhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C449129223D1DA700169843 /* ViewPhotoViewModel.swift */; };
 		7C816F4B22386071009C8EB8 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C816F4A22386071009C8EB8 /* SignInViewModel.swift */; };
 		7C816F4D223861A7009C8EB8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7C816F4C223861A7009C8EB8 /* Localizable.strings */; };
-		7C816F512238660B009C8EB8 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C816F502238660B009C8EB8 /* R.generated.swift */; };
 		7C9755902236FFEC005F30B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C97558F2236FFEC005F30B4 /* AppDelegate.swift */; };
 		7C9755922236FFEC005F30B4 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9755912236FFEC005F30B4 /* SignInViewController.swift */; };
 		7C9755972236FFED005F30B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C9755962236FFED005F30B4 /* Assets.xcassets */; };
 		7C97559A2236FFED005F30B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C9755982236FFED005F30B4 /* LaunchScreen.storyboard */; };
-		7C9755A52236FFEE005F30B4 /* fbphotoviewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9755A42236FFEE005F30B4 /* fbphotoviewerTests.swift */; };
+		7C9755A52236FFEE005F30B4 /* FBPhotoViewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9755A42236FFEE005F30B4 /* FBPhotoViewerTests.swift */; };
 		7C9755B02236FFEE005F30B4 /* FBPhotoViewerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9755AF2236FFEE005F30B4 /* FBPhotoViewerUITests.swift */; };
 		7CE8135D2239A3CF004A223E /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE8135C2239A3CF004A223E /* SignInView.swift */; };
 		7CE813602239A59F004A223E /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE8135F2239A59F004A223E /* UIColor+Ext.swift */; };
@@ -174,6 +175,8 @@
 		04078EE227C3A16B00DBC6DE /* Decodable+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decodable+Ext.swift"; sourceTree = "<group>"; };
 		04123F9E27B7C78400AD5721 /* Prod.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Prod.xcconfig; sourceTree = "<group>"; };
 		04123FA027B7C79900AD5721 /* Dev.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Dev.xcconfig; sourceTree = "<group>"; };
+		042538A82A2A0B0E0060967A /* LocalizedStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedStrings.swift; sourceTree = "<group>"; };
+		042538AA2A2A0E450060967A /* AppImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppImages.swift; sourceTree = "<group>"; };
 		04767D19282556EE00A6E13F /* UIProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIProvider.swift; sourceTree = "<group>"; };
 		04767D1D2825576E00A6E13F /* BasicLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicLabel.swift; sourceTree = "<group>"; };
 		04767D20282557BE00A6E13F /* UIProvider+Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIProvider+Label.swift"; sourceTree = "<group>"; };
@@ -291,7 +294,6 @@
 		7C449129223D1DA700169843 /* ViewPhotoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPhotoViewModel.swift; sourceTree = "<group>"; };
 		7C816F4A22386071009C8EB8 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		7C816F4C223861A7009C8EB8 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
-		7C816F502238660B009C8EB8 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = R.generated.swift; path = fbphotoviewer/Resources/R.generated.swift; sourceTree = SOURCE_ROOT; };
 		7C97558C2236FFEC005F30B4 /* FBPhotoViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FBPhotoViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C97558F2236FFEC005F30B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C9755912236FFEC005F30B4 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -299,7 +301,7 @@
 		7C9755992236FFED005F30B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7C97559B2236FFED005F30B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C9755A02236FFEE005F30B4 /* FBPhotoViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FBPhotoViewerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7C9755A42236FFEE005F30B4 /* fbphotoviewerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fbphotoviewerTests.swift; sourceTree = "<group>"; };
+		7C9755A42236FFEE005F30B4 /* FBPhotoViewerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBPhotoViewerTests.swift; sourceTree = "<group>"; };
 		7C9755A62236FFEE005F30B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C9755AB2236FFEE005F30B4 /* FBPhotoViewerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FBPhotoViewerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C9755AF2236FFEE005F30B4 /* FBPhotoViewerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBPhotoViewerUITests.swift; sourceTree = "<group>"; };
@@ -642,6 +644,7 @@
 			isa = PBXGroup;
 			children = (
 				7C816F4C223861A7009C8EB8 /* Localizable.strings */,
+				042538A82A2A0B0E0060967A /* LocalizedStrings.swift */,
 			);
 			path = Localization;
 			sourceTree = "<group>";
@@ -651,6 +654,7 @@
 			children = (
 				04767D432825629400A6E13F /* Images.xcassets */,
 				7C9755962236FFED005F30B4 /* Assets.xcassets */,
+				042538AA2A2A0E450060967A /* AppImages.swift */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -1169,7 +1173,6 @@
 				04123FA127B7C89C00AD5721 /* LaunchScreen */,
 				049CFA7226403CB10021C7CA /* Images */,
 				049CFA7126403CA60021C7CA /* Localization */,
-				7C816F502238660B009C8EB8 /* R.generated.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -1215,7 +1218,7 @@
 		7C9755A32236FFEE005F30B4 /* FBPhotoViewerTests */ = {
 			isa = PBXGroup;
 			children = (
-				7C9755A42236FFEE005F30B4 /* fbphotoviewerTests.swift */,
+				7C9755A42236FFEE005F30B4 /* FBPhotoViewerTests.swift */,
 				7C9755A62236FFEE005F30B4 /* Info.plist */,
 			);
 			path = FBPhotoViewerTests;
@@ -1303,7 +1306,6 @@
 			buildConfigurationList = 7C9755B42236FFEE005F30B4 /* Build configuration list for PBXNativeTarget "FBPhotoViewer" */;
 			buildPhases = (
 				5DD6FF77B69DA34218EA6169 /* [CP] Check Pods Manifest.lock */,
-				7C816F4F22386586009C8EB8 /* R.swift */,
 				049CFB1D264062DF0021C7CA /* Swift Lint */,
 				7C9755882236FFEC005F30B4 /* Sources */,
 				7C9755892236FFEC005F30B4 /* Frameworks */,
@@ -1496,26 +1498,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7C816F4F22386586009C8EB8 /* R.swift */ = {
-			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = R.swift;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				$SRCROOT/FBPhotoViewer/Resources/R.generated.swift,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/FBPhotoViewer/Resources/R.generated.swift\"\n";
-		};
 		9C7AF7B9DD601D0071FD2608 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1584,6 +1566,7 @@
 				049CFAB726403D2E0021C7CA /* Mockable.swift in Sources */,
 				04767D252825581E00A6E13F /* LabelDecorator.swift in Sources */,
 				04078ED127C39DD400DBC6DE /* FBAlbumPhotoData.swift in Sources */,
+				042538A92A2A0B0E0060967A /* LocalizedStrings.swift in Sources */,
 				04E36A6828244E100004959C /* LayoutConstants.swift in Sources */,
 				049CFA6C264037A90021C7CA /* UIView+AddAction.swift in Sources */,
 				04078EC227C2ADFF00DBC6DE /* Data+JSON.swift in Sources */,
@@ -1610,6 +1593,7 @@
 				7C24DE85223B726E00A88EED /* AlbumsListView.swift in Sources */,
 				049CFADB26403EE30021C7CA /* LoggerService.swift in Sources */,
 				7C24DE8A223B72E800A88EED /* AlbumsListCell.swift in Sources */,
+				042538AB2A2A0E450060967A /* AppImages.swift in Sources */,
 				049F362F2893036B0057F787 /* ViewPhotoViewModelProtocol.swift in Sources */,
 				049F36412894026B0057F787 /* ViewPhotoScreenBuilder.swift in Sources */,
 				7C816F4B22386071009C8EB8 /* SignInViewModel.swift in Sources */,
@@ -1646,7 +1630,6 @@
 				049F36202892E2650057F787 /* SignInViewControllerProtocol.swift in Sources */,
 				04767D4628256A9500A6E13F /* FacebookSignInButton.swift in Sources */,
 				04078EC827C39CD200DBC6DE /* FBPaginationCursor.swift in Sources */,
-				7C816F512238660B009C8EB8 /* R.generated.swift in Sources */,
 				049F36062892C3080057F787 /* CoordinatorProtocol.swift in Sources */,
 				049CFAAC26403D2E0021C7CA /* LocaleRefreshable.swift in Sources */,
 				04078EDF27C3A12100DBC6DE /* Codable+Ext.swift in Sources */,
@@ -1684,7 +1667,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C9755A52236FFEE005F30B4 /* fbphotoviewerTests.swift in Sources */,
+				7C9755A52236FFEE005F30B4 /* FBPhotoViewerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

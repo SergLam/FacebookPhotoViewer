@@ -12,8 +12,8 @@ final class AlertPresenter: NSObject {
     
     static func showErrorAlert(on viewController: UIViewController, error: String) {
         executeOnMain {
-            let alert = UIAlertController(title: Localizable.error(), message: error, preferredStyle: .alert)
-            let action = UIAlertAction(title: Localizable.ok(), style: .default, handler: { _ in
+            let alert = UIAlertController(title: LocalizedStrings.error, message: error, preferredStyle: .alert)
+            let action = UIAlertAction(title: LocalizedStrings.ok, style: .default, handler: { _ in
                 alert.dismiss(animated: true, completion: nil)
             })
             alert.addAction(action)
@@ -25,8 +25,8 @@ final class AlertPresenter: NSObject {
                                  message: String,
                                  _ completion: VoidClosure?) {
         executeOnMain {
-            let alert = UIAlertController(title: Localizable.success(), message: message, preferredStyle: .alert)
-            let action = UIAlertAction(title: Localizable.ok(), style: .default, handler: { _ in
+            let alert = UIAlertController(title: LocalizedStrings.success, message: message, preferredStyle: .alert)
+            let action = UIAlertAction(title: LocalizedStrings.ok, style: .default, handler: { _ in
                 completion?()
             })
             alert.addAction(action)
@@ -38,15 +38,15 @@ final class AlertPresenter: NSObject {
     static func showLogOutAlert(at vc: UIViewController,
                                 logOutClosure: @escaping VoidClosure) {
         executeOnMain {
-            let title = Localizable.appName(preferredLanguages: [UserDefaults.shared.selectedLocaleCode])
-            let message = Localizable.logOutAlertText(preferredLanguages: [UserDefaults.shared.selectedLocaleCode])
+            let title = LocalizedStrings.appName
+            let message = LocalizedStrings.logOutAlertText
             
             let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
             
-            let logOutAction = UIAlertAction(title: Localizable.logOutAlertTitle(preferredLanguages: [UserDefaults.shared.selectedLocaleCode]), style: .default) { _ in
+            let logOutAction = UIAlertAction(title: LocalizedStrings.logOutAlertTitle, style: .default) { _ in
                 logOutClosure()
             }
-            let cancelAction = UIAlertAction(title: Localizable.cancel(preferredLanguages: [UserDefaults.shared.selectedLocaleCode]), style: .default) { _ in
+            let cancelAction = UIAlertAction(title: LocalizedStrings.cancel, style: .default) { _ in
                 alert.dismiss(animated: true, completion: nil)
             }
             

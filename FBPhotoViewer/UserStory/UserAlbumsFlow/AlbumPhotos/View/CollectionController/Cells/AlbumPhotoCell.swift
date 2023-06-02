@@ -12,7 +12,7 @@ import UIKit
 final class AlbumPhotoCell: UICollectionViewCell {
     
     private let photoImageView = UIImageView()
-    private let placeholder = R.image.placeholder()
+    private let placeholder = AppImages.placeholder
     
     // MARK: - Life cycle
     override init(frame: CGRect) {

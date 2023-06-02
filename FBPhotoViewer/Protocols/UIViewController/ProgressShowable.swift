@@ -16,7 +16,7 @@ protocol ProgressShowable {
 
 extension ProgressShowable where Self: BaseViewController {
     
-    func showProgress(_ title: String? = Localizable.loading(preferredLanguages: [UserDefaults.shared.selectedLocaleCode])) {
+    func showProgress(_ title: String? = LocalizedStrings.loading) {
         
         DispatchQueue.main.async { [weak self] in
             guard let `self` = self else { return }

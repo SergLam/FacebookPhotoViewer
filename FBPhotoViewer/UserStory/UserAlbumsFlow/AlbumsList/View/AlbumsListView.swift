@@ -51,7 +51,7 @@ final class AlbumsView: UIView {
     }
     
     private func emptyAlbumsListTitle() -> NSAttributedString {
-        let text = Localizable.albumsListEmptyStateTitle()
+        let text = LocalizedStrings.albumsListEmptyStateTitle
         let attributes: [NSAttributedString.Key: Any] = [
             .font: UIFont.systemFont(ofSize: 25, weight: .bold),
             .foregroundColor: UIColor.darkGray]

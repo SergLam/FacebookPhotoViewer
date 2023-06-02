@@ -15,9 +15,9 @@ enum TabBarPage: Int, CaseIterable {
     var pageTitle: String {
         switch self {
         case .feed:
-            return Localizable.tabBarFeedTitle()
+            return LocalizedStrings.tabBarFeedTitle
         case .myProfile:
-            return Localizable.tabBarProfileTitle()
+            return LocalizedStrings.tabBarProfileTitle
         }
     }
 

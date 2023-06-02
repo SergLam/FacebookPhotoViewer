@@ -25,7 +25,7 @@
 "sign-in.fb-login.button.title" = "Continue with Facebook";
 
 // MARK: - Albums List
-"albums-list.screenTitle" = "My Albums List";
+"albums-list.screen-title" = "My Albums List";
 "albums-list.empty-state-title" = "User does not have albums yet";
 
 // MARK: - Albums list nav bar items

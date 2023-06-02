@@ -49,7 +49,7 @@ extension BaseViewController: MFMailComposeViewControllerDelegate {
                 controller.dismiss(animated: true, completion: { [weak self] in
                     
                     guard let self = self else { return }
-                    let message = Localizable.emailSendFail(preferredLanguages: [UserDefaults.shared.selectedLocaleCode] )
+                    let message = LocalizedStrings.emailSendFail
                     AlertPresenter.showSuccessAlert(on: self, message: message, nil)
                 })
                 
@@ -58,7 +58,7 @@ extension BaseViewController: MFMailComposeViewControllerDelegate {
                 controller.dismiss(animated: true, completion: { [weak self] in
                     
                     guard let self = self else { return }
-                    let message = Localizable.emailSendSuccess(preferredLanguages: [UserDefaults.shared.selectedLocaleCode])
+                    let message = LocalizedStrings.emailSendSuccess
                     AlertPresenter.showSuccessAlert(on: self, message: message, nil)
                 })
                 

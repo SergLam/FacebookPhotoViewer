@@ -19,24 +19,21 @@ def development_pods
   inhibit_all_warnings!
   
   # Facebook
-  pod 'FBSDKLoginKit', '~> 13.2.0'
-  pod 'FBSDKCoreKit', '~> 13.2.0'
-  pod 'FBSDKShareKit', '~> 13.2.0'
+  pod 'FBSDKLoginKit', '~> 16.1.0'
+  pod 'FBSDKCoreKit', '~> 16.1.0'
+  pod 'FBSDKShareKit', '~> 16.1.0'
   
   # Networking
-  pod 'Kingfisher', '~> 7.2.0'
-  
-  # Resources
-  pod 'R.swift', '~> 6.1.0'
+  pod 'Kingfisher', '~> 7.7.0'
 
   # Code-style
-  pod 'SwiftLint', '~> 0.47.1'
+  pod 'SwiftLint', '~> 0.52.2'
 end
 
 def testing_pods
   
   # Code-style
-  pod 'SwiftLint', '~> 0.47.1'
+  pod 'SwiftLint', '~> 0.52.2'
 end
 
 abstract_target 'App' do

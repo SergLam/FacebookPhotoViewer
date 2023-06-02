@@ -27,7 +27,7 @@ final class AlbumsListCell: UITableViewCell {
     // MARK: - Public
     func update(with model: AlbumsListCellViewModel) {
         if let url = URL(string: model.album.picture.data.url) {
-            albumImage.kf.setImage(with: url, placeholder: R.image.placeholder())
+            albumImage.kf.setImage(with: url, placeholder: AppImages.placeholder)
         }
         albumTitle.text = model.album.name
     }
@@ -38,7 +38,7 @@ final class AlbumsListCell: UITableViewCell {
         contentView.backgroundColor = UIColor.white
         
         contentView.addSubview(albumImage)
-        albumImage.image = R.image.placeholder()
+        albumImage.image = AppImages.placeholder
         
         albumImage.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([

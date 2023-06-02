@@ -1,27 +1,23 @@
 PODS:
-  - FBAEMKit (13.2.0):
-    - FBSDKCoreKit_Basics (= 13.2.0)
-  - FBSDKCoreKit (13.2.0):
-    - FBAEMKit (= 13.2.0)
-    - FBSDKCoreKit_Basics (= 13.2.0)
-  - FBSDKCoreKit_Basics (13.2.0)
-  - FBSDKLoginKit (13.2.0):
-    - FBSDKCoreKit (= 13.2.0)
-  - FBSDKShareKit (13.2.0):
-    - FBSDKCoreKit (= 13.2.0)
-  - Kingfisher (7.2.1)
-  - R.swift (6.1.0):
-    - R.swift.Library (~> 5.3.0)
-  - R.swift.Library (5.3.0)
-  - SwiftLint (0.47.1)
+  - FBAEMKit (16.1.0):
+    - FBSDKCoreKit_Basics (= 16.1.0)
+  - FBSDKCoreKit (16.1.0):
+    - FBAEMKit (= 16.1.0)
+    - FBSDKCoreKit_Basics (= 16.1.0)
+  - FBSDKCoreKit_Basics (16.1.0)
+  - FBSDKLoginKit (16.1.0):
+    - FBSDKCoreKit (= 16.1.0)
+  - FBSDKShareKit (16.1.0):
+    - FBSDKCoreKit (= 16.1.0)
+  - Kingfisher (7.7.0)
+  - SwiftLint (0.52.2)
 
 DEPENDENCIES:
-  - FBSDKCoreKit (~> 13.2.0)
-  - FBSDKLoginKit (~> 13.2.0)
-  - FBSDKShareKit (~> 13.2.0)
-  - Kingfisher (~> 7.2.0)
-  - R.swift (~> 6.1.0)
-  - SwiftLint (~> 0.47.1)
+  - FBSDKCoreKit (~> 16.1.0)
+  - FBSDKLoginKit (~> 16.1.0)
+  - FBSDKShareKit (~> 16.1.0)
+  - Kingfisher (~> 7.7.0)
+  - SwiftLint (~> 0.52.2)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -31,21 +27,17 @@ SPEC REPOS:
     - FBSDKLoginKit
     - FBSDKShareKit
     - Kingfisher
-    - R.swift
-    - R.swift.Library
     - SwiftLint
 
 SPEC CHECKSUMS:
-  FBAEMKit: c2b2895363b7e57192013d1dc49fdf498b28624c
-  FBSDKCoreKit: 58139803d861e72c7661dc875611a759352a55ac
-  FBSDKCoreKit_Basics: 1ffc68326a5ece051d85574f02a0adcf27c2a5f2
-  FBSDKLoginKit: 19e2a878556c2ee4f20486dc406e582783cd7578
-  FBSDKShareKit: 079497bb0cfeb049dc8ff6aee2702698680a2806
-  Kingfisher: 7c084bebf7d548c623ad41bcf765fb200efed369
-  R.swift: ec98ff71c4ab2f6fd01dd077e5afd15e63a4834c
-  R.swift.Library: 0fc583cb55a99e28901299cc451614cad1161962
-  SwiftLint: f80f1be7fa96d30e0aa68e58d45d4ea1ccaac519
+  FBAEMKit: c7efe06720a8b15b1d25b68921ba46dee20996e0
+  FBSDKCoreKit: ca77d40d46786157b7b31ad3516f5ad9c2315339
+  FBSDKCoreKit_Basics: d39c3361379def7297bf76738cdd4fd2e0eb1a68
+  FBSDKLoginKit: 8fa1a0e3be1c9e8ae6df522844235a05cb03d835
+  FBSDKShareKit: 6dc40042ed436cd3469f975957062be3fc721dea
+  Kingfisher: f043ac666dfc96c1f37604f93effb45a7ee3a3e1
+  SwiftLint: 1ac76dac888ca05cb0cf24d0c85887ec1209961d
 
-PODFILE CHECKSUM: ba843997dc79d364b355d1d5b80bd2bfc4d2bb81
+PODFILE CHECKSUM: 3cccc8baa8b5f27f7ab71b476d7f0bd474c3ef2e
 
-COCOAPODS: 1.11.3
+COCOAPODS: 1.12.1
